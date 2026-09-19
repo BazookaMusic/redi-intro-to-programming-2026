@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title description">
+  <title id="title">Create a file on Windows</title>
+  <desc id="description">File Explorer open at C drive Users alex with a my-project folder, followed by Visual Studio Code showing hello.txt.</desc>
+  <rect width="720" height="300" rx="18" fill="#eaf5ff"/>
+  <rect x="22" y="26" width="306" height="248" rx="10" fill="#ffffff" stroke="#7ab8e8" stroke-width="3"/>
+  <rect x="22" y="26" width="306" height="34" rx="10" fill="#d9ecfb"/>
+  <circle cx="42" cy="43" r="5" fill="#5b9bd5"/>
+  <text x="57" y="48" fill="#24405a" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700">File Explorer</text>
+  <rect x="38" y="72" width="274" height="28" rx="5" fill="#f3f7fb" stroke="#b8d2e7"/>
+  <text x="49" y="91" fill="#24405a" font-family="Consolas, monospace" font-size="12">C:\Users\alex</text>
+  <rect x="38" y="112" width="76" height="146" fill="#f5f8fb"/>
+  <text x="49" y="136" fill="#50687c" font-family="Segoe UI, sans-serif" font-size="11">Home</text>
+  <text x="49" y="158" fill="#50687c" font-family="Segoe UI, sans-serif" font-size="11">Desktop</text>
+  <text x="49" y="180" fill="#50687c" font-family="Segoe UI, sans-serif" font-size="11">Documents</text>
+  <path d="M155 143h68v54h-68z" fill="#ffd45c"/>
+  <path d="M155 143v-13h29l10 13z" fill="#f2bd32"/>
+  <text x="144" y="219" fill="#24405a" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700">my-project</text>
+  <circle cx="300" cy="245" r="18" fill="#2489ca"/>
+  <path d="M292 237l13 8-13 8z" fill="#ffffff"/>
+
+  <path d="M342 150h28" stroke="#7556c8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M362 140l12 10-12 10" fill="none" stroke="#7556c8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="390" y="26" width="308" height="248" rx="10" fill="#1e1e1e" stroke="#7556c8" stroke-width="3"/>
+  <rect x="390" y="26" width="308" height="34" rx="10" fill="#181818"/>
+  <text x="409" y="48" fill="#d8d8d8" font-family="Segoe UI, sans-serif" font-size="12">my-project - Visual Studio Code</text>
+  <rect x="390" y="60" width="112" height="214" fill="#252526"/>
+  <text x="404" y="83" fill="#cccccc" font-family="Segoe UI, sans-serif" font-size="10" font-weight="700">EXPLORER</text>
+  <text x="404" y="108" fill="#eeeeee" font-family="Segoe UI, sans-serif" font-size="11">v MY-PROJECT</text>
+  <rect x="404" y="120" width="86" height="24" rx="3" fill="#37373d"/>
+  <text x="414" y="137" fill="#d7ba7d" font-family="Consolas, monospace" font-size="11">hello.txt</text>
+  <rect x="502" y="60" width="196" height="30" fill="#2d2d2d"/>
+  <text x="517" y="80" fill="#dddddd" font-family="Consolas, monospace" font-size="11">hello.txt</text>
+  <text x="522" y="126" fill="#858585" font-family="Consolas, monospace" font-size="12">1</text>
+  <text x="546" y="126" fill="#d4d4d4" font-family="Consolas, monospace" font-size="13">Hello!</text>
+</svg>

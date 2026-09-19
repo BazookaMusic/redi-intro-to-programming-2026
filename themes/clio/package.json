@@ -1,0 +1,12 @@
+{
+  "name": "slidev-theme-clio",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=52.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "redi-intro-to-programming",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "slidev --open",
+        "build": "slidev build slides/*.md --out ../dist"
+    },
+    "devDependencies": {
+        "@slidev/cli": "^52.19.1",
+        "@slidev/theme-default": "latest"
+    }
+}
