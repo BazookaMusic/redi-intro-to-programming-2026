@@ -6,9 +6,9 @@ Course slides for the 2026 Intro to Programming class at ReDI School, built with
 
 Choose a lesson below. These versions do not contain solutions.
 
-| Lesson | PDF | Interactive HTML |
+| Lesson | Open in browser | PDF |
 | --- | --- | --- |
-| 01 · Git and GitHub | [Open PDF](slides_no_solutions/01-github-desktop.pdf) | [Open slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) |
+| 01 · Git and GitHub | [Open in browser](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | [Open PDF](slides_no_solutions/01-github-desktop.pdf) |
 
 The interactive version opens directly in your browser.
 
@@ -16,9 +16,9 @@ The interactive version opens directly in your browser.
 
 These versions include exercise solutions:
 
-| Lesson | PDF | Interactive HTML |
+| Lesson | Open in browser | PDF |
 | --- | --- | --- |
-| 01 · Git and GitHub | [Open PDF](slides_solutions/01-github-desktop.pdf) | [Open slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) |
+| 01 · Git and GitHub | [Open in browser](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Open PDF](slides_solutions/01-github-desktop.pdf) |
 
 ## Requirements
 
