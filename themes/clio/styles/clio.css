@@ -54,6 +54,167 @@
     text-decoration-color: var(--lesson-blue);
 }
 
+.lesson-overview-slide h1 {
+    margin-bottom: 0.6rem;
+}
+
+.lesson-overview-intro {
+    color: var(--lesson-muted);
+    font-size: 1rem;
+    margin: 0 0 1.4rem;
+}
+
+.lesson-overview-path {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.lesson-overview-path section {
+    align-items: center;
+    border-bottom: 1px solid var(--lesson-border);
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 2rem 1fr;
+    padding: 0.45rem 0.25rem;
+}
+
+.lesson-overview-path b {
+    align-items: center;
+    background: var(--lesson-blue);
+    border-radius: 50%;
+    color: #17112f;
+    display: inline-flex;
+    height: 2rem;
+    justify-content: center;
+    width: 2rem;
+}
+
+.lesson-overview-path span,
+.lesson-overview-path strong {
+    display: block;
+}
+
+.lesson-overview-path span {
+    color: var(--lesson-muted);
+    font-size: 0.78rem;
+}
+
+.lesson-overview-path strong {
+    color: var(--lesson-heading);
+    font-size: 0.95rem;
+    margin-bottom: 0.05rem;
+}
+
+.lesson-overview-goal {
+    background: rgb(192 132 252 / 16%);
+    border-left: 4px solid var(--lesson-blue);
+    font-size: 0.85rem;
+    margin: 1rem 0 0;
+    padding: 0.55rem 0.7rem;
+}
+
+.knowledge-check-slide {
+    padding: 1.5rem 2.4rem;
+}
+
+.knowledge-check-slide h1 {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0;
+    margin: 0.15rem 0 0.45rem;
+}
+
+.knowledge-check-intro {
+    color: var(--lesson-muted);
+    font-size: 0.9rem;
+    margin: 0 0 0.8rem;
+}
+
+.knowledge-check-layout {
+    align-items: stretch;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.knowledge-check-tree {
+    background: #0d1117;
+    border-left: 4px solid var(--lesson-blue);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+    padding: 1.1rem;
+}
+
+.knowledge-questions {
+    display: grid;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.knowledge-questions-wide {
+    grid-template-columns: 1fr 1fr;
+}
+
+.knowledge-questions li {
+    align-items: center;
+    border-bottom: 1px solid var(--lesson-border);
+    display: grid;
+    font-size: 0.85rem;
+    gap: 0.65rem;
+    grid-template-columns: 1.65rem 1fr;
+    padding: 0.5rem 0.3rem;
+}
+
+.knowledge-questions b,
+.knowledge-solutions > section > b {
+    align-items: center;
+    background: var(--lesson-blue);
+    border-radius: 50%;
+    color: #17112f;
+    display: inline-flex;
+    height: 1.65rem;
+    justify-content: center;
+    width: 1.65rem;
+}
+
+.knowledge-solutions {
+    display: grid;
+    gap: 0.75rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+.knowledge-solutions section {
+    align-items: center;
+    border-bottom: 1px solid var(--lesson-border);
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: 1.65rem 1fr;
+    min-height: 5.5rem;
+    padding: 0.5rem 0.3rem;
+}
+
+.knowledge-solutions span,
+.knowledge-solutions strong {
+    display: block;
+}
+
+.knowledge-solutions span {
+    color: var(--lesson-muted);
+    font-size: 0.82rem;
+}
+
+.knowledge-solutions strong {
+    color: var(--lesson-heading);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
 .git-command-sequence-slide {
     padding: 1.25rem 2rem;
 }
@@ -268,6 +429,67 @@
 .git-pull-followup > span,
 .git-pull-followup > span > strong {
     display: block;
+}
+
+.git-exercise-slide {
+    padding-block: 1rem;
+}
+
+.git-exercise-slide h1 {
+    margin-bottom: 0.65rem;
+}
+
+.git-exercise-layout {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.git-exercise-prep {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.git-exercise-step {
+    align-items: start;
+    border-bottom: 1px solid var(--lesson-border);
+    display: grid;
+    font-size: 0.72rem;
+    gap: 0.55rem;
+    grid-template-columns: 1.5rem 1fr;
+    padding: 0.3rem 0.15rem 0.5rem;
+}
+
+.git-exercise-step b {
+    align-items: center;
+    background: var(--lesson-blue);
+    border-radius: 50%;
+    color: #17112f;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    width: 1.5rem;
+}
+
+.git-exercise-step span,
+.git-exercise-step strong {
+    display: block;
+}
+
+.git-exercise-finish {
+    background: rgb(192 132 252 / 16%);
+    border-left: 4px solid var(--lesson-blue);
+    font-size: 0.72rem;
+    padding: 0.5rem 0.6rem;
+}
+
+.git-exercise-commands .slidev-code-wrapper {
+    margin: 0;
+}
+
+.git-exercise-commands pre {
+    font-size: 0.63rem;
+    line-height: 1.3;
 }
 
 .eyebrow {

@@ -8,10 +8,29 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+class: foundation-slide lesson-overview-slide
+---
+
+<div class="eyebrow">Git and GitHub</div>
+
+# What will we cover?
+
+<p class="lesson-overview-intro">We will start with the prerequisites, then use Git and GitHub to save and share code.</p>
+
+<div class="lesson-overview-path">
+  <section><b>1</b><span><strong>Files and folders</strong>Files, folders, paths, and VS Code</span></section>
+  <section><b>2</b><span><strong>Git and GitHub</strong>Repositories, commits, and history</span></section>
+  <section><b>3</b><span><strong>Create a repository</strong>GitHub Desktop and publishing online</span></section>
+  <section><b>4</b><span><strong>Use the terminal</strong>Clone, pull, add, commit, and push</span></section>
+</div>
+
+<p class="lesson-overview-goal"><strong>Goal:</strong> create a Python file, save it with Git, and publish it on GitHub.</p>
+
+---
 class: foundation-slide files-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
 # What is a file?
 
@@ -32,13 +51,13 @@ class: foundation-slide files-slide
   </section>
 </div>
 
-<p class="foundation-note"><code>hello.txt</code> is a file name. <code>hello</code> is the name you choose; <code>.txt</code> is the <strong>file type</strong> and helps the computer choose an app to open it.</p>
+<p class="foundation-note"><code>hello.txt</code> is a file name. <code>hello</code> is the name you choose; <code>.txt</code> is the <strong>file extension</strong>. It indicates that this is a text file and helps the computer choose an app to open it.</p>
 
 ---
 class: foundation-slide file-examples-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
 # Text vs Binary files
 
@@ -133,16 +152,16 @@ class: foundation-slide file-examples-slide
 class: foundation-slide directory-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
-# What is a directory?
+# What is a folder?
 
 <div class="directory-definition">
-  <div class="directory-mark"><span>Directory</span><strong>project/</strong></div>
+  <div class="directory-mark"><span>Folder</span><strong>project/</strong></div>
   <div class="directory-facts">
-    <p><strong>It organizes data</strong><span>A directory holds files and other directories.</span></p>
+    <p><strong>It organizes data</strong><span>A folder holds files and other folders.</span></p>
     <p><strong>It has a name</strong><span>The name helps people and programs find its contents.</span></p>
-    <p><strong>It is also called a folder</strong><span>The two words mean the same thing.</span></p>
+    <p><strong>It is also called a directory</strong><span>The two words mean the same thing. In this lesson, we will use folder.</span></p>
   </div>
 </div>
 
@@ -206,16 +225,16 @@ class: foundation-slide directory-slide
 class: foundation-slide directory-example-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
-# Example: a directory
+# Example: a folder
 
 <div class="directory-example-layout">
-  <img class="directory-example-image" src="/images/computer-basics/example-directory.png" alt="A Finder window showing three folders and one image file inside the secrets directory">
+  <img class="directory-example-image" src="/images/computer-basics/example-directory.png" alt="A Finder window showing three folders and one image file inside the secrets folder">
   <div class="directory-explanation">
-    <p><strong>secrets</strong> is the directory currently open in Finder.</p>
-    <p>It contains three directories and one image file.</p>
-    <p class="directory-note">The <strong>Kind</strong> column tells us which items are folders and which are files.</p>
+    <p><strong>secrets</strong> is the folder currently open in Finder.</p>
+    <p>It contains three folders and one image file.</p>
+    <p class="directory-note">The <strong>icons in the image</strong> help us tell them apart: folders have folder icons, while the image file shows a picture thumbnail.</p>
   </div>
 </div>
 
@@ -254,12 +273,12 @@ class: foundation-slide directory-example-slide
 class: foundation-slide tree-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
 # Directories form a tree
 
 <div class="tree-grid">
-  <pre class="tree-shell" aria-label="Example directory tree"><span class="tree-folder">~</span>
+  <pre class="tree-shell" aria-label="Example folder tree"><span class="tree-folder">~</span>
 |-- <span class="tree-folder">Documents/</span>
 |   `-- <span class="tree-folder">Projects/</span>
 |       `-- <span class="tree-folder">my-website/</span>
@@ -267,8 +286,8 @@ class: foundation-slide tree-slide
 |           `-- index.html
 `-- <span class="tree-folder">Downloads/</span></pre>
   <div class="tree-terms">
-    <p><strong>Parent</strong><span>The directory one level above.</span></p>
-    <p><strong>Child</strong><span>A file or directory inside another directory.</span></p>
+    <p><strong>Parent</strong><span>The folder one level above.</span></p>
+    <p><strong>Child</strong><span>A file or folder inside another folder.</span></p>
     <p><strong>Tree</strong><span>The whole branching structure.</span></p>
   </div>
 </div>
@@ -326,7 +345,7 @@ class: foundation-slide tree-slide
 class: foundation-slide home-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
 # Your user folder
 
@@ -388,11 +407,11 @@ class: foundation-slide home-slide
 class: foundation-slide path-slide
 ---
 
-<div class="eyebrow">Computer basics</div>
+<div class="eyebrow">Prerequisites</div>
 
 # A path is an address
 
-<p class="path-intro">A path tells the computer exactly where a file or directory lives.</p>
+<p class="path-intro">A path tells the computer exactly where a file or folder lives.</p>
 
 <div class="path-track" aria-label="Windows path to crab.png">
   <span>C:</span><i>\</i><span>Users</span><i>\</i><span>alex</span><i>\</i><span>Documents</span><i>\</i><span>photos</span><i>\</i><strong>crab.png</strong>
@@ -608,6 +627,48 @@ class: foundation-slide create-file-walkthrough-slide
 </style>
 
 ---
+class: knowledge-check-slide
+---
+
+<div class="eyebrow">Exercise · Prerequisites</div>
+
+# Read this folder structure
+
+<p class="knowledge-check-intro">Study the tree, then answer the four questions.</p>
+
+<div class="knowledge-check-layout">
+<pre class="knowledge-check-tree">my-project/
+|-- hello.py
+|-- notes.txt
+`-- images/
+    `-- logo.png</pre>
+
+<ol class="knowledge-questions">
+  <li><b>1</b><span>Name the <strong>three files</strong>.</span></li>
+  <li><b>2</b><span>Name the <strong>two folders</strong>.</span></li>
+  <li><b>3</b><span>What is the file extension of <code>hello.py</code>?</span></li>
+  <li><b>4</b><span>What path leads from <code>my-project</code> to <code>logo.png</code>?</span></li>
+</ol>
+</div>
+
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+<div class="eyebrow">Solution · Prerequisites</div>
+
+# Files and folders
+
+<div class="knowledge-solutions">
+  <section><b>1</b><span><strong>Files</strong><code>hello.py</code>, <code>notes.txt</code>, <code>logo.png</code></span></section>
+  <section><b>2</b><span><strong>Folders</strong><code>my-project</code> and <code>images</code></span></section>
+  <section><b>3</b><span><strong>File extension</strong><code>.py</code></span></section>
+  <section><b>4</b><span><strong>Path</strong><code>my-project/images/logo.png</code></span></section>
+</div>
+<!-- solution:end -->
+
+---
 layout: cover
 ---
 
@@ -652,7 +713,7 @@ class: concept-slide git-intro-slide
   </div>
 </div>
 
-<p class="prerequisite"><strong>Why use both?</strong> Git keeps the history. GitHub keeps an online copy. GitHub Desktop gives us buttons to use them without typing commands.</p>
+<p class="prerequisite"><strong>How will we use them?</strong> Git keeps the history, and GitHub keeps an online copy. We will create and publish the repository with GitHub Desktop, then use Git by typing commands in VS Code’s terminal.</p>
 
 <style>
 .git-intro-slide h1 {
@@ -817,6 +878,40 @@ class: commits-tour-slide
   width: 100%;
 }
 </style>
+
+---
+class: knowledge-check-slide
+---
+
+<div class="eyebrow">Exercise · Git and GitHub</div>
+
+# Choose the right word
+
+<p class="knowledge-check-intro">Use each answer once: <strong>Git</strong>, <strong>GitHub</strong>, <strong>repository</strong>, <strong>commit</strong>.</p>
+
+<ol class="knowledge-questions knowledge-questions-wide">
+  <li><b>1</b><span>The tool that records changes on your computer is ______.</span></li>
+  <li><b>2</b><span>A project folder that Git tracks is a ______.</span></li>
+  <li><b>3</b><span>A saved point in the project’s history is a ______.</span></li>
+  <li><b>4</b><span>The website where you publish and share Git projects is ______.</span></li>
+</ol>
+
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+<div class="eyebrow">Solution · Git and GitHub</div>
+
+# The four key words
+
+<div class="knowledge-solutions">
+  <section><b>1</b><span><strong>Git</strong>records changes on your computer.</span></section>
+  <section><b>2</b><span><strong>Repository</strong>is the project folder Git tracks.</span></section>
+  <section><b>3</b><span><strong>Commit</strong>is a saved point in the project’s history.</span></section>
+  <section><b>4</b><span><strong>GitHub</strong>stores and shares Git projects online.</span></section>
+</div>
+<!-- solution:end -->
 
 ---
 class: step-slide
@@ -1991,6 +2086,47 @@ To https://github.com/username/name-of-your-repo.git
 </div>
 
 ---
+class: git-command-sequence-slide git-exercise-slide
+---
+
+<div class="eyebrow">Exercise · Work from top to bottom</div>
+
+# Make and publish a commit
+
+<div class="git-exercise-layout">
+  <div class="git-exercise-prep">
+    <div class="git-exercise-step"><b>1</b><span><strong>Change <code>hello.py</code></strong>Add a new line, for example:<br><code>print("I made a commit!")</code></span></div>
+    <div class="git-exercise-step"><b>2</b><span><strong>Save the file</strong>Use <code>Ctrl + S</code> on Windows or <code>⌘ + S</code> on macOS.</span></div>
+    <div class="git-exercise-step"><b>3</b><span><strong>Open the terminal</strong>Choose <em>Terminal → New Terminal</em>.</span></div>
+    <div class="git-exercise-finish"><strong>Finished?</strong> Open your repository on GitHub and look for the new commit.</div>
+  </div>
+
+  <div class="git-exercise-commands">
+
+```bash
+# 4. Check what changed
+git status
+
+# 5. Choose hello.py for the commit
+git add ./hello.py
+
+# 6. Check that hello.py is green
+git status
+
+# 7. Create the commit
+git commit -m "Update hello"
+
+# 8. Check that the commit is ready
+git status
+
+# 9. Send it to GitHub
+git push
+```
+
+  </div>
+</div>
+
+---
 class: git-command-sequence-slide git-clone-slide
 ---
 
@@ -2014,7 +2150,7 @@ git clone https://github.com/username/name-of-your-repo.git
 
   </section>
 
-  <div class="git-clone-step"><b>5</b><span><strong>Open the new repository</strong>Choose <em>File → Open Folder…</em> and select <code>name-of-your-repo</code>.</span></div>
+  <div class="git-clone-step"><b>5</b><span><strong>Open the new repository</strong>Choose <em>File → Open Folder…</em> and select the <code>name-of-your-repo</code> folder.</span></div>
 
   <section class="git-pull-followup">
     <span><strong>Next time: get updates</strong>Open the repository folder and its terminal, then run:</span>

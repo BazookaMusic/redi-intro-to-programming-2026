@@ -15,20 +15,52 @@ Install the dependencies:
 npm install
 ```
 
-Start a presentation by passing its Markdown file:
+Start the deck with solutions:
 
 ```sh
-npm run dev -- slides/01-introduction.md
+npm run dev:solutions -- slides_solutions/01-github-desktop.md
 ```
 
-Slidev opens the deck in your browser and updates it as you edit the file.
+Or start the generated deck without solutions:
+
+```sh
+npm run dev:no-solutions -- slides_no_solutions/01-github-desktop.md
+```
+
+Slidev opens the selected deck in your browser. After changing a source deck, restart the no-solutions command to regenerate its learner version.
+
+## Solutions
+
+Always edit decks in `slides_solutions/`. The files in `slides_no_solutions/` are generated, so do not edit them directly.
+
+Wrap each complete solution slide with these markers:
+
+```md
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+# Solution
+
+The answer goes here.
+<!-- solution:end -->
+```
+
+Then generate the learner decks:
+
+```sh
+npm run generate:no-solutions
+```
+
+This copies the decks and public assets to `slides_no_solutions/` and removes everything between the solution markers.
 
 ## Adding a deck
 
-Add a uniquely named Markdown file to `slides/`, for example:
+Add each new deck to `slides_solutions/`, then run the generation command:
 
 ```text
-slides/
+slides_solutions/
 ├── 01-introduction.md
 ├── 02-variables.md
 └── 03-conditionals.md
@@ -42,4 +74,4 @@ Each file is an independent Slidev deck with its own frontmatter and slides.
 npm run build
 ```
 
-All decks are built to separate folders under `dist/`, named after their Markdown files.
+This regenerates the learner decks and builds both versions under `dist/solutions/` and `dist/no-solutions/`.

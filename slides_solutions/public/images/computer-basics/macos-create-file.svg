@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title description">
+  <title id="title">Create a file on macOS</title>
+  <desc id="description">Finder open at Users alex with a my-project folder, followed by Visual Studio Code showing hello.txt.</desc>
+  <rect width="720" height="300" rx="18" fill="#f2edff"/>
+  <rect x="22" y="26" width="306" height="248" rx="10" fill="#ffffff" stroke="#b4a2e8" stroke-width="3"/>
+  <rect x="22" y="26" width="306" height="34" rx="10" fill="#eeeaf7"/>
+  <circle cx="42" cy="43" r="6" fill="#ff605c"/>
+  <circle cx="60" cy="43" r="6" fill="#ffbd44"/>
+  <circle cx="78" cy="43" r="6" fill="#00ca4e"/>
+  <text x="154" y="48" fill="#443b5a" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">alex</text>
+  <rect x="38" y="72" width="76" height="186" fill="#f5f3f8"/>
+  <text x="49" y="98" fill="#675f78" font-family="-apple-system, sans-serif" font-size="11">AirDrop</text>
+  <text x="49" y="120" fill="#675f78" font-family="-apple-system, sans-serif" font-size="11">Desktop</text>
+  <text x="49" y="142" fill="#675f78" font-family="-apple-system, sans-serif" font-size="11">Documents</text>
+  <path d="M155 135h68v56h-68z" fill="#74b9ff"/>
+  <path d="M155 135v-13h29l10 13z" fill="#529ee8"/>
+  <text x="144" y="213" fill="#443b5a" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">my-project</text>
+
+  <path d="M342 150h28" stroke="#7556c8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M362 140l12 10-12 10" fill="none" stroke="#7556c8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="390" y="26" width="308" height="248" rx="10" fill="#1e1e1e" stroke="#7556c8" stroke-width="3"/>
+  <rect x="390" y="26" width="308" height="34" rx="10" fill="#181818"/>
+  <circle cx="409" cy="43" r="5" fill="#ff605c"/>
+  <circle cx="425" cy="43" r="5" fill="#ffbd44"/>
+  <circle cx="441" cy="43" r="5" fill="#00ca4e"/>
+  <text x="478" y="48" fill="#d8d8d8" font-family="-apple-system, sans-serif" font-size="12">my-project - VS Code</text>
+  <rect x="390" y="60" width="112" height="214" fill="#252526"/>
+  <text x="404" y="83" fill="#cccccc" font-family="-apple-system, sans-serif" font-size="10" font-weight="700">EXPLORER</text>
+  <text x="404" y="108" fill="#eeeeee" font-family="-apple-system, sans-serif" font-size="11">v MY-PROJECT</text>
+  <rect x="404" y="120" width="86" height="24" rx="3" fill="#37373d"/>
+  <text x="414" y="137" fill="#d7ba7d" font-family="Menlo, monospace" font-size="11">hello.txt</text>
+  <rect x="502" y="60" width="196" height="30" fill="#2d2d2d"/>
+  <text x="517" y="80" fill="#dddddd" font-family="Menlo, monospace" font-size="11">hello.txt</text>
+  <text x="522" y="126" fill="#858585" font-family="Menlo, monospace" font-size="12">1</text>
+  <text x="546" y="126" fill="#d4d4d4" font-family="Menlo, monospace" font-size="13">Hello!</text>
+</svg>

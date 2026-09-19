@@ -4,7 +4,12 @@
     "private": true,
     "scripts": {
         "dev": "slidev --open",
-        "build": "slidev build slides/*.md --out ../dist"
+        "dev:solutions": "slidev --open",
+        "dev:no-solutions": "npm run generate:no-solutions && slidev --open",
+        "generate:no-solutions": "node scripts/generate-no-solutions.mjs",
+        "build:solutions": "slidev build slides_solutions/*.md --out ../dist/solutions",
+        "build:no-solutions": "npm run generate:no-solutions && slidev build slides_no_solutions/*.md --out ../dist/no-solutions",
+        "build": "npm run build:solutions && npm run build:no-solutions"
     },
     "devDependencies": {
         "@slidev/cli": "^52.19.1",
