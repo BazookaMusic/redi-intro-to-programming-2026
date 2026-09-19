@@ -52,7 +52,7 @@ npm run dev:no-solutions -- <deck>.md
 ```
 
 - Run `npm run build`, then confirm that matching `<deck>.pdf` and `<deck>.html` files exist in both `slides_solutions/` and `slides_no_solutions/`.
-- Add the lesson to the README table. Link the lesson name to the no-solutions GitHub Pages HTML file by default, add a separate `With solutions` HTML link, include a short description grounded in the deck's learning goals, and link both generated PDFs with `?raw=1`.
+- Add the lesson to the README table. Link the lesson name to the no-solutions GitHub Pages HTML file by default, add a separate `With solutions` HTML link, include a short description grounded in the deck's learning goals, and link both generated PDFs with absolute `raw.githubusercontent.com` URLs so they download reliably.
 - Include the source deck, shared assets, README update, and all four generated artifacts in the same change.
 
 ## Exercises and solutions
