@@ -6,7 +6,7 @@ Apply it to a deck with a path relative to that deck:
 
 ```yaml
 ---
-theme: ../themes/clio
+theme: ../../themes/clio
 ---
 ```
 

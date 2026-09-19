@@ -1,8 +1,8 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
-const sourceDirectory = path.resolve('slides_solutions')
-const outputDirectory = path.resolve('slides_no_solutions')
+const sourceDirectory = path.resolve('src/slides')
+const outputDirectory = path.resolve('src/slides_no_solutions')
 const solutionStart = '<!-- solution:start -->'
 const solutionEnd = '<!-- solution:end -->'
 
@@ -68,4 +68,4 @@ async function generateDirectory(source, output) {
 await rm(outputDirectory, { recursive: true, force: true })
 const removedSlides = await generateDirectory(sourceDirectory, outputDirectory)
 
-console.log(`Generated slides_no_solutions and removed ${removedSlides} solution slide(s).`)
+console.log(`Generated src/slides_no_solutions and removed ${removedSlides} solution slide(s).`)

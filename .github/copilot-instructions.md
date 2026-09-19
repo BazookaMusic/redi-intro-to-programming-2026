@@ -11,10 +11,11 @@
 
 ## Deck structure
 
-- Treat `slides_solutions/` as the only editable source for decks and public assets.
-- Never edit `slides_no_solutions/` directly. It is generated and committed so learners can use it immediately.
-- After changing a source deck or asset, run `npm run generate:no-solutions` and include the generated changes.
-- Store images under `slides_solutions/public/images/` and reference them as `/images/...` in slide Markdown.
+- Treat `src/slides/` as the only editable source for decks and public assets.
+- Never edit `src/slides_no_solutions/` directly. It is a generated, ignored intermediate directory.
+- Keep the root `slides_solutions/` and `slides_no_solutions/` directories artifact-only. They may contain exported PDFs, never Markdown, images, or development files.
+- After changing a source deck, asset, or theme, run `npm run build` and include both updated PDFs in the commit.
+- Store images under `src/slides/public/images/` and reference them as `/images/...` in slide Markdown.
 - Each Markdown file is an independent Slidev deck and must retain its document frontmatter.
 
 ## Exercises and solutions
@@ -49,7 +50,7 @@ The answer goes here.
 ## Validation
 
 - Run `npm run generate:no-solutions` after source changes. Confirm the command reports the expected number of removed solution slides.
-- Run `npm run build` after deck, theme, asset, script, or package changes. It must build both `dist/solutions/` and `dist/no-solutions/`.
-- Use `npm run dev:solutions -- slides_solutions/<deck>.md` to preview the source deck.
-- Use `npm run dev:no-solutions -- slides_no_solutions/<deck>.md` to regenerate and preview the learner deck.
+- Run `npm run build` after deck, theme, asset, script, or package changes. It must export matching PDFs under `slides_solutions/` and `slides_no_solutions/`.
+- Use `npm run dev:solutions -- src/slides/<deck>.md` to preview the source deck.
+- Use `npm run dev:no-solutions -- src/slides_no_solutions/<deck>.md` to regenerate and preview the learner deck.
 - Do not commit `node_modules/` or `dist/`.

@@ -1,5 +1,5 @@
 ---
-theme: ../themes/clio
+theme: ../../themes/clio
 title: Create a Repository with GitHub Desktop
 info: |
   Intro to Programming

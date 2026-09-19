@@ -7,12 +7,12 @@
         "dev:solutions": "slidev --open",
         "dev:no-solutions": "npm run generate:no-solutions && slidev --open",
         "generate:no-solutions": "node scripts/generate-no-solutions.mjs",
-        "build:solutions": "slidev build slides_solutions/*.md --out ../dist/solutions",
-        "build:no-solutions": "npm run generate:no-solutions && slidev build slides_no_solutions/*.md --out ../dist/no-solutions",
-        "build": "npm run build:solutions && npm run build:no-solutions"
+        "export": "npm run generate:no-solutions && node scripts/export-slides.mjs",
+        "build": "npm run export"
     },
     "devDependencies": {
         "@slidev/cli": "^52.19.1",
-        "@slidev/theme-default": "latest"
+        "@slidev/theme-default": "latest",
+        "playwright-chromium": "^1.63.0"
     }
 }
