@@ -2,17 +2,23 @@
 
 Course slides for the 2026 Intro to Programming class at ReDI School, built with [Slidev](https://sli.dev/).
 
-## Slides
+## Student slides
 
-Students can open the PDFs directly:
+Choose a lesson below. These versions do not contain solutions.
 
-- [Git and GitHub slides](slides_no_solutions/01-github-desktop.pdf)
-- [Git and GitHub slides with solutions](slides_solutions/01-github-desktop.pdf)
+| Lesson | PDF | Interactive HTML |
+| --- | --- | --- |
+| 01 · Git and GitHub | [Open PDF](slides_no_solutions/01-github-desktop.pdf) | [Download HTML](slides_no_solutions/01-github-desktop.html?raw=1) |
 
-Students can also download the self-contained HTML files and open them directly in a browser:
+The PDF opens directly on GitHub. For the interactive version, download the HTML file and open it in a browser. It works offline.
 
-- [Git and GitHub slides as HTML](slides_no_solutions/01-github-desktop.html)
-- [Git and GitHub slides with solutions as HTML](slides_solutions/01-github-desktop.html)
+## Teacher slides
+
+These versions include exercise solutions:
+
+| Lesson | PDF | Interactive HTML |
+| --- | --- | --- |
+| 01 · Git and GitHub | [Open PDF](slides_solutions/01-github-desktop.pdf) | [Download HTML](slides_solutions/01-github-desktop.html?raw=1) |
 
 ## Requirements
 

@@ -17,6 +17,7 @@
 - After changing a source deck, asset, or theme, run `npm run build` and include both updated PDFs and HTML builds in the commit.
 - Store images under `src/slides/public/images/` and reference them as `/images/...` in slide Markdown.
 - Each Markdown file is an independent Slidev deck and must retain its document frontmatter.
+- After adding and exporting a deck, add its PDF and HTML links to both the student and teacher slide tables in `README.md`.
 
 ## Exercises and solutions
 
