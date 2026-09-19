@@ -8,9 +8,9 @@ Choose a lesson below. These versions do not contain solutions.
 
 | Lesson | PDF | Interactive HTML |
 | --- | --- | --- |
-| 01 · Git and GitHub | [Open PDF](slides_no_solutions/01-github-desktop.pdf) | [Download HTML](slides_no_solutions/01-github-desktop.html?raw=1) |
+| 01 · Git and GitHub | [Open PDF](slides_no_solutions/01-github-desktop.pdf) | [Open slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) |
 
-The PDF opens directly on GitHub. For the interactive version, download the HTML file and open it in a browser. It works offline.
+The interactive version opens directly in your browser.
 
 ## Teacher slides
 
@@ -18,7 +18,7 @@ These versions include exercise solutions:
 
 | Lesson | PDF | Interactive HTML |
 | --- | --- | --- |
-| 01 · Git and GitHub | [Open PDF](slides_solutions/01-github-desktop.pdf) | [Download HTML](slides_solutions/01-github-desktop.html?raw=1) |
+| 01 · Git and GitHub | [Open PDF](slides_solutions/01-github-desktop.pdf) | [Open slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) |
 
 ## Requirements
 
