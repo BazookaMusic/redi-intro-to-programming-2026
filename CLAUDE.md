@@ -22,7 +22,7 @@
 
 - Create the deck as a top-level `src/slides/<NN>-<topic>.md` file. Use a zero-padded lesson number so decks sort in teaching order; the export script discovers only top-level `.md` files.
 - Start from a nearby deck and keep the complete Slidev document frontmatter. The source filename becomes the filename of every generated PDF and HTML file.
-- Put shared images in `src/slides/public/images/` and reusable styles in `themes/clio/styles/clio.css`.
+- Put shared images in `src/slides/public/images/`. Use the deck owner's theme for reusable styles; do not edit another user's theme.
 - Keep exercises outside solution markers and wrap each complete solution slide as described below.
 - Preview both variants:
 
@@ -32,7 +32,7 @@ npm run dev:no-solutions -- <deck>.md
 ```
 
 - Run `npm run build`, then confirm that matching `<deck>.pdf` and `<deck>.html` files exist in both `slides_solutions/` and `slides_no_solutions/`.
-- Add the lesson to both README slide tables. Link the lesson name to the corresponding GitHub Pages HTML file, include a short description grounded in the deck's learning goals, and link to the generated PDF with `?raw=1`.
+- Add the lesson to the README table. Link the lesson name to the no-solutions GitHub Pages HTML file by default, add a separate `With solutions` HTML link, include a short description grounded in the deck's learning goals, and link both generated PDFs with `?raw=1`.
 - Include the source deck, shared assets, README update, and all four generated artifacts in the same change.
 
 ## Exercises and solutions
@@ -58,7 +58,9 @@ The answer goes here.
 ## Design and code conventions
 
 - Reuse established slide classes and layouts before introducing new ones.
-- Put styles reused by multiple slides in `themes/clio/styles/clio.css`. Keep a slide-local `<style>` block only for genuinely one-off layout rules.
+- Treat each folder under `themes/` as owned by a GitHub user. Never modify another user's theme unless that owner explicitly requests it.
+- `themes/clio/` belongs to GitHub user `bazookamusic`. Other contributors must use their own theme or keep one-off styles local to their deck.
+- Put styles reused by multiple slides in the deck owner's theme. Keep a slide-local `<style>` block only for genuinely one-off layout rules.
 - Preserve the existing visual language, CSS variables, spacing, and local formatting style.
 - Use semantic HTML and meaningful image alt text.
 - Keep slide content comfortably inside the fixed canvas. Leave generous space below content so browser controls or the macOS Dock cannot cover it in fullscreen; avoid overflow, overly small text, and dense paragraphs.
