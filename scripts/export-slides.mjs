@@ -1,13 +1,9 @@
 import { mkdir, readdir, rm } from 'node:fs/promises'
 import { spawn } from 'node:child_process'
 import path from 'node:path'
+import { createNoSolutionsWorkspace, removeNoSolutionsWorkspace } from './generate-no-solutions.mjs'
 
 const slidevCli = path.resolve('node_modules/@slidev/cli/bin/slidev.mjs')
-
-const variants = [
-	{ source: 'src/slides', output: 'slides_solutions' },
-	{ source: 'src/slides_no_solutions', output: 'slides_no_solutions' },
-]
 
 function runSlidev(arguments_) {
 	return new Promise((resolve, reject) => {
@@ -23,35 +19,45 @@ function runSlidev(arguments_) {
 	})
 }
 
-for (const variant of variants) {
-	const sourceDirectory = path.resolve(variant.source)
-	const outputDirectory = path.resolve(variant.output)
-	const entries = await readdir(sourceDirectory, { withFileTypes: true })
-	const decks = entries
-		.filter(entry => entry.isFile() && entry.name.endsWith('.md'))
-		.map(entry => entry.name)
-		.sort()
+const workspace = await createNoSolutionsWorkspace()
 
-	if (decks.length === 0)
-		throw new Error(`No Slidev decks found in ${variant.source}`)
+try {
+	const variants = [
+		{ source: path.resolve('src/slides'), output: path.resolve('slides_solutions') },
+		{ source: workspace.slidesDirectory, output: path.resolve('slides_no_solutions') },
+	]
 
-	await rm(outputDirectory, { recursive: true, force: true })
-	await mkdir(outputDirectory, { recursive: true })
+	for (const variant of variants) {
+		const entries = await readdir(variant.source, { withFileTypes: true })
+		const decks = entries
+			.filter(entry => entry.isFile() && entry.name.endsWith('.md'))
+			.map(entry => entry.name)
+			.sort()
 
-	for (const deck of decks) {
-		const inputPath = path.join(sourceDirectory, deck)
-		const outputPath = path.join(outputDirectory, deck.replace(/\.md$/, '.pdf'))
+		if (decks.length === 0)
+			throw new Error(`No Slidev decks found in ${variant.source}`)
 
-		console.log(`Exporting ${inputPath} to ${outputPath}`)
-		await runSlidev([
-			'export',
-			inputPath,
-			'--output',
-			outputPath,
-			'--format',
-			'pdf',
-			'--wait-until',
-			'networkidle',
-		])
+		await rm(variant.output, { recursive: true, force: true })
+		await mkdir(variant.output, { recursive: true })
+
+		for (const deck of decks) {
+			const inputPath = path.join(variant.source, deck)
+			const outputPath = path.join(variant.output, deck.replace(/\.md$/, '.pdf'))
+
+			console.log(`Exporting ${inputPath} to ${outputPath}`)
+			await runSlidev([
+				'export',
+				inputPath,
+				'--output',
+				outputPath,
+				'--format',
+				'pdf',
+				'--wait-until',
+				'networkidle',
+			])
+		}
 	}
+}
+finally {
+	await removeNoSolutionsWorkspace(workspace.rootDirectory)
 }

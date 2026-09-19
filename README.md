@@ -33,14 +33,14 @@ npm run dev:solutions -- src/slides/01-github-desktop.md
 Or start the generated deck without solutions:
 
 ```sh
-npm run dev:no-solutions -- src/slides_no_solutions/01-github-desktop.md
+npm run dev:no-solutions -- 01-github-desktop.md
 ```
 
-Slidev opens the selected deck in your browser. After changing a source deck, restart the no-solutions command to regenerate its learner version.
+Slidev opens the selected deck in your browser. The no-solutions command creates temporary Markdown and removes it when the preview closes.
 
 ## Solutions
 
-Always edit decks in `src/slides/`. The Markdown in `src/slides_no_solutions/` is generated, so do not edit it directly.
+Always edit decks in `src/slides/`. This is the only source copy.
 
 Wrap each complete solution slide with these markers:
 
@@ -56,13 +56,7 @@ The answer goes here.
 <!-- solution:end -->
 ```
 
-Then generate the learner Markdown:
-
-```sh
-npm run generate:no-solutions
-```
-
-This copies the decks and public assets to `src/slides_no_solutions/` and removes everything between the solution markers.
+During preview or export, the build scripts create temporary learner Markdown and remove everything between the solution markers. The temporary files are deleted automatically.
 
 ## Adding a deck
 
@@ -83,7 +77,7 @@ Each file is an independent Slidev deck with its own frontmatter and slides.
 npm run build
 ```
 
-This regenerates the learner Markdown and exports every deck as a PDF:
+This temporarily generates the learner Markdown and exports every deck as a PDF:
 
 - `slides_solutions/` contains PDFs with solutions.
 - `slides_no_solutions/` contains PDFs without solutions.

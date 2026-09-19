@@ -5,9 +5,8 @@
     "scripts": {
         "dev": "slidev --open",
         "dev:solutions": "slidev --open",
-        "dev:no-solutions": "npm run generate:no-solutions && slidev --open",
-        "generate:no-solutions": "node scripts/generate-no-solutions.mjs",
-        "export": "npm run generate:no-solutions && node scripts/export-slides.mjs",
+        "dev:no-solutions": "node scripts/dev-no-solutions.mjs",
+        "export": "node scripts/export-slides.mjs",
         "build": "npm run export"
     },
     "devDependencies": {

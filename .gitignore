@@ -1,4 +1,4 @@
 node_modules/
 dist/
-src/slides_no_solutions/
+.slidev-temp-*/
 .DS_Store
