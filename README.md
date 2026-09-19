@@ -1,14 +1,18 @@
-# Intro to Programming
+<h1 align="center">Intro to Programming</h1>
 
-Course slides for the 2026 Intro to Programming class at ReDI School, built with [Slidev](https://sli.dev/).
+<p align="center">
+	<img src=".github/assets/redi-copenhagen-banner.svg" width="720" alt="A cheerful laptop with code, Copenhagen buildings, and ReDI School colors">
+</p>
+
+**Welcome!** Pick a lesson, open it in your browser, and start exploring.
 
 ## Student slides
 
 Choose a lesson below. These versions do not contain solutions.
 
-| Lesson | Open in browser | PDF |
-| --- | --- | --- |
-| 01 · Git and GitHub | [Open in browser](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | [Open PDF](slides_no_solutions/01-github-desktop.pdf) |
+| Lesson | PDF |
+| --- | --- |
+| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | [Download PDF](slides_no_solutions/01-github-desktop.pdf?raw=1) |
 
 The interactive version opens directly in your browser.
 
@@ -16,9 +20,9 @@ The interactive version opens directly in your browser.
 
 These versions include exercise solutions:
 
-| Lesson | Open in browser | PDF |
-| --- | --- | --- |
-| 01 · Git and GitHub | [Open in browser](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Open PDF](slides_solutions/01-github-desktop.pdf) |
+| Lesson | PDF |
+| --- | --- |
+| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Download PDF](slides_solutions/01-github-desktop.pdf?raw=1) |
 
 ## Requirements
 

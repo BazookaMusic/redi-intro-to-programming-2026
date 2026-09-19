@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-labelledby="title description">
+  <title id="title">ReDI School Copenhagen Intro to Programming</title>
+  <desc id="description">A smiling student with glasses waves from behind a laptop in a colorful Copenhagen classroom scene.</desc>
+
+  <rect width="900" height="300" rx="20" fill="#eaf8f7"/>
+  <circle cx="84" cy="68" r="28" fill="#f7cf58"/>
+  <path d="M84 27v-15M84 124v-15M43 68H28M140 68h-15M55 39 44 28M124 108l-11-11M113 39l11-11M44 108l11-11" stroke="#f7cf58" stroke-width="6" stroke-linecap="round"/>
+
+  <text x="72" y="170" fill="#26374a" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Hello, future coder!</text>
+  <text x="74" y="206" fill="#4d6174" font-family="Verdana, sans-serif" font-size="18">ReDI School Copenhagen</text>
+  <text x="74" y="236" fill="#4d6174" font-family="Verdana, sans-serif" font-size="18">Intro to Programming</text>
+  <path d="M76 258h226" stroke="#64b5a5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="322" cy="258" r="7" fill="#f28b82"/>
+  <circle cx="344" cy="258" r="7" fill="#f7cf58"/>
+
+  <g stroke="#26374a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M650 252v-42l31-23 31 23v42M714 252v-61l37-27 37 27v61M788 252v-38l27-20 27 20v38" fill="#fffdf8"/>
+    <path d="M742 164v-22h18v22" fill="#f28b82"/>
+  </g>
+  <g fill="#f7cf58">
+    <rect x="667" y="218" width="11" height="14" rx="2"/>
+    <rect x="686" y="218" width="11" height="14" rx="2"/>
+    <rect x="730" y="204" width="12" height="15" rx="2"/>
+    <rect x="757" y="204" width="12" height="15" rx="2"/>
+    <rect x="804" y="222" width="11" height="14" rx="2"/>
+  </g>
+
+  <path d="M521 104c-34-9-38-55-4-70 28-13 63 3 68 33 22-7 47 9 48 35 1 27-24 45-50 36z" fill="#493442"/>
+  <path d="M485 252v-58c0-35 28-61 68-61s68 26 68 61v58z" fill="#64b5a5" stroke="#26374a" stroke-width="5"/>
+  <path d="M608 174c20-13 34-34 38-61" fill="none" stroke="#b96f4d" stroke-width="16"/>
+  <circle cx="553" cy="110" r="58" fill="#b96f4d" stroke="#26374a" stroke-width="5"/>
+  <path d="M500 94c4-43 38-66 76-54 24 8 39 31 36 56-18-9-30-23-35-40-16 22-43 36-77 38z" fill="#493442"/>
+  <path d="M518 107h28m15 0h28m-43 0h15" fill="none" stroke="#26374a" stroke-width="5"/>
+  <circle cx="532" cy="107" r="16" fill="#fffdf8" stroke="#26374a" stroke-width="5"/>
+  <circle cx="575" cy="107" r="16" fill="#fffdf8" stroke="#26374a" stroke-width="5"/>
+  <circle cx="535" cy="109" r="5" fill="#26374a"/>
+  <circle cx="572" cy="109" r="5" fill="#26374a"/>
+  <path d="M536 136c10 10 25 10 35 0" fill="none" stroke="#26374a" stroke-width="5"/>
+  <circle cx="510" cy="129" r="8" fill="#e98b79" opacity=".7"/>
+  <circle cx="595" cy="129" r="8" fill="#e98b79" opacity=".7"/>
+
+  <path d="M632 116c-8-11-6-25 4-34l2-17c1-6 10-5 10 1v15l8-12c3-5 11 0 8 5l-8 15c9 1 14 8 11 16-5 13-20 21-35 11z" fill="#b96f4d" stroke="#26374a" stroke-width="5" stroke-linejoin="round"/>
+
+  <rect x="430" y="184" width="245" height="82" rx="10" fill="#26374a"/>
+  <rect x="448" y="200" width="209" height="49" rx="5" fill="#fffdf8"/>
+  <path d="M468 217l10 8-10 8m20 0h25" fill="none" stroke="#f28b82" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="627" cy="225" r="11" fill="#f7cf58"/>
+  <path d="M547 266h-89l-20 18h228l-20-18z" fill="#d6e1e8" stroke="#26374a" stroke-width="5" stroke-linejoin="round"/>
+
+  <path d="M822 55l5 11 12 2-9 8 3 12-11-6-11 6 3-12-9-8 12-2z" fill="#f28b82"/>
+  <path d="M755 88l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#64b5a5"/>
+</svg>
