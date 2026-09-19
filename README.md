@@ -14,14 +14,18 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 | --- | --- | --- | --- |
 | [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Without solutions](slides_no_solutions/01-github-desktop.pdf?raw=1) · [With solutions](slides_solutions/01-github-desktop.pdf?raw=1) |
 
-## Requirements
+## For teachers
+
+Use this section when adding, editing, previewing, or exporting slide decks.
+
+### Requirements
 
 The following tools are only needed to edit or export the slides:
 
 - Node.js 20.12 or newer
 - npm
 
-## Development
+### Development
 
 Install the dependencies:
 
@@ -43,7 +47,7 @@ npm run dev:no-solutions -- 01-github-desktop.md
 
 Slidev opens the selected deck in your browser. The no-solutions command creates temporary Markdown and removes it when the preview closes.
 
-## Solutions
+### Solutions
 
 Always edit decks in `src/slides/`. This is the only source copy.
 
@@ -63,7 +67,7 @@ The answer goes here.
 
 During preview or export, the build scripts create temporary learner Markdown and remove everything between the solution markers. The temporary files are deleted automatically.
 
-## Adding a deck
+### Adding a deck
 
 Add each new deck to `src/slides/`:
 
@@ -76,7 +80,7 @@ src/slides/
 
 Each file is an independent Slidev deck with its own frontmatter and slides.
 
-## Export student artifacts
+### Export student artifacts
 
 ```sh
 npm run build

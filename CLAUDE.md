@@ -18,6 +18,26 @@
 - Store images under `src/slides/public/images/` and reference them as `/images/...` in slide Markdown.
 - Each Markdown file is an independent Slidev deck and must retain its document frontmatter.
 
+## Development process
+
+1. Run `npm install` after cloning the repository or when dependencies change.
+2. Edit the source deck in `src/slides/`, shared assets in `src/slides/public/`, and only the theme owned by the deck author.
+3. Preview the deck with solutions:
+
+```sh
+npm run dev:solutions -- src/slides/<deck>.md
+```
+
+4. Preview the generated learner deck without solutions:
+
+```sh
+npm run dev:no-solutions -- <deck>.md
+```
+
+5. Run `npm run build` to regenerate the solution and no-solution PDFs and self-contained HTML files for every deck.
+6. Verify the four matching artifacts in `slides_solutions/` and `slides_no_solutions/`, then update the README lesson links and description when adding or renaming a deck.
+7. Commit the source deck, owned assets or theme changes, README update, and generated artifacts together. Never commit temporary learner Markdown, `node_modules/`, or `dist/`.
+
 ## Adding a slide deck
 
 - Create the deck as a top-level `src/slides/<NN>-<topic>.md` file. Use a zero-padded lesson number so decks sort in teaching order; the export script discovers only top-level `.md` files.
