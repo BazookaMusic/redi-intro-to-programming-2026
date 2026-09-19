@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap");
 
 :root {
-    --lesson-ink: #f4edff;
+    --lesson-ink: #ffffff;
     --lesson-paper: #241647;
     --lesson-heading: #e7d8ff;
-    --lesson-blue: #a982ff;
+    --lesson-blue: #c084fc;
+    --lesson-link: #ffffff;
     --lesson-coral: #d3baff;
     --lesson-green: #d3baff;
     --lesson-muted: #c3b6e6;
@@ -36,6 +37,237 @@
     font-size: 1.55rem;
     letter-spacing: 0;
     margin: 0.65rem 0 0.45rem;
+}
+
+.slidev-layout strong {
+    color: var(--lesson-blue);
+}
+
+.slidev-layout p,
+.slidev-layout h1 + p {
+    opacity: 1;
+}
+
+.slidev-layout a {
+    color: var(--lesson-link);
+    font-weight: 700;
+    text-decoration-color: var(--lesson-blue);
+}
+
+.git-command-sequence-slide {
+    padding: 1.25rem 2rem;
+}
+
+.git-command-sequence-slide h1 {
+    font-family: system-ui, sans-serif;
+    font-size: 1.85rem;
+    letter-spacing: 0;
+    margin: 0.1rem 0 0.25rem;
+}
+
+.git-command-intro {
+    font-size: 0.82rem;
+    margin: 0 0 0.6rem;
+}
+
+.git-command-panels {
+    display: grid;
+    gap: 0.55rem;
+    grid-template-columns: 1fr;
+}
+
+.git-command-panels-wide-first {
+    grid-template-columns: 1fr;
+}
+
+.git-command-panels section {
+    background: var(--lesson-panel);
+    border: 1px solid var(--lesson-border);
+    border-radius: 6px;
+    display: grid;
+    gap: 0.3rem 0.55rem;
+    grid-template-areas:
+        "title title"
+        "command output"
+        "meaning meaning";
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    min-width: 0;
+    padding: 0.55rem 0.65rem;
+}
+
+.git-command-panels h2 {
+    font-size: 0.82rem;
+    grid-area: title;
+    margin: 0 0 0.25rem;
+}
+
+.git-command-panels .slidev-code-wrapper {
+    grid-area: command;
+    margin: 0;
+}
+
+.git-command-panels pre {
+    font-size: 0.56rem;
+    line-height: 1.28;
+    margin: 0;
+}
+
+.git-command-panels .command-output {
+    background: #0d1117;
+    border-left: 3px solid var(--lesson-blue);
+    color: #d8dee9;
+    grid-area: output;
+    margin: 0;
+    overflow: hidden;
+    padding: 0.4rem 0.5rem;
+    white-space: pre-wrap;
+}
+
+.git-command-panels .git-untracked {
+    color: #ff7b72;
+}
+
+.git-command-panels .git-staged {
+    color: #7ee787;
+}
+
+.git-command-panels section > p {
+    background: rgb(192 132 252 / 16%);
+    border-left: 4px solid var(--lesson-blue);
+    color: #ffffff;
+    font-size: 0.76rem;
+    grid-area: meaning;
+    line-height: 1.35;
+    margin: 0.1rem 0 0;
+    padding: 0.4rem 0.55rem;
+}
+
+.git-single-file-option {
+    grid-column: 1 / -1;
+}
+
+.git-command-panels .git-single-file-option .slidev-code-wrapper {
+    margin: 0;
+}
+
+.git-stage-slide {
+    padding-block: 0.75rem;
+}
+
+.git-stage-slide h1 {
+    font-size: 1.65rem;
+    margin-bottom: 0.15rem;
+}
+
+.git-stage-slide .git-command-intro {
+    margin-bottom: 0.3rem;
+}
+
+.git-stage-slide .git-command-panels {
+    gap: 0.3rem;
+}
+
+.git-stage-slide .git-command-panels section {
+    gap: 0.2rem 0.45rem;
+    padding: 0.4rem 0.55rem;
+}
+
+.git-stage-slide .git-command-panels h2 {
+    margin-bottom: 0.1rem;
+}
+
+.git-stage-slide .git-command-panels section > p {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    padding: 0.3rem 0.45rem;
+}
+
+.git-full-sequence-slide .slidev-code-wrapper {
+    margin-top: 0.65rem;
+}
+
+.git-full-sequence-slide pre {
+    font-size: 0.72rem;
+    line-height: 1.35;
+}
+
+.git-clone-workflow {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+}
+
+.git-clone-step,
+.git-clone-step-heading {
+    align-items: center;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 1.5rem 1fr;
+}
+
+.git-clone-step {
+    border-bottom: 1px solid var(--lesson-border);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.35rem 0.35rem;
+}
+
+.git-clone-step b,
+.git-clone-step-heading b {
+    align-items: center;
+    background: var(--lesson-blue);
+    border-radius: 50%;
+    color: #17112f;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    width: 1.5rem;
+}
+
+.git-clone-step strong,
+.git-clone-step span {
+    display: block;
+}
+
+.git-clone-command {
+    align-items: center;
+    background: var(--lesson-panel);
+    border: 1px solid var(--lesson-border);
+    border-radius: 6px;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 0.7fr 1.3fr;
+    padding: 0.45rem 0.55rem;
+}
+
+.git-clone-command .slidev-code-wrapper,
+.git-pull-followup .slidev-code-wrapper {
+    margin: 0;
+}
+
+.git-clone-command pre,
+.git-pull-followup pre {
+    font-size: 0.58rem;
+    line-height: 1.3;
+}
+
+.git-pull-followup {
+    align-items: center;
+    background: rgb(192 132 252 / 16%);
+    border-left: 4px solid var(--lesson-blue);
+    display: grid;
+    font-size: 0.7rem;
+    gap: 0.75rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.4rem 0.55rem;
+}
+
+.git-pull-followup pre code {
+    white-space: nowrap;
+}
+
+.git-pull-followup > span,
+.git-pull-followup > span > strong {
+    display: block;
 }
 
 .eyebrow {

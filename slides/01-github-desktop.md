@@ -722,6 +722,103 @@ class: foundation-slide repository-intro-slide
 </style>
 
 ---
+class: commits-tour-slide
+---
+
+<div class="eyebrow">See a repository online</div>
+
+# Where are the commits?
+
+<p class="repository-link">
+  <strong>Our course repository</strong>
+  <a href="https://github.com/BazookaMusic/redi-intro-to-programming-2026" target="_blank">https://github.com/BazookaMusic/redi-intro-to-programming-2026</a>
+</p>
+
+<div class="commit-tour">
+  <figure>
+    <figcaption><b>1</b> Open the repository and click the <strong>commits link</strong>.</figcaption>
+    <img src="/images/github/commits-open.png" alt="The repository main page with the commits link visible">
+  </figure>
+  <figure>
+    <figcaption><b>2</b> GitHub shows the project’s commit history.</figcaption>
+    <img src="/images/github/commits-main-page.png" alt="The repository commits page showing the project history">
+  </figure>
+</div>
+
+<style>
+.commits-tour-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 750;
+  letter-spacing: 0;
+  margin-bottom: 0.2rem;
+}
+
+.repository-link {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  gap: 0.15rem;
+  margin: 0.35rem 0 0;
+}
+
+.repository-link strong {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.repository-link a {
+  color: var(--lesson-link);
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: var(--lesson-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.commit-tour {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.commit-tour figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.commit-tour figcaption {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+}
+
+.commit-tour figcaption b {
+  align-items: center;
+  background: var(--lesson-coral);
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  height: 1.55rem;
+  justify-content: center;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  width: 1.55rem;
+}
+
+.commit-tour img {
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  display: block;
+  max-height: 13.3rem;
+  object-fit: contain;
+  object-position: top left;
+  width: 100%;
+}
+</style>
+
+---
 class: step-slide
 ---
 
@@ -731,8 +828,9 @@ class: step-slide
 
 <div class="step-grid wide-shot">
   <div class="step-copy">
-    <span class="action">Open</span>
-    <p><strong>File</strong> → <strong>New Repository…</strong></p>
+    <span class="action">First</span>
+    <p>Open <strong>GitHub Desktop</strong>.</p>
+    <p>Then choose <strong>File</strong> → <strong>New Repository…</strong></p>
     <p class="hint">A repository is the project folder Git will track.</p>
   </div>
   <img src="/images/github/new-repo.png" alt="The File menu in GitHub Desktop with New Repository selected">
@@ -750,8 +848,7 @@ class: step-slide
   <div class="step-copy checklist">
     <p><b>1.</b> Give the repository a short, clear name.</p>
     <p><b>2.</b> Choose where to save it.</p>
-    <p><b>3.</b> Add a README so the project is not empty.</p>
-    <p><b>4.</b> Select a Git Ignore when your language needs one.</p>
+    <p><b>3.</b> Tick the box to initialize with a readme.</p>
     <p class="finish">Click <strong>Create Repository</strong>.</p>
   </div>
   <img src="/images/github/new-repo-card.png" alt="The Create a New Repository form in GitHub Desktop">
@@ -782,15 +879,59 @@ class: step-slide
 
 # Publish it to GitHub
 
-<div class="step-grid publish-shot">
-  <div class="step-copy checklist">
-    <p><b>Name</b><br>Check how it will appear on GitHub.</p>
-    <p><b>Description</b><br>Say what the project is for.</p>
-    <p><b>Visibility</b><br>Tick “Keep this code private” only when needed.</p>
-    <p class="finish">Click <strong>Publish Repository</strong>.</p>
-  </div>
-  <img src="/images/github/publish-repo.png" alt="The Publish Repository form in GitHub Desktop">
+<div class="publish-flow">
+  <figure>
+    <figcaption><b>1</b> Click <strong>Publish repository</strong> in the top bar.</figcaption>
+    <img src="/images/github/main-view-with-publish.png" alt="The GitHub Desktop main view with Publish repository in the top bar">
+  </figure>
+  <figure>
+    <figcaption><b>2</b> Review the name, description, and visibility. Then click <strong>Publish Repository</strong>.</figcaption>
+    <img src="/images/github/publish-repo.png" alt="The Publish Repository form in GitHub Desktop">
+  </figure>
 </div>
+
+<style>
+.publish-flow {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  margin-top: 1rem;
+}
+
+.publish-flow figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.publish-flow figcaption {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  min-height: 2.6rem;
+}
+
+.publish-flow figcaption b {
+  align-items: center;
+  background: var(--lesson-coral);
+  border-radius: 50%;
+  color: #17112f;
+  display: inline-flex;
+  height: 1.55rem;
+  justify-content: center;
+  margin-right: 0.35rem;
+  width: 1.55rem;
+}
+
+.publish-flow img {
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  display: block;
+  height: 14rem;
+  object-fit: contain;
+  object-position: top center;
+  width: 100%;
+}
+</style>
 
 ---
 class: step-slide
@@ -865,9 +1006,55 @@ class: finish-slide
   <span><b>3</b> Opened in VS Code</span>
 </div>
 
-<p class="lead">Next: add a file, make a commit, and push your change.</p>
+<div class="repository-address">
+  <span>Open your repository in your browser (e.g. Chrome, Edge, or Safari) at:</span>
+  <code>www.github.com/<mark>username</mark>/<mark>name-of-your-repo</mark></code>
+  <p>Replace <strong>username</strong> with your GitHub username and <strong>name-of-your-repo</strong> with your repository name.</p>
+  <p class="repository-example"><strong>Example:</strong> <a href="https://github.com/bazookamusic/redi-example" target="_blank">www.github.com/bazookamusic/redi-example</a></p>
+</div>
+
+<p class="lead">Next: create a file inside your repository.</p>
 
 <style>
+.repository-address {
+  margin: 1.5rem 0 1.1rem;
+}
+
+.repository-address > span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.repository-address code {
+  background: rgb(4 16 26 / 62%);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.repository-address mark {
+  background: transparent;
+  color: var(--lesson-blue);
+  font-weight: 800;
+}
+
+.repository-address p {
+  font-size: 0.85rem;
+  margin: 0.45rem 0 0;
+}
+
+.repository-example a {
+  color: #ffffff;
+  text-decoration-color: var(--lesson-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.16em;
+}
+
 .step-label {
   color: var(--lesson-coral);
   font-size: 0.8rem;
@@ -1451,3 +1638,426 @@ class: finish-slide
   text-align: center;
 }
 </style>
+
+---
+class: create-repository-file-slide
+---
+
+<div class="eyebrow">Your turn · VS Code</div>
+
+# Create a file in your repository
+
+<p class="create-repository-file-intro">Your repository is already open in VS Code. Now add your first Python file.</p>
+
+<div class="create-repository-file-flow">
+  <figure>
+    <figcaption><b>1</b><span>In Explorer, click <strong>New File</strong>.</span></figcaption>
+    <img src="/images/computer-basics/create-file.png" alt="The New File button highlighted in the VS Code Explorer">
+  </figure>
+  <figure>
+    <figcaption><b>2</b><span>Type <code>my-file.py</code>, then press <strong>Enter</strong>.</span></figcaption>
+    <img src="/images/computer-basics/edit-file.png" alt="Naming a new file my-file.py in the VS Code Explorer">
+  </figure>
+  <figure>
+    <figcaption><b>3</b><span>Type <code>print("hello")</code>, then save.</span></figcaption>
+    <img src="/images/computer-basics/add-name.png" alt="Editing my-file.py with print hello in VS Code">
+  </figure>
+</div>
+
+<p class="create-repository-file-done"><strong>Done when:</strong> <code>my-file.py</code> appears inside your repository folder.</p>
+
+<style>
+.create-repository-file-slide {
+  padding: 1.5rem 2rem;
+}
+
+.create-repository-file-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.3rem;
+}
+
+.create-repository-file-intro {
+  font-size: 0.9rem;
+  margin: 0 0 0.8rem;
+}
+
+.create-repository-file-flow {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.create-repository-file-flow figure {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.create-repository-file-flow figcaption {
+  align-items: center;
+  display: flex;
+  font-size: 0.72rem;
+  gap: 0.4rem;
+  line-height: 1.3;
+  min-height: 2.7rem;
+}
+
+.create-repository-file-flow figcaption b {
+  align-items: center;
+  background: var(--lesson-blue);
+  border-radius: 50%;
+  color: #17112f;
+  display: inline-flex;
+  flex: 0 0 1.4rem;
+  height: 1.4rem;
+  justify-content: center;
+}
+
+.create-repository-file-flow img {
+  border: 1px solid var(--lesson-border);
+  border-radius: 4px;
+  display: block;
+  height: 11.5rem;
+  object-fit: cover;
+  object-position: left center;
+  width: 100%;
+}
+
+.create-repository-file-flow figure:last-child img {
+  object-position: center;
+}
+
+.create-repository-file-done {
+  color: var(--lesson-green);
+  font-size: 0.85rem;
+  margin: 0.7rem 0 0;
+  text-align: center;
+}
+</style>
+
+---
+class: open-terminal-slide
+---
+
+<div class="eyebrow">VS Code · Step by step</div>
+
+# Open the terminal
+
+<p class="open-terminal-intro">The terminal lets you give text commands to your computer without leaving VS Code.</p>
+
+<div class="open-terminal-flow">
+  <figure>
+    <figcaption><b>1</b><span>Choose <strong>Terminal → New Terminal</strong>.</span></figcaption>
+    <img src="/images/github/click-terminal.png" alt="The VS Code Terminal menu with New Terminal selected">
+  </figure>
+  <figure>
+    <figcaption><b>2</b><span>The terminal opens at the bottom of VS Code.</span></figcaption>
+    <img src="/images/github/terminal-bottom.png" alt="The terminal panel open at the bottom of VS Code">
+  </figure>
+</div>
+
+<p class="open-terminal-done"><strong>Check:</strong> the terminal shows the name of your repository next to the prompt.</p>
+
+<style>
+.open-terminal-slide {
+  padding: 1.5rem 2rem;
+}
+
+.open-terminal-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.3rem;
+}
+
+.open-terminal-intro {
+  font-size: 0.9rem;
+  margin: 0 0 0.8rem;
+}
+
+.open-terminal-flow {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.open-terminal-flow figure {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.open-terminal-flow figcaption {
+  align-items: center;
+  display: flex;
+  font-size: 0.82rem;
+  gap: 0.45rem;
+  line-height: 1.3;
+  min-height: 2.4rem;
+}
+
+.open-terminal-flow figcaption b {
+  align-items: center;
+  background: var(--lesson-blue);
+  border-radius: 50%;
+  color: #17112f;
+  display: inline-flex;
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+}
+
+.open-terminal-flow img {
+  border: 1px solid var(--lesson-border);
+  border-radius: 4px;
+  display: block;
+  height: 15rem;
+  object-fit: cover;
+  object-position: top left;
+  width: 100%;
+}
+
+.open-terminal-flow figure:last-child img {
+  object-position: bottom center;
+  transform: scale(1.65);
+  transform-origin: bottom left;
+}
+
+.open-terminal-done {
+  color: var(--lesson-green);
+  font-size: 0.85rem;
+  margin: 0.7rem 0 0;
+  text-align: center;
+}
+</style>
+
+---
+class: git-command-sequence-slide git-stage-slide
+---
+
+<div class="eyebrow">Terminal · Save and publish</div>
+
+# 1. Check and stage the file
+
+<p class="git-command-intro">Type or copy one command at a time. <strong>Press Enter after each command</strong> to run it.</p>
+
+<div class="git-command-panels git-command-panels-wide-first">
+<section>
+
+## Check what Git sees
+
+```bash
+git status
+```
+
+<pre class="command-output">On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+  <span class="git-untracked">hello.py</span>
+
+nothing added to commit but untracked files present
+(use "git add" to track)</pre>
+
+<p><strong>What it means:</strong> The red filename means <code>hello.py</code> is untracked. Red does not mean it is broken.</p>
+</section>
+
+<section>
+
+## Stage the file
+
+```bash
+git add .
+```
+
+<pre class="command-output">No output appears.
+The prompt returns.</pre>
+
+<p><strong>What it means:</strong> <code>git add</code> chooses which changes Git will include in your next commit.<br><strong>The dot <code>.</code></strong> means every changed file in this repository.<br><strong>To choose only <code>hello.py</code>, use its path from the repository folder:</strong></p>
+
+<div class="git-single-file-option">
+
+```bash
+git add ./hello.py
+```
+
+</div>
+</section>
+</div>
+
+---
+class: git-command-sequence-slide
+---
+
+<div class="eyebrow">Terminal · Save and publish</div>
+
+# 2. Verify and create a commit
+
+<p class="git-command-intro">Run each command with <strong>Enter</strong>. Your commit code may look different from this example.</p>
+
+<div class="git-command-panels">
+<section>
+
+## Check that the file is staged
+
+```bash
+git status
+```
+
+<pre class="command-output">On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged &lt;file&gt;..." to unstage)
+  <span class="git-staged">new file:   hello.py</span></pre>
+
+<p><strong>What it means:</strong> The green filename means the file is staged. It will be included in your next commit.</p>
+</section>
+
+<section>
+
+## Save it in Git's history
+
+```bash
+git commit -m "Printed hello"
+```
+
+<pre class="command-output">[main a4058f0] Printed hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py</pre>
+
+<p><strong>What it means:</strong> Git created the commit locally. Your seven-character code will be different.</p>
+</section>
+</div>
+
+---
+class: git-command-sequence-slide
+---
+
+<div class="eyebrow">Terminal · Save and publish</div>
+
+# 3. Check and push to GitHub
+
+<p class="git-command-intro">Press <strong>Enter</strong> after each command. Git may print slightly different numbers on your computer.</p>
+
+<div class="git-command-panels">
+<section>
+
+## Check the local commit
+
+```bash
+git status
+```
+
+<pre class="command-output">On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean</pre>
+
+<p><strong>What it means:</strong> The commit exists on your computer, but has not reached GitHub yet.</p>
+</section>
+
+<section>
+
+## Send the commit online
+
+```bash
+git push
+```
+
+<pre class="command-output">Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/username/name-of-your-repo.git
+   a1c79f4..a4058f0  main -&gt; main</pre>
+
+<p><strong>What it means:</strong> The progress lines are normal. <code>main → main</code> confirms the commit is now on GitHub.</p>
+</section>
+</div>
+
+---
+class: git-command-sequence-slide git-clone-slide
+---
+
+<div class="eyebrow">Terminal · Download a repository</div>
+
+# How do I get a repository from GitHub?
+
+<p class="git-command-intro">Choose where the repository should live before you download it.</p>
+
+<div class="git-clone-workflow">
+  <div class="git-clone-step"><b>1</b><span><strong>Open VS Code</strong>Choose <em>File → Open Folder…</em></span></div>
+  <div class="git-clone-step"><b>2</b><span><strong>Choose the parent folder</strong>Select <em>Documents</em>, or create a <em>Code</em> folder there.</span></div>
+  <div class="git-clone-step"><b>3</b><span><strong>Open the terminal</strong>Choose <em>Terminal → New Terminal</em>. It opens in the selected folder.</span></div>
+
+  <section class="git-clone-command">
+    <div class="git-clone-step-heading"><b>4</b><strong>Clone the repository</strong></div>
+
+```bash
+git clone https://github.com/username/name-of-your-repo.git
+```
+
+  </section>
+
+  <div class="git-clone-step"><b>5</b><span><strong>Open the new repository</strong>Choose <em>File → Open Folder…</em> and select <code>name-of-your-repo</code>.</span></div>
+
+  <section class="git-pull-followup">
+    <span><strong>Next time: get updates</strong>Open the repository folder and its terminal, then run:</span>
+
+```bash
+git pull
+```
+
+  </section>
+</div>
+
+---
+class: git-command-sequence-slide git-full-sequence-slide
+---
+
+<div class="eyebrow">Terminal · Cheat sheet</div>
+
+# Git Cheat Sheet
+
+<p class="git-command-intro">Run these commands one at a time. Press <strong>Enter</strong> after each command.</p>
+
+```bash
+# Get a repository for the first time
+git clone https://github.com/username/name-of-your-repo.git
+
+# Get its newest changes later
+git pull
+
+# 1. Check what Git sees
+git status
+
+# 2. Choose hello.py for the next commit
+git add ./hello.py
+
+# 3. Check that hello.py was added
+git status
+
+# 4. Create the commit
+git commit -m "Printed hello"
+
+# 5. Check that the commit is ready to publish
+git status
+
+# 6. Send the commit to GitHub
+git push
+```
