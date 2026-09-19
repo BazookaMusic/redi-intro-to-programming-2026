@@ -17,7 +17,23 @@
 - After changing a source deck, asset, or theme, run `npm run build` and include both updated PDFs and HTML builds in the commit.
 - Store images under `src/slides/public/images/` and reference them as `/images/...` in slide Markdown.
 - Each Markdown file is an independent Slidev deck and must retain its document frontmatter.
-- After adding and exporting a deck, add its PDF and HTML links to both the student and teacher slide tables in `README.md`.
+
+## Adding a slide deck
+
+- Create the deck as a top-level `src/slides/<NN>-<topic>.md` file. Use a zero-padded lesson number so decks sort in teaching order; the export script discovers only top-level `.md` files.
+- Start from a nearby deck and keep the complete Slidev document frontmatter. The source filename becomes the filename of every generated PDF and HTML file.
+- Put shared images in `src/slides/public/images/` and reusable styles in `themes/clio/styles/clio.css`.
+- Keep exercises outside solution markers and wrap each complete solution slide as described below.
+- Preview both variants:
+
+```sh
+npm run dev:solutions -- src/slides/<deck>.md
+npm run dev:no-solutions -- <deck>.md
+```
+
+- Run `npm run build`, then confirm that matching `<deck>.pdf` and `<deck>.html` files exist in both `slides_solutions/` and `slides_no_solutions/`.
+- Add the lesson to both README slide tables. Link the lesson name to the corresponding GitHub Pages HTML file, include a short description grounded in the deck's learning goals, and link to the generated PDF with `?raw=1`.
+- Include the source deck, shared assets, README update, and all four generated artifacts in the same change.
 
 ## Exercises and solutions
 
