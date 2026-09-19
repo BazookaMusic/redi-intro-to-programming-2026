@@ -10,8 +10,10 @@
         "build": "npm run export"
     },
     "devDependencies": {
+        "@fontsource/cinzel": "^5.2.8",
         "@slidev/cli": "^52.19.1",
         "@slidev/theme-default": "latest",
-        "playwright-chromium": "^1.63.0"
+        "playwright-chromium": "^1.63.0",
+        "vite-plugin-singlefile": "^2.3.3"
     }
 }

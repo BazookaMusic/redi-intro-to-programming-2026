@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap");
+@import "@fontsource/cinzel/600.css";
+@import "@fontsource/cinzel/700.css";
 
 :root {
+    --slidev-code-background: rgb(4 16 26 / 78%);
+    --slidev-code-foreground: #f3ecff;
     --lesson-ink: #ffffff;
     --lesson-paper: #241647;
     --lesson-heading: #e7d8ff;

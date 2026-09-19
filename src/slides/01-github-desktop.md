@@ -7,6 +7,7 @@ info: |
 drawings:
   persist: false
 transition: slide-left
+preloadImages: false
 mdc: true
 class: foundation-slide lesson-overview-slide
 ---
@@ -939,15 +940,37 @@ class: step-slide
 
 # Choose the repository details
 
-<div class="step-grid form-shot">
+<div class="repository-details-layout">
   <div class="step-copy checklist">
     <p><b>1.</b> Give the repository a short, clear name.</p>
     <p><b>2.</b> Choose where to save it.</p>
     <p><b>3.</b> Tick the box to initialize with a readme.</p>
     <p class="finish">Click <strong>Create Repository</strong>.</p>
   </div>
-  <img src="/images/github/new-repo-card.png" alt="The Create a New Repository form in GitHub Desktop">
+  <img src="/images/github/new-repo-card.jpg" alt="The Create a New Repository form in GitHub Desktop">
 </div>
+
+<style>
+.repository-details-layout {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  height: 22.75rem;
+}
+
+.repository-details-layout .step-copy {
+  flex: 0 0 40%;
+}
+
+.repository-details-layout img {
+  border: 1px solid var(--lesson-border);
+  box-shadow: 0 18px 40px rgb(7 4 17 / 45%);
+  height: 100%;
+  min-width: 0;
+  object-fit: contain;
+  width: 60%;
+}
+</style>
 
 ---
 layout: center
@@ -1066,7 +1089,7 @@ class: exercise-slide
       <b>2</b>
       <div><h2>Set up</h2><p>Name it, choose a folder, and add a README.</p></div>
     </div>
-    <img src="/images/github/new-repo-card.png" alt="Create a New Repository form">
+    <img src="/images/github/new-repo-card.jpg" alt="Create a New Repository form">
   </section>
   <section class="exercise-step">
     <div class="exercise-copy">

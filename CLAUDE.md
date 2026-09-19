@@ -13,8 +13,8 @@
 
 - Treat `src/slides/` as the only editable source for decks and public assets.
 - The no-solutions Markdown is generated in a temporary folder during preview or export and deleted automatically. Do not create or maintain a second source tree.
-- Keep the root `slides_solutions/` and `slides_no_solutions/` directories artifact-only. They may contain exported PDFs, never Markdown, images, or development files.
-- After changing a source deck, asset, or theme, run `npm run build` and include both updated PDFs in the commit.
+- Keep the root `slides_solutions/` and `slides_no_solutions/` directories artifact-only. They may contain exported PDFs and self-contained HTML files, never source Markdown or development files.
+- After changing a source deck, asset, or theme, run `npm run build` and include both updated PDFs and HTML builds in the commit.
 - Store images under `src/slides/public/images/` and reference them as `/images/...` in slide Markdown.
 - Each Markdown file is an independent Slidev deck and must retain its document frontmatter.
 
@@ -49,7 +49,7 @@ The answer goes here.
 
 ## Validation
 
-- Run `npm run build` after deck, theme, asset, script, or package changes. It must export matching PDFs under `slides_solutions/` and `slides_no_solutions/`.
+- Run `npm run build` after deck, theme, asset, script, or package changes. It must export matching PDFs and self-contained HTML files under `slides_solutions/` and `slides_no_solutions/`.
 - Use `npm run dev:solutions -- src/slides/<deck>.md` to preview the source deck.
 - Use `npm run dev:no-solutions -- <deck>.md` to generate a temporary learner deck and preview it.
 - Do not commit `node_modules/` or `dist/`.

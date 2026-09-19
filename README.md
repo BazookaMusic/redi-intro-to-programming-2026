@@ -9,6 +9,11 @@ Students can open the PDFs directly:
 - [Git and GitHub slides](slides_no_solutions/01-github-desktop.pdf)
 - [Git and GitHub slides with solutions](slides_solutions/01-github-desktop.pdf)
 
+Students can also download the self-contained HTML files and open them directly in a browser:
+
+- [Git and GitHub slides as HTML](slides_no_solutions/01-github-desktop.html)
+- [Git and GitHub slides with solutions as HTML](slides_solutions/01-github-desktop.html)
+
 ## Requirements
 
 The following tools are only needed to edit or export the slides:
@@ -71,15 +76,15 @@ src/slides/
 
 Each file is an independent Slidev deck with its own frontmatter and slides.
 
-## Export PDFs
+## Export student artifacts
 
 ```sh
 npm run build
 ```
 
-This temporarily generates the learner Markdown and exports every deck as a PDF:
+This temporarily generates the learner Markdown and exports every deck as a PDF and static HTML:
 
-- `slides_solutions/` contains PDFs with solutions.
-- `slides_no_solutions/` contains PDFs without solutions.
+- `slides_solutions/` contains PDFs and HTML with solutions.
+- `slides_no_solutions/` contains PDFs and HTML without solutions.
 
-These two folders are for student artifacts only. Do not put Markdown, images, or development files in them.
+Each HTML deck is one self-contained file that works offline. These two root folders are for generated student artifacts only. Do not put source Markdown or development files in them.
