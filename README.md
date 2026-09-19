@@ -10,9 +10,9 @@
 
 Choose a lesson below. These versions do not contain solutions.
 
-| Lesson | PDF |
-| --- | --- |
-| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | [Download PDF](slides_no_solutions/01-github-desktop.pdf?raw=1) |
+| Lesson | Description | PDF |
+| --- | --- | --- |
+| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Download PDF](slides_no_solutions/01-github-desktop.pdf?raw=1) |
 
 The interactive version opens directly in your browser.
 
@@ -20,9 +20,9 @@ The interactive version opens directly in your browser.
 
 These versions include exercise solutions:
 
-| Lesson | PDF |
-| --- | --- |
-| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Download PDF](slides_solutions/01-github-desktop.pdf?raw=1) |
+| Lesson | Description | PDF |
+| --- | --- | --- |
+| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Download PDF](slides_solutions/01-github-desktop.pdf?raw=1) |
 
 ## Requirements
 
