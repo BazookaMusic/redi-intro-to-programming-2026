@@ -44,7 +44,7 @@ The answer goes here.
 - Put styles reused by multiple slides in `themes/clio/styles/clio.css`. Keep a slide-local `<style>` block only for genuinely one-off layout rules.
 - Preserve the existing visual language, CSS variables, spacing, and local formatting style.
 - Use semantic HTML and meaningful image alt text.
-- Keep slide content within the fixed canvas: avoid overflow, overly small text, and dense paragraphs.
+- Keep slide content comfortably inside the fixed canvas. Leave generous space below content so browser controls or the macOS Dock cannot cover it in fullscreen; avoid overflow, overly small text, and dense paragraphs.
 - Avoid unrelated refactors and do not edit generated dependencies or build artifacts.
 
 ## Validation

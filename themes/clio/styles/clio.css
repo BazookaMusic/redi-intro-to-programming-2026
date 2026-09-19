@@ -47,7 +47,7 @@
 }
 
 .slidev-layout p,
-.slidev-layout h1 + p {
+.slidev-layout h1+p {
     opacity: 1;
 }
 
@@ -57,19 +57,25 @@
     text-decoration-color: var(--lesson-blue);
 }
 
-.lesson-overview-slide h1 {
-    margin-bottom: 0.6rem;
+.slidev-layout.lesson-overview-slide {
+    display: block;
+}
+
+.slidev-layout.lesson-overview-slide h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .lesson-overview-intro {
     color: var(--lesson-muted);
     font-size: 1rem;
-    margin: 0 0 1.4rem;
+    margin: 0 0 0.9rem;
 }
 
 .lesson-overview-path {
     display: grid;
-    gap: 0.55rem;
+    gap: 0.6rem 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .lesson-overview-path section {
@@ -78,6 +84,7 @@
     display: grid;
     gap: 0.9rem;
     grid-template-columns: 2rem 1fr;
+    min-width: 0;
     padding: 0.45rem 0.25rem;
 }
 
@@ -112,7 +119,7 @@
     background: rgb(192 132 252 / 16%);
     border-left: 4px solid var(--lesson-blue);
     font-size: 0.85rem;
-    margin: 1rem 0 0;
+    margin: 0.75rem 0 0;
     padding: 0.55rem 0.7rem;
 }
 
@@ -174,7 +181,7 @@
 }
 
 .knowledge-questions b,
-.knowledge-solutions > section > b {
+.knowledge-solutions>section>b {
     align-items: center;
     background: var(--lesson-blue);
     border-radius: 50%;
@@ -219,7 +226,7 @@
 }
 
 .git-command-sequence-slide {
-    padding: 1.25rem 2rem;
+    padding: 0.8rem 2rem;
 }
 
 .git-command-sequence-slide h1 {
@@ -236,7 +243,7 @@
 
 .git-command-panels {
     display: grid;
-    gap: 0.55rem;
+    gap: 0.3rem;
     grid-template-columns: 1fr;
 }
 
@@ -249,14 +256,14 @@
     border: 1px solid var(--lesson-border);
     border-radius: 6px;
     display: grid;
-    gap: 0.3rem 0.55rem;
+    gap: 0.25rem 0.5rem;
     grid-template-areas:
         "title title"
         "command output"
         "meaning meaning";
     grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
     min-width: 0;
-    padding: 0.55rem 0.65rem;
+    padding: 0.3rem 0.55rem;
 }
 
 .git-command-panels h2 {
@@ -271,8 +278,8 @@
 }
 
 .git-command-panels pre {
-    font-size: 0.56rem;
-    line-height: 1.28;
+    font-size: 0.54rem;
+    line-height: 1.2;
     margin: 0;
 }
 
@@ -283,7 +290,7 @@
     grid-area: output;
     margin: 0;
     overflow: hidden;
-    padding: 0.4rem 0.5rem;
+    padding: 0.3rem 0.45rem;
     white-space: pre-wrap;
 }
 
@@ -295,15 +302,15 @@
     color: #7ee787;
 }
 
-.git-command-panels section > p {
+.git-command-panels section>p {
     background: rgb(192 132 252 / 16%);
     border-left: 4px solid var(--lesson-blue);
     color: #ffffff;
     font-size: 0.76rem;
     grid-area: meaning;
     line-height: 1.35;
-    margin: 0.1rem 0 0;
-    padding: 0.4rem 0.55rem;
+    margin: 0.05rem 0 0;
+    padding: 0.25rem 0.5rem;
 }
 
 .git-single-file-option {
@@ -316,6 +323,11 @@
 
 .git-stage-slide {
     padding-block: 0.75rem;
+}
+
+.git-stage-slide .command-output {
+    font-size: 0.52rem;
+    line-height: 1.15;
 }
 
 .git-stage-slide h1 {
@@ -333,26 +345,27 @@
 
 .git-stage-slide .git-command-panels section {
     gap: 0.2rem 0.45rem;
-    padding: 0.4rem 0.55rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .git-stage-slide .git-command-panels h2 {
     margin-bottom: 0.1rem;
 }
 
-.git-stage-slide .git-command-panels section > p {
+.git-stage-slide .git-command-panels section>p {
     font-size: 0.7rem;
     line-height: 1.25;
-    padding: 0.3rem 0.45rem;
+    padding: 0.15rem 0.4rem;
 }
 
 .git-full-sequence-slide .slidev-code-wrapper {
-    margin-top: 0.65rem;
+    margin-top: 0.2rem;
 }
 
-.git-full-sequence-slide pre {
-    font-size: 0.72rem;
-    line-height: 1.35;
+.git-full-sequence-slide {
+    --slidev-code-font-size: 0.6rem;
+    --slidev-code-line-height: 1.18;
+    padding-top: 0.25rem;
 }
 
 .git-clone-workflow {
@@ -429,8 +442,8 @@
     white-space: nowrap;
 }
 
-.git-pull-followup > span,
-.git-pull-followup > span > strong {
+.git-pull-followup>span,
+.git-pull-followup>span>strong {
     display: block;
 }
 
@@ -526,6 +539,14 @@
     margin-top: 4.25rem;
 }
 
+.slidev-layout.repository-cover-slide {
+    display: block;
+}
+
+.repository-cover-slide .route {
+    margin-top: 2.5rem;
+}
+
 .route span,
 .recap span {
     align-items: center;
@@ -558,16 +579,22 @@
     text-align: left;
 }
 
+.slidev-layout.git-intro-slide,
+.slidev-layout.finish-slide {
+    display: block;
+    padding-top: 0.75rem;
+}
+
 .places {
     border-bottom: 1px solid var(--lesson-border);
     border-top: 1px solid var(--lesson-border);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .places>div {
-    padding: 1.4rem 2rem 1.4rem 0;
+    padding: 1.2rem 2rem 1.2rem 0;
 }
 
 .places>div+div {
@@ -596,6 +623,10 @@
     padding: 2rem 3rem;
 }
 
+.foundation-slide.files-slide {
+    padding-top: 0.75rem;
+}
+
 .foundation-slide h1 {
     font-size: 2.2rem;
     margin: 0.3rem 0 1.1rem;
@@ -618,8 +649,8 @@
     background: var(--lesson-panel);
     border: 1px solid var(--lesson-border);
     border-radius: 6px;
-    min-height: 13rem;
-    padding: 1.45rem;
+    min-height: 11rem;
+    padding: 1.2rem;
 }
 
 .object-label {
@@ -659,7 +690,7 @@
     display: grid;
     gap: 2.25rem;
     grid-template-columns: minmax(13rem, 0.7fr) minmax(0, 1.7fr);
-    height: 22.75rem;
+    height: 18rem;
 }
 
 .step-grid img {
@@ -763,9 +794,9 @@
     display: grid;
     gap: 0.7rem;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
-    height: 9.5rem;
+    height: 8rem;
     overflow: hidden;
-    padding: 0.65rem;
+    padding: 0.55rem;
 }
 
 .exercise-copy {

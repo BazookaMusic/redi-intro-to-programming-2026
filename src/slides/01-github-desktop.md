@@ -596,14 +596,14 @@ class: foundation-slide create-file-walkthrough-slide
 .create-file-shot {
   border: 1px solid var(--lesson-border);
   border-radius: 6px;
-  height: 8.5rem;
+  height: 7rem;
   overflow: hidden;
   width: 100%;
 }
 
 .open-folder-step .create-file-shot,
 .choose-folder-step .create-file-shot {
-  height: 9.5rem;
+  height: 8rem;
 }
 
 .create-file-shot img {
@@ -628,49 +628,8 @@ class: foundation-slide create-file-walkthrough-slide
 </style>
 
 ---
-class: knowledge-check-slide
----
-
-<div class="eyebrow">Exercise · Prerequisites</div>
-
-# Read this folder structure
-
-<p class="knowledge-check-intro">Study the tree, then answer the four questions.</p>
-
-<div class="knowledge-check-layout">
-<pre class="knowledge-check-tree">my-project/
-|-- hello.py
-|-- notes.txt
-`-- images/
-    `-- logo.png</pre>
-
-<ol class="knowledge-questions">
-  <li><b>1</b><span>Name the <strong>three files</strong>.</span></li>
-  <li><b>2</b><span>Name the <strong>two folders</strong>.</span></li>
-  <li><b>3</b><span>What is the file extension of <code>hello.py</code>?</span></li>
-  <li><b>4</b><span>What path leads from <code>my-project</code> to <code>logo.png</code>?</span></li>
-</ol>
-</div>
-
-<!-- solution:start -->
----
-class: knowledge-check-slide knowledge-solution-slide
----
-
-<div class="eyebrow">Solution · Prerequisites</div>
-
-# Files and folders
-
-<div class="knowledge-solutions">
-  <section><b>1</b><span><strong>Files</strong><code>hello.py</code>, <code>notes.txt</code>, <code>logo.png</code></span></section>
-  <section><b>2</b><span><strong>Folders</strong><code>my-project</code> and <code>images</code></span></section>
-  <section><b>3</b><span><strong>File extension</strong><code>.py</code></span></section>
-  <section><b>4</b><span><strong>Path</strong><code>my-project/images/logo.png</code></span></section>
-</div>
-<!-- solution:end -->
-
----
 layout: cover
+class: repository-cover-slide
 ---
 
 <div class="eyebrow">GitHub Desktop · Step by step</div>
@@ -881,40 +840,6 @@ class: commits-tour-slide
 </style>
 
 ---
-class: knowledge-check-slide
----
-
-<div class="eyebrow">Exercise · Git and GitHub</div>
-
-# Choose the right word
-
-<p class="knowledge-check-intro">Use each answer once: <strong>Git</strong>, <strong>GitHub</strong>, <strong>repository</strong>, <strong>commit</strong>.</p>
-
-<ol class="knowledge-questions knowledge-questions-wide">
-  <li><b>1</b><span>The tool that records changes on your computer is ______.</span></li>
-  <li><b>2</b><span>A project folder that Git tracks is a ______.</span></li>
-  <li><b>3</b><span>A saved point in the project’s history is a ______.</span></li>
-  <li><b>4</b><span>The website where you publish and share Git projects is ______.</span></li>
-</ol>
-
-<!-- solution:start -->
----
-class: knowledge-check-slide knowledge-solution-slide
----
-
-<div class="eyebrow">Solution · Git and GitHub</div>
-
-# The four key words
-
-<div class="knowledge-solutions">
-  <section><b>1</b><span><strong>Git</strong>records changes on your computer.</span></section>
-  <section><b>2</b><span><strong>Repository</strong>is the project folder Git tracks.</span></section>
-  <section><b>3</b><span><strong>Commit</strong>is a saved point in the project’s history.</span></section>
-  <section><b>4</b><span><strong>GitHub</strong>stores and shares Git projects online.</span></section>
-</div>
-<!-- solution:end -->
-
----
 class: step-slide
 ---
 
@@ -955,7 +880,7 @@ class: step-slide
   align-items: center;
   display: flex;
   gap: 2rem;
-  height: 22.75rem;
+  height: 18rem;
 }
 
 .repository-details-layout .step-copy {
@@ -1593,7 +1518,7 @@ class: finish-slide
   display: grid;
   gap: 2.25rem;
   grid-template-columns: minmax(13rem, 0.7fr) minmax(0, 1.7fr);
-  height: 22.75rem;
+  height: 18rem;
 }
 
 .step-grid img {
@@ -1860,6 +1785,103 @@ class: create-repository-file-slide
 </style>
 
 ---
+class: foundation-slide terminal-intro-slide
+---
+
+<div class="eyebrow">Before typing commands</div>
+
+# What is the terminal?
+
+<p class="foundation-intro">The terminal is an app where you <strong>write commands to run programs</strong> and control your computer.</p>
+
+<div class="definition-grid">
+<section class="definition-panel">
+<span class="object-label">Run a program</span>
+<h2>Write a command</h2>
+<p>Windows:</p>
+
+```bash
+python hello.py
+```
+
+<p>macOS:</p>
+
+```bash
+python3 hello.py
+```
+
+<p>Press <strong>Enter</strong>. The terminal returns text called <strong>output</strong>, describing what the command did or showing the program’s result.</p>
+</section>
+<section class="definition-panel">
+<span class="object-label">Working folder</span>
+<h2>Commands run in one folder</h2>
+<p>The terminal has a <strong>working folder</strong>: the folder where it currently runs commands.</p>
+<p><code>$HOME</code> means your current user’s home folder.</p>
+<p>Go to a specific folder on macOS:</p>
+
+```bash
+cd "$HOME/Documents/my-project"
+```
+
+<p>On Windows PowerShell:</p>
+
+```powershell
+cd "$HOME\Documents\my-project"
+```
+
+<p>Go up to the parent folder:</p>
+
+```bash
+cd ..
+```
+
+</section>
+</div>
+
+<p class="foundation-note"><strong>Open it:</strong> On Windows, search for <strong>Terminal</strong> or <strong>PowerShell</strong>. On macOS, open <strong>Applications → Utilities → Terminal</strong>. In VS Code, <strong>Terminal → New Terminal</strong> works the same on both.</p>
+
+<style>
+.terminal-intro-slide {
+  padding-block: 0.6rem;
+}
+
+.terminal-intro-slide h1 {
+  font-size: 1.85rem;
+  margin: 0.1rem 0 0.35rem;
+}
+
+.terminal-intro-slide .foundation-intro {
+  font-size: 0.9rem;
+  margin-bottom: 0.45rem;
+}
+
+.terminal-intro-slide .definition-panel {
+  min-height: 0;
+  padding: 0.65rem;
+}
+
+.terminal-intro-slide .definition-panel p {
+  font-size: 0.82rem;
+  line-height: 1.3;
+  margin: 0.1rem 0;
+}
+
+.terminal-intro-slide .slidev-code-wrapper {
+  margin: 0.08rem 0;
+}
+
+.terminal-intro-slide .slidev-code {
+  --slidev-code-font-size: 0.6rem;
+  --slidev-code-line-height: 1.25;
+}
+
+.terminal-intro-slide .foundation-note {
+  font-size: 0.76rem;
+  margin-top: 0.45rem;
+}
+</style>
+
+---
 class: open-terminal-slide
 ---
 
@@ -1939,7 +1961,7 @@ class: open-terminal-slide
   border: 1px solid var(--lesson-border);
   border-radius: 4px;
   display: block;
-  height: 15rem;
+  height: 13rem;
   object-fit: cover;
   object-position: top left;
   width: 100%;
@@ -1980,7 +2002,6 @@ git status
 
 <pre class="command-output">On branch main
 Your branch is up to date with 'origin/main'.
-
 Untracked files:
   (use "git add &lt;file&gt;..." to include in what will be committed)
   <span class="git-untracked">hello.py</span>
@@ -2220,3 +2241,166 @@ git status
 # 6. Send the commit to GitHub
 git push
 ```
+
+---
+class: knowledge-check-slide
+---
+
+<div class="eyebrow">Take-home exercise · Prerequisites</div>
+
+# Read this folder structure
+
+<p class="knowledge-check-intro">Study the tree, then answer the four questions.</p>
+
+<div class="knowledge-check-layout">
+<pre class="knowledge-check-tree">my-project/
+|-- hello.py
+|-- notes.txt
+`-- images/
+    `-- logo.png</pre>
+
+<ol class="knowledge-questions">
+  <li><b>1</b><span>Name the <strong>three files</strong>.</span></li>
+  <li><b>2</b><span>Name the <strong>two folders</strong>.</span></li>
+  <li><b>3</b><span>What is the file extension of <code>hello.py</code>?</span></li>
+  <li><b>4</b><span>What path leads from <code>my-project</code> to <code>logo.png</code>?</span></li>
+</ol>
+</div>
+
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+<div class="eyebrow">Solution · Prerequisites</div>
+
+# Files and folders
+
+<div class="knowledge-solutions">
+  <section><b>1</b><span><strong>Files</strong><code>hello.py</code>, <code>notes.txt</code>, <code>logo.png</code></span></section>
+  <section><b>2</b><span><strong>Folders</strong><code>my-project</code> and <code>images</code></span></section>
+  <section><b>3</b><span><strong>File extension</strong><code>.py</code></span></section>
+  <section><b>4</b><span><strong>Path</strong><code>my-project/images/logo.png</code></span></section>
+</div>
+<!-- solution:end -->
+
+---
+class: git-command-sequence-slide git-exercise-slide
+---
+
+<div class="eyebrow">Take-home exercise · Explore a Python project</div>
+
+# Clone and play a Python game
+
+<div class="git-exercise-layout">
+  <div class="git-exercise-prep">
+    <div class="git-exercise-step"><b>1</b><span><strong>Open a new VS Code window</strong>Choose <em>File → New Window</em>.</span></div>
+    <div class="git-exercise-step"><b>2</b><span><strong>Open the terminal</strong>Choose <em>Terminal → New Terminal</em>. Type and run every command shown on this slide there.</span></div>
+    <div class="git-exercise-step"><b>3</b><span><strong>Clone and explore</strong>Open the new <code>PythonStdioGames</code> folder and find <code>bagels.py</code>.</span></div>
+    <div class="git-exercise-finish"><strong>Finished?</strong> Play Bagels: guess the secret three-digit number using the clues.</div>
+  </div>
+
+  <div class="git-exercise-commands">
+
+In the terminal, run:
+
+```bash
+git clone https://github.com/asweigart/PythonStdioGames.git
+```
+
+Open the new repository folder in VS Code. Open its terminal, then run:
+
+```bash
+git status
+```
+
+Run the game on Windows:
+
+```bash
+python src/gamesbyexample/bagels.py
+```
+
+On macOS:
+
+```bash
+python3 src/gamesbyexample/bagels.py
+```
+
+  </div>
+</div>
+
+---
+class: git-command-sequence-slide git-exercise-slide
+---
+
+<div class="eyebrow">Advanced take-home exercise · Terminal</div>
+
+# Build folders using commands
+
+<div class="git-exercise-layout">
+  <div class="git-exercise-prep">
+    <div class="git-exercise-step"><b>1</b><span><strong>Go home</strong>Use <code>cd</code> to move to your home folder.</span></div>
+    <div class="git-exercise-step"><b>2</b><span><strong>Create and enter a folder</strong>Make <code>terminal-practice</code>, then move into it.</span></div>
+    <div class="git-exercise-step"><b>3</b><span><strong>Build the structure</strong>Create the folders shown on the right.</span></div>
+    <div class="git-exercise-step"><b>4</b><span><strong>Check your work</strong>Use <code>ls</code> after each step.</span></div>
+    <div class="git-exercise-finish"><strong>Finished?</strong> Your final <code>ls</code> shows <code>projects</code> and <code>notes</code>.</div>
+  </div>
+
+  <div class="git-exercise-commands">
+
+Build this structure:
+
+```text
+terminal-practice/
+|-- notes/
+`-- projects/
+    `-- python/
+```
+
+Navigate between folders:
+
+```bash
+cd "$HOME"
+cd folder-name
+cd ..
+```
+
+<strong>Hint:</strong> Replace <code>folder-name</code> with the folder you want to create or enter.
+
+```bash
+mkdir folder-name
+ls
+```
+
+<code>mkdir</code> creates a folder. <code>ls</code> lists what is in your working folder.
+
+  </div>
+</div>
+
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+<div class="eyebrow">Solution · Advanced terminal exercise</div>
+
+# Build folders using commands
+
+Run one command at a time:
+
+```bash
+cd "$HOME"
+mkdir terminal-practice
+cd terminal-practice
+mkdir notes
+mkdir projects
+ls
+cd projects
+mkdir python
+ls
+cd ..
+ls
+```
+
+The final output should include <code>notes</code> and <code>projects</code>.
+<!-- solution:end -->
