@@ -2330,7 +2330,7 @@ python3 src/gamesbyexample/bagels.py
 </div>
 
 ---
-class: git-command-sequence-slide git-exercise-slide
+class: git-command-sequence-slide git-exercise-slide advanced-terminal-exercise-slide
 ---
 
 <div class="eyebrow">Advanced take-home exercise · Terminal</div>
@@ -2376,6 +2376,48 @@ ls
 
   </div>
 </div>
+
+<style>
+.advanced-terminal-exercise-slide {
+  padding-block: 0.8rem;
+}
+
+.advanced-terminal-exercise-slide h1 {
+  margin-bottom: 0.45rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-layout {
+  gap: 0.75rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-prep {
+  gap: 0.35rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-step {
+  font-size: 0.7rem;
+  padding-block: 0.25rem 0.4rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-finish {
+  font-size: 0.7rem;
+  padding-block: 0.4rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-commands {
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-commands p {
+  margin-block: 0.3rem;
+}
+
+.advanced-terminal-exercise-slide .git-exercise-commands pre {
+  font-size: 0.62rem;
+  line-height: 1.25;
+}
+</style>
 
 <!-- solution:start -->
 ---
