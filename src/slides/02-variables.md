@@ -35,7 +35,7 @@ class: foundation-slide
 
 # print()
 
-<p class="foundation-intro"><code>print()</code> tells Python to display something on the screen. It is the first command you will use in almost every program.</p>
+<p class="foundation-intro"><code>print()</code> displays something on the screen. You will use it in almost every program.</p>
 
 <div class="definition-grid">
   <section class="definition-panel">
@@ -103,6 +103,43 @@ I am 25 years old
   </section>
 </div>
 
+<style>
+.python-code-slide {
+  padding: 0.8rem 2.4rem;
+}
+
+.python-code-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.55rem;
+}
+
+.code-and-output {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.code-panel .slidev-code-wrapper {
+  margin: 0;
+}
+
+.output-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.output-panel p {
+  color: var(--lesson-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0.2rem 0 0.5rem;
+}
+</style>
+
 ---
 class: foundation-slide
 ---
@@ -158,7 +195,7 @@ print("Sara")
 print("Sara")
 ```
 
-    <p class="var-compare-note">You repeat the value every time. If it changes, you must update every single occurrence.</p>
+<p class="var-compare-note">You repeat the value every time. If it changes, you must update every single occurrence.</p>
   </section>
   <section class="var-compare-panel var-compare-better">
     <span class="object-label">With a variable</span>
@@ -171,11 +208,42 @@ print(name)
 print(name)
 ```
 
-    <p class="var-compare-note">Change the value in one place — it updates everywhere automatically.</p>
+<p class="var-compare-note">Change the value in one place — it updates everywhere automatically.</p>
   </section>
 </div>
 
 <p class="foundation-note">Think of a variable as a sticky note: you write a label on it and stick a value underneath. Any time you need the value, just use the label.</p>
+
+<style>
+.var-compare {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.5rem;
+}
+
+.var-compare-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+}
+
+.var-compare-better {
+  border-color: var(--lesson-blue);
+}
+
+.var-compare-panel .slidev-code-wrapper {
+  margin: 0.4rem 0;
+}
+
+.var-compare-note {
+  color: var(--lesson-muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0;
+}
+</style>
 
 ---
 class: foundation-slide
@@ -198,8 +266,6 @@ age        = 25        # whole number
 height     = 1.68      # decimal number
 is_student = True      # True or False
 
-# Use them
-print(name)            # Sara
 print(age)             # 25
 
 # Update a value any time
@@ -221,6 +287,22 @@ print(age)             # 26
     </div>
   </section>
 </div>
+
+<style>
+.name-rules p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.25rem 0;
+}
+
+.rule-ok {
+  color: var(--lesson-green) !important;
+}
+
+.rule-bad {
+  color: #ff9a9a !important;
+}
+</style>
 
 ---
 class: foundation-slide
@@ -283,6 +365,37 @@ is_raining  = True
   </section>
 </div>
 
+<style>
+.type-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.type-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.9rem;
+}
+
+.type-panel h2 {
+  font-size: 1.05rem;
+  margin: 0.3rem 0 0.35rem;
+}
+
+.type-panel p {
+  color: var(--lesson-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
+.type-panel .slidev-code-wrapper {
+  margin: 0;
+}
+</style>
+
 ---
 class: python-code-slide
 ---
@@ -322,6 +435,62 @@ print(len(""))       # 0  — empty string
     <p class="output-note">Both are <strong>built-in functions</strong> — they come with Python and are always available.</p>
   </section>
 </div>
+
+<style>
+.python-code-slide {
+  padding: 0.8rem 2.4rem;
+}
+
+.python-code-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.55rem;
+}
+
+.code-and-output {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.code-panel .slidev-code-wrapper {
+  margin: 0;
+}
+
+.output-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.output-panel h2 {
+  font-size: 0.95rem;
+  margin: 0.7rem 0 0.2rem;
+}
+
+.output-panel h2:first-of-type {
+  margin-top: 0;
+}
+
+.output-panel p {
+  color: var(--lesson-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.output-note {
+  background: rgb(192 132 252 / 16%);
+  border-left: 3px solid var(--lesson-blue);
+  color: var(--lesson-ink) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  margin-top: 0.6rem !important;
+  padding: 0.3rem 0.5rem;
+}
+</style>
 
 ---
 class: python-code-slide
@@ -372,6 +541,62 @@ y = int(3.9)    # 3  ← decimal is cut, not rounded!
   </section>
 </div>
 
+<style>
+.python-code-slide {
+  padding: 0.8rem 2.4rem;
+}
+
+.python-code-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.55rem;
+}
+
+.code-and-output {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.code-panel .slidev-code-wrapper {
+  margin: 0;
+}
+
+.output-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.converter-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.converter {
+  background: rgb(192 132 252 / 12%);
+  border-left: 3px solid var(--lesson-blue);
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.converter code {
+  color: var(--lesson-blue);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.converter span {
+  color: var(--lesson-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+</style>
+
 ---
 class: foundation-slide
 ---
@@ -391,7 +616,7 @@ age = 25
 print("I am " + age)
 ```
 
-    <p class="error-fix">Fix: convert with <code>str(age)</code> or use a comma instead of <code>+</code>:</p>
+<p class="error-fix">Fix: convert with <code>str(age)</code> or use a comma instead of <code>+</code>:</p>
 
 ```python
 print("I am " + str(age))  # ✓
@@ -408,7 +633,7 @@ print("I am", age)          # ✓ comma works too
 age = int("twenty five")
 ```
 
-    <p class="error-fix">Fix: <code>int()</code> and <code>float()</code> only work on numeric strings:</p>
+<p class="error-fix">Fix: <code>int()</code> and <code>float()</code> only work on numeric strings:</p>
 
 ```python
 age = int("25")     # ✓  "25" is a valid number
@@ -418,6 +643,41 @@ age = int("25")     # ✓  "25" is a valid number
 </div>
 
 <p class="foundation-note"><strong>TypeError</strong> — check your types and add a conversion. <strong>ValueError</strong> — check what you are trying to convert.</p>
+
+<style>
+.error-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.error-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+}
+
+.error-panel .slidev-code-wrapper {
+  margin: 0.4rem 0;
+}
+
+.error-panel h2 {
+  font-size: 1rem;
+  margin: 0.3rem 0 0.4rem;
+}
+
+.error-label {
+  color: #ff9a9a !important;
+}
+
+.error-fix {
+  color: var(--lesson-muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0.3rem 0 0.15rem;
+}
+</style>
 
 ---
 class: python-code-slide
@@ -447,6 +707,7 @@ print("Double:", price * 2)
   </section>
   <section class="output-panel">
     <span class="object-label">What happens</span>
+
 ```text
 What is your name? Sara
 Hello, Sara!
@@ -459,6 +720,46 @@ Double: 9.98
 <p class="output-note"><code>input()</code> <strong>always</strong> returns a string — even when the user types a number. Wrap it with <code>int()</code> or <code>float()</code> if you need to do maths.</p>
   </section>
 </div>
+
+<style>
+.python-code-slide {
+  padding: 0.8rem 2.4rem;
+}
+
+.python-code-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0;
+  margin: 0.15rem 0 0.55rem;
+}
+
+.code-and-output {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.code-panel .slidev-code-wrapper {
+  margin: 0;
+}
+
+.output-panel {
+  background: var(--lesson-panel);
+  border: 1px solid var(--lesson-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.output-note {
+  background: rgb(192 132 252 / 16%);
+  border-left: 3px solid var(--lesson-blue);
+  color: var(--lesson-ink) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  margin-top: 0.6rem !important;
+  padding: 0.3rem 0.5rem;
+}
+</style>
 
 ---
 class: exercise-slide
@@ -505,6 +806,61 @@ is_student =
   </div>
 </div>
 
+<style>
+.py-exercise-layout {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.py-exercise-steps {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.py-exercise-step {
+  align-items: start;
+  border-bottom: 1px solid var(--lesson-border);
+  display: grid;
+  font-size: 0.72rem;
+  gap: 0.5rem;
+  grid-template-columns: 1.5rem 1fr;
+  padding: 0.25rem 0.15rem 0.4rem;
+}
+
+.py-exercise-step b {
+  align-items: center;
+  background: var(--lesson-blue);
+  border-radius: 50%;
+  color: #17112f;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+
+.py-exercise-step strong,
+.py-exercise-step span {
+  display: block;
+}
+
+.py-exercise-done {
+  background: rgb(192 132 252 / 16%);
+  border-left: 4px solid var(--lesson-blue);
+  font-size: 0.72rem;
+  padding: 0.45rem 0.6rem;
+}
+
+.py-exercise-starter .slidev-code-wrapper {
+  margin: 0;
+}
+
+.py-exercise-starter pre {
+  font-size: 0.6rem;
+  line-height: 1.3;
+}
+</style>
+
 <!-- solution:start -->
 ---
 class: knowledge-check-slide knowledge-solution-slide
@@ -513,6 +869,9 @@ class: knowledge-check-slide knowledge-solution-slide
 <div class="eyebrow">Solution · About Me</div>
 
 # About Me — solution
+
+<div class="solution-code-columns">
+  <section>
 
 ```python
 # 1. Variables
@@ -528,7 +887,12 @@ print(age)            # 25
 print(city)           # Berlin
 print(language)       # Arabic
 print(is_student)     # True
+```
 
+  </section>
+  <section>
+
+```python
 # 3. Types
 print(type(name))     # <class 'str'>
 print(type(age))      # <class 'int'>
@@ -541,6 +905,21 @@ print(age)            # 26
 # 5. Name length
 print(len(name))      # 4
 ```
+
+  </section>
+</div>
+
+<style>
+.solution-code-columns {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.solution-code-columns .slidev-code-wrapper {
+  margin: 0;
+}
+</style>
 <!-- solution:end -->
 
 ---
@@ -599,6 +978,24 @@ class: knowledge-check-slide homework-slide
   <li><b>7</b><span><strong>Interactive profile</strong> — use <code>input()</code> to ask for a name and age. Print a sentence using both. Bonus: print how many letters the name has.</span></li>
 </ol>
 
+<style>
+.homework-slide {
+  padding: 0.9rem 2.4rem;
+}
+
+.homework-slide h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 1.85rem;
+  letter-spacing: 0;
+  margin: 0.1rem 0 0.45rem;
+}
+
+.homework-slide .knowledge-questions li {
+  font-size: 0.78rem;
+  padding: 0.5rem 0.3rem;
+}
+</style>
+
 ---
 layout: center
 class: finish-slide
@@ -618,272 +1015,6 @@ class: finish-slide
 <p class="lead">Next lesson: arithmetic, order of operations, and building a calculator with user input.</p>
 
 <style>
-.python-code-slide {
-  padding: 0.8rem 2.4rem;
-}
-
-.python-code-slide h1 {
-  font-family: system-ui, sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0;
-  margin: 0.15rem 0 0.55rem;
-}
-
-.code-and-output {
-  display: grid;
-  gap: 0.85rem;
-  grid-template-columns: 1.15fr 0.85fr;
-}
-
-.code-panel .slidev-code-wrapper {
-  margin: 0;
-}
-
-.output-panel {
-  background: var(--lesson-panel);
-  border: 1px solid var(--lesson-border);
-  border-radius: 6px;
-  padding: 0.85rem 1rem;
-}
-
-.output-panel h2 {
-  font-size: 0.95rem;
-  margin: 0.7rem 0 0.2rem;
-}
-
-.output-panel h2:first-of-type {
-  margin-top: 0;
-}
-
-.output-panel p {
-  color: var(--lesson-muted);
-  font-size: 0.82rem;
-  line-height: 1.4;
-  margin: 0.2rem 0 0.5rem;
-}
-
-.output-note {
-  background: rgb(192 132 252 / 16%);
-  border-left: 3px solid var(--lesson-blue);
-  color: var(--lesson-ink) !important;
-  font-size: 0.78rem !important;
-  line-height: 1.35 !important;
-  margin-top: 0.6rem !important;
-  padding: 0.3rem 0.5rem;
-}
-
-.shell-output {
-  background: #0d1117;
-  border: 1px solid var(--lesson-border);
-  border-radius: 4px;
-  color: #d8dee9;
-  font-size: 0.75rem;
-  line-height: 1.55;
-  margin: 0 0 0.5rem;
-  padding: 0.6rem 0.8rem;
-  white-space: pre-wrap;
-}
-
-.var-compare {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 0.5rem;
-}
-
-.var-compare-panel {
-  background: var(--lesson-panel);
-  border: 1px solid var(--lesson-border);
-  border-radius: 6px;
-  padding: 0.9rem 1rem;
-}
-
-.var-compare-better {
-  border-color: var(--lesson-blue);
-}
-
-.var-compare-panel .slidev-code-wrapper {
-  margin: 0.4rem 0;
-}
-
-.var-compare-note {
-  color: var(--lesson-muted);
-  font-size: 0.8rem;
-  line-height: 1.35;
-  margin: 0;
-}
-
-.name-rules p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin: 0.25rem 0;
-}
-
-.rule-ok {
-  color: var(--lesson-green) !important;
-}
-
-.rule-bad {
-  color: #ff9a9a !important;
-}
-
-.type-grid {
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.type-panel {
-  background: var(--lesson-panel);
-  border: 1px solid var(--lesson-border);
-  border-radius: 6px;
-  padding: 0.9rem;
-}
-
-.type-panel h2 {
-  font-size: 1.05rem;
-  margin: 0.3rem 0 0.35rem;
-}
-
-.type-panel p {
-  color: var(--lesson-muted);
-  font-size: 0.78rem;
-  line-height: 1.35;
-  margin: 0 0 0.5rem;
-}
-
-.type-panel .slidev-code-wrapper {
-  margin: 0;
-}
-
-.converter-list {
-  display: grid;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.converter {
-  background: rgb(192 132 252 / 12%);
-  border-left: 3px solid var(--lesson-blue);
-  display: grid;
-  gap: 0.35rem;
-  padding: 0.4rem 0.6rem;
-}
-
-.converter code {
-  color: var(--lesson-blue);
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.converter span {
-  color: var(--lesson-muted);
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.error-grid {
-  display: grid;
-  gap: 0.85rem;
-  grid-template-columns: 1fr 1fr;
-}
-
-.error-panel {
-  background: var(--lesson-panel);
-  border: 1px solid var(--lesson-border);
-  border-radius: 6px;
-  padding: 0.9rem 1rem;
-}
-
-.error-panel .slidev-code-wrapper {
-  margin: 0.4rem 0;
-}
-
-.error-panel h2 {
-  font-size: 1rem;
-  margin: 0.3rem 0 0.4rem;
-}
-
-.error-label {
-  color: #ff9a9a !important;
-}
-
-.error-fix {
-  color: var(--lesson-muted);
-  font-size: 0.8rem;
-  line-height: 1.35;
-  margin: 0.3rem 0 0.15rem;
-}
-
-.py-exercise-layout {
-  display: grid;
-  gap: 0.85rem;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-}
-
-.py-exercise-steps {
-  display: grid;
-  gap: 0.4rem;
-}
-
-.py-exercise-step {
-  align-items: start;
-  border-bottom: 1px solid var(--lesson-border);
-  display: grid;
-  font-size: 0.72rem;
-  gap: 0.5rem;
-  grid-template-columns: 1.5rem 1fr;
-  padding: 0.25rem 0.15rem 0.4rem;
-}
-
-.py-exercise-step b {
-  align-items: center;
-  background: var(--lesson-blue);
-  border-radius: 50%;
-  color: #17112f;
-  display: inline-flex;
-  height: 1.5rem;
-  justify-content: center;
-  width: 1.5rem;
-}
-
-.py-exercise-step strong,
-.py-exercise-step span {
-  display: block;
-}
-
-.py-exercise-done {
-  background: rgb(192 132 252 / 16%);
-  border-left: 4px solid var(--lesson-blue);
-  font-size: 0.72rem;
-  padding: 0.45rem 0.6rem;
-}
-
-.py-exercise-starter .slidev-code-wrapper {
-  margin: 0;
-}
-
-.py-exercise-starter pre {
-  font-size: 0.6rem;
-  line-height: 1.3;
-}
-
-.homework-slide {
-  padding: 0.9rem 2.4rem;
-}
-
-.homework-slide h1 {
-  font-family: system-ui, sans-serif;
-  font-size: 1.85rem;
-  letter-spacing: 0;
-  margin: 0.1rem 0 0.45rem;
-}
-
-.homework-slide .knowledge-questions li {
-  font-size: 0.78rem;
-  padding: 0.5rem 0.3rem;
-}
-
 .recap {
   display: flex;
   flex-wrap: wrap;
