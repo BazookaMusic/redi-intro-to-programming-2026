@@ -8,15 +8,15 @@
 
 ## Lessons
 
-Choose a lesson below. Select **Open** to view the slides in your browser, or **Download** to save them as a PDF.
+Choose a lesson below. The lesson name opens the browser slides without solutions.
 
-| Lesson | Description | No solutions | With solutions |
+| Lesson | Description | Teacher slides | PDFs |
 | --- | --- | --- | --- |
-| 01 · Git and GitHub | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
-| 02 · Variables and Data Types | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
+| [01 · Git and GitHub](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
+| [02 · Variables and Data Types](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
+| [03 · Arithmetic and User Input](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 
-<details>
-<summary><strong>For teachers</strong></summary>
+## For teachers
 
 Use this section when adding, editing, previewing, or exporting slide decks.
 
@@ -94,5 +94,3 @@ This temporarily generates the learner Markdown and exports every deck as a PDF 
 - `slides_no_solutions/` contains PDFs and HTML without solutions.
 
 Each HTML deck is one self-contained file that works offline. These two root folders are for generated student artifacts only. Do not put source Markdown or development files in them.
-
-</details>
