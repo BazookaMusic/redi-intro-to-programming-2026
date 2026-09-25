@@ -75,6 +75,16 @@ The answer goes here.
 - Use `knowledge-solution-slide` on solution slides for styling and semantics. The generator removes content by markers, not by title or class.
 - Keep every start marker paired with one end marker. Do not nest solution markers.
 
+## Practice exercises
+
+- Put practice exercises in `exercises/<topic>/`. Each exercise gets a zero-padded folder, such as `01-counting-sheep/`, with an `exercise.py` starter file and a `test_exercise.py` pytest file.
+- Students open a single exercise folder in VS Code and run `python3 -m pytest` (macOS) or `python -m pytest` (Windows) in its terminal. Keep `exercises/pytest.ini` and `exercises/conftest.py` in place so pytest finds them from every exercise folder.
+- Test program output with the shared `check_program` fixture from `exercises/conftest.py`. Check each rule stated in an exercise, such as "use a for loop", in its own test with the `check_uses_for_loop` or `check_does_not_use` fixture. When students build a grid, put a function that returns the grid in the starter file, and test it with the `check_grid` fixture for several sizes so that printing a hardcoded answer cannot pass. Do not add other test dependencies; `exercises/setup_exercises.py` installs only pytest, globally, without a virtual environment.
+- Put each exercise's task, expected output and hint in a `README.md` inside its folder, with the hint in a `<details>` block. The topic `README.md` holds the overview, key words and a linked list of the exercises.
+- Write hints as nudges: guiding questions, patterns to notice, or reminders of tools already introduced. Never put solution code or step-by-step instructions in a hint.
+- Put each solution in `exercises/<topic>/solutions/<exercise-folder>/` with the same file name as the starter, and link to it from the exercise README. Never put solution code in the exercise folder or its README.
+- Every starter file must fail its tests, and every solution must pass them and print exactly the expected output shown. From the topic folder, `python3 -m pytest` tests the starters and `python3 -m pytest --solutions` tests the solutions.
+
 ## Design and code conventions
 
 - Reuse established slide classes and layouts before introducing new ones.
