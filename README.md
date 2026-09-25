@@ -8,7 +8,7 @@
 
 ## Lessons
 
-Choose a lesson below and open its slides in your browser.
+Choose a lesson below. Select **Open** to view the slides in your browser, or **Download** to save them as a PDF.
 
 | Lesson | Description | No solutions | With solutions |
 | --- | --- | --- | --- |
