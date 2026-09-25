@@ -15,7 +15,8 @@ Choose a lesson below. Select **Open** to view the slides in your browser, or **
 | 01 · Git and GitHub | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
 | 02 · Variables and Data Types | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) · [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 
-## For teachers
+<details>
+<summary><strong>For teachers</strong></summary>
 
 Use this section when adding, editing, previewing, or exporting slide decks.
 
@@ -93,3 +94,5 @@ This temporarily generates the learner Markdown and exports every deck as a PDF 
 - `slides_no_solutions/` contains PDFs and HTML without solutions.
 
 Each HTML deck is one self-contained file that works offline. These two root folders are for generated student artifacts only. Do not put source Markdown or development files in them.
+
+</details>
