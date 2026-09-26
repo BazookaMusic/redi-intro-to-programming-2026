@@ -87,12 +87,6 @@ On Windows, type this in the VS Code terminal and press Enter:
 py check.py
 ```
 
-If you copy an exercise somewhere else, keep `exercise.py` and `check.py` together and open that folder in VS Code. Run the checker with Python as shown above, not with `./check.py`; this avoids executable-permission errors.
-
-Use `input("...")` to ask questions and `print()` for the requested answer lines. The checker supplies any requested input. If the answers do not match, it shows what it expected and what your program printed.
-
-For Lesson 02, you can choose your own values where the exercise asks you to. The checker compares your printed answers with the variables you created.
-
 <details>
 <summary>For teachers</summary>
 
