@@ -8,13 +8,26 @@
 
 ## Lessons
 
-Choose a lesson below. Open the slides in your browser or download a PDF. Links marked "with solutions" include the answers.
+Choose a lesson below. Open the slides in your browser or download them as a PDF.
 
-| Title | Open in Browser | PDF |
+| Lesson | Description | Slides |
 | --- | --- | --- |
-| **01 · Git and GitHub**<br>Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) · [Open with solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) | [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) · [Download with solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
-| **02 · Variables and Data Types**<br>Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [Open with solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [Download with solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
-| **03 · Arithmetic and User Input**<br>Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) · [Open with solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Download](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [Download with solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
+| 01 · Git and GitHub | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) |
+| 02 · Variables and Data Types | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) |
+| 03 · Arithmetic and User Input | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) |
+
+<details>
+<summary><strong>Show slides with solutions</strong></summary>
+
+These slides include the answers. Try the questions first!
+
+| Lesson | Slides with solutions |
+| --- | --- |
+| 01 · Git and GitHub | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
+| 02 · Variables and Data Types | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
+| 03 · Arithmetic and User Input | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
+
+</details>
 
 ## Exercises
 
