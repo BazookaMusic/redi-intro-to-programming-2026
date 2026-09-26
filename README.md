@@ -16,6 +16,15 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 | [02 · Variables and Data Types](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | [03 · Arithmetic and User Input](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 
+## Exercises
+
+Open an exercise folder for a lesson, then choose a task inside it. After trying the task, you can find its matching solved file in the solutions folder.
+
+| Lesson | Exercises (without solutions) | Solutions |
+| --- | --- | --- |
+| 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
+| 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
+
 ## How to get this repository on your computer
 
 You need [Git](https://git-scm.com/downloads) to copy the repository.
@@ -57,15 +66,6 @@ cd redi-intro-to-programming-2026 # Go into the copied folder
 
 You now have a copy of the repository in Documents → ReDI Projects.
 
-## Exercises
-
-Each link opens a lesson's exercise folder on GitHub. Inside it, choose an exercise folder with `exercise.py` and `check.py`.
-
-- [02 · Variables and Data Types](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types)
-- [03 · Arithmetic and User Input](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input)
-
-[View Lesson 03 solutions on GitHub](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) after trying the exercises. The solved files are in matching folders.
-
 ### Work on an exercise in VS Code
 
 You need Python 3 and VS Code. After cloning the repository:
@@ -94,7 +94,7 @@ Use this section when adding, editing, previewing, or exporting slide decks.
 
 ### Practice solutions
 
-[Lesson 03's solved exercises](solutions/03-arithmetic-and-user-input/) mirror the student exercise folders. Each contains only a completed `exercise.py`; the matching `check.py` stays in `exercises/`.
+The solved exercises for Lessons 02 and 03 in `solutions/` mirror the student exercise folders. Each contains only a completed `exercise.py`; the matching `check.py` stays in `exercises/`.
 
 ### Requirements
 
