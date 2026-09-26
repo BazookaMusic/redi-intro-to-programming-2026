@@ -7,6 +7,7 @@ import unittest
 
 
 LESSON = Path(__file__).parent
+SOLUTIONS = LESSON.parents[1] / "solutions" / LESSON.name
 
 SOURCES = {
     "about-me": """name = "Mina"
@@ -135,6 +136,18 @@ class CheckingTests(unittest.TestCase):
     def test_each_checker_accepts_a_correct_answer_with_chosen_values(self):
         for name, source in SOURCES.items():
             with self.subTest(folder=name):
+                result = self.run_pair(name, source)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn("Correct!", result.stdout)
+                self.assertEqual(result.stderr, "")
+
+    def test_every_solution_passes_its_matching_checker(self):
+        solutions = list(SOLUTIONS.glob("*/exercise.py"))
+        self.assertEqual({path.parent.name for path in solutions}, set(SOURCES))
+        self.assertFalse(list(SOLUTIONS.glob("*/check.py")))
+        for name in SOURCES:
+            with self.subTest(folder=name):
+                source = (SOLUTIONS / name / "exercise.py").read_text(encoding="utf-8")
                 result = self.run_pair(name, source)
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertIn("Correct!", result.stdout)
