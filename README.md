@@ -27,8 +27,8 @@ Open an exercise folder for a lesson, then choose a task inside it. After trying
 
 ## Tutorials
 
-<details>
-<summary><h3>How to clone this repository to get access to exercises</h3></summary>
+<details id="clone-repository">
+<summary><strong>How to clone this repository to get access to exercises</strong></summary>
 
 You need [Git](https://git-scm.com/downloads) to copy the repository.
 
@@ -72,11 +72,11 @@ You now have a copy of the repository in Documents → ReDI Projects.
 </details>
 
 <details>
-<summary><h3>How to do exercises and check my answers</h3></summary>
+<summary><strong>How to do exercises and check my answers</strong></summary>
 
 ### Work on an exercise in VS Code
 
-You need Python 3 and VS Code. After [cloning the repository](#how-to-clone-this-repository-to-get-access-to-exercises):
+You need Python 3 and VS Code. After [cloning the repository](#clone-repository):
 
 1. In VS Code, choose **File → Open Folder...**.
 2. Browse to **Documents → ReDI Projects → redi-intro-to-programming-2026 → exercises**. Choose a lesson, then open one exercise folder. You should see `exercise.py` and `check.py` in VS Code.
@@ -97,8 +97,10 @@ py check.py
 
 </details>
 
+## For teachers
+
 <details>
-<summary>For teachers</summary>
+<summary>Show teacher instructions</summary>
 
 Use this section when adding, editing, previewing, or exporting slide decks.
 
