@@ -77,7 +77,7 @@ The answer goes here.
 
 ## Standalone practice exercises
 
-- For each lesson, include **both in-class and take-home exercises and solutions**. Cover homework, projects, and requested bonus tasks too; do not create only the homework exercises. Keep learner-facing task names neutral rather than labeling them "in-class" or "take-home".
+- Do not require exercises in every deck. When slides do include them, create standalone exercises **and solutions for every in-class and take-home task**, including homework and projects; add bonus exercises when requested. Do not copy only homework. Keep learner-facing task names neutral rather than labeling them "in-class" or "take-home".
 - Mirror each task under `exercises/<NN>-<lesson-title>/<task-name>/` and `solutions/<NN>-<lesson-title>/<task-name>/`. The student folder contains an unsolved `exercise.py` and a standalone `check.py`; the solution folder contains only a simply solved `exercise.py`.
 - Start each student `exercise.py` with a plain-language task in comments, at least one accurate example output (and sample input if needed), and `# Write your solution below.` Use only concepts taught so far.
 - Make each `check.py` work with only the two files in its folder: no shared helper or third-party packages. Supply test input when the task uses `input()`, compare printed output, and show both expected and actual output on failure. Accept students' own values where the task lets them choose.
