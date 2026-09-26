@@ -7,4 +7,14 @@
 # Power, and Whole number division, with a colon after each label.
 # The second number will not be zero.
 #
+# Example input: 10, then 3
+# Example output:
+# Sum: 13.0
+# Difference: 7.0
+# Product: 30.0
+# Quotient: 3.33
+# Remainder: 1.0
+# Power: 1000.0
+# Whole number division: 3.0
+#
 # Write your solution below.

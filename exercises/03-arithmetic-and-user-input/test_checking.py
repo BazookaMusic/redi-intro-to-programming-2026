@@ -3,6 +3,7 @@ from io import StringIO
 from math import isclose
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import re
 import runpy
 import unittest
 
@@ -116,6 +117,37 @@ class CheckingTests(unittest.TestCase):
                             isclose(float(line.partition(":")[2]), value, rel_tol=0, abs_tol=1e-9),
                             line,
                         )
+
+    def test_each_starter_example_matches_its_first_check(self):
+        checkers = sorted(LESSON.glob("*/check.py"))
+        self.assertEqual(len(checkers), 8)
+        for checker in checkers:
+            with self.subTest(folder=checker.parent.name):
+                comments = checker.with_name("exercise.py").read_text(encoding="utf-8").splitlines()
+                self.assertIn("# Example output:", comments)
+                start = comments.index("# Example output:") + 1
+                example = []
+                for line in comments[start:]:
+                    if not line.startswith("# "):
+                        break
+                    example.append(line[2:])
+
+                answers, expected = runpy.run_path(str(checker))["CASES"][0]
+                self.assertEqual(len(example), len(expected))
+                for shown, wanted in zip(example, expected):
+                    shown_label, _, shown_number = shown.partition(":")
+                    wanted_label, _, wanted_number = wanted.partition(":")
+                    self.assertEqual(shown_label, wanted_label)
+                    self.assertTrue(
+                        isclose(float(shown_number), float(wanted_number), rel_tol=0, abs_tol=1e-9)
+                    )
+
+                if answers:
+                    input_lines = [line for line in comments if line.startswith("# Example input:")]
+                    self.assertEqual(len(input_lines), 1)
+                    self.assertEqual(
+                        tuple(re.findall(r"-?\d+(?:\.\d+)?", input_lines[0])), answers
+                    )
 
 
 if __name__ == "__main__":
