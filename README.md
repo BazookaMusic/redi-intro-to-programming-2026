@@ -16,6 +16,24 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 | [02 · Variables and Data Types](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | [03 · Arithmetic and User Input](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 
+## Practice
+
+[Lesson 03's mini project and homework](exercises/03-arithmetic-and-user-input/) have one folder per task. You need Python 3 to work on them. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
+
+On macOS:
+
+```sh
+python3 check.py
+```
+
+On Windows:
+
+```sh
+py check.py
+```
+
+Use `input("...")` to ask questions and `print()` for the requested answer lines. The checker supplies any requested input. If the answers do not match, it shows what it expected and what your program printed.
+
 ## For teachers
 
 Use this section when adding, editing, previewing, or exporting slide decks.
