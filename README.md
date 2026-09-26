@@ -31,12 +31,26 @@ These slides include the answers. Try the questions first!
 
 ## Exercises
 
-Each lesson has task folders with `exercise.py` for your code and `check.py` to check your answer. To run an exercise, follow [How to clone this repository to get access to exercises](#clone-repository), then [How to do exercises and check my answers](#do-exercises).
+Lesson 01's exercises are in one README. From Lesson 02, each exercise folder has `exercise.py` for your code and `check.py` to check your answer. To run a Python exercise, follow [How to clone this repository to get access to exercises](#clone-repository), then [How to do exercises and check my answers](#do-exercises).
 
-| Lesson | Exercises (without solutions) | Solutions |
-| --- | --- | --- |
-| 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
-| 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
+| Lesson | Exercises |
+| --- | --- |
+| 01 · Git and GitHub | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/01-git-and-github) |
+| 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types) |
+| 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input) |
+
+<details>
+<summary><strong>Show exercise solutions</strong></summary>
+
+These folders contain the answers. Try the exercises first!
+
+| Lesson | Solutions |
+| --- | --- |
+| 01 · Git and GitHub | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/01-git-and-github) |
+| 02 · Variables and Data Types | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
+| 03 · Arithmetic and User Input | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
+
+</details>
 
 ## Tutorials
 
@@ -121,7 +135,7 @@ Use this section when adding, editing, previewing, or exporting slide decks.
 
 ### Practice solutions
 
-The solved exercises for Lessons 02 and 03 in `solutions/` mirror the student exercise folders. Each contains only a completed `exercise.py`; the matching `check.py` stays in `exercises/`.
+The solved exercises in `solutions/` mirror the student exercise folders. For Python lessons, each task folder contains only a completed `exercise.py`; the matching `check.py` stays in `exercises/`. Lessons without Python tasks use one `README.md` for exercises and one for solutions.
 
 ### Requirements
 
