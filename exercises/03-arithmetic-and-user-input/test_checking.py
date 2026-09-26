@@ -10,15 +10,19 @@ import unittest
 
 
 LESSON = Path(__file__).parent
+SOLUTIONS = LESSON.parents[1] / "solutions" / LESSON.name
 
 
 class CheckingTests(unittest.TestCase):
-    def run_copied_checker(self, checker, source):
+    def run_copied_checker(self, checker, source=None, solution_file=None):
         with TemporaryDirectory() as folder:
             copied = Path(folder)
             copyfile(checker, copied / "check.py")
             copyfile(checker.with_name("exercise.py"), copied / "exercise.py")
-            (copied / "exercise.py").write_text(source, encoding="utf-8")
+            if solution_file is not None:
+                copyfile(solution_file, copied / "exercise.py")
+            elif source is not None:
+                (copied / "exercise.py").write_text(source, encoding="utf-8")
             return subprocess.run(
                 [sys.executable, "check.py"],
                 cwd=copied,
@@ -39,6 +43,23 @@ class CheckingTests(unittest.TestCase):
                 self.assertIn("Not quite yet.", result.stdout)
                 self.assertIn("Expected output:", result.stdout)
                 self.assertIn("Your output:\n(nothing)", result.stdout)
+
+    def test_every_solution_passes_its_matching_checker(self):
+        checkers = sorted(LESSON.glob("*/check.py"))
+        solutions = sorted(SOLUTIONS.glob("*/exercise.py"))
+        self.assertEqual(len(solutions), 8)
+        self.assertEqual(
+            {checker.parent.name for checker in checkers},
+            {solution.parent.name for solution in solutions},
+        )
+        self.assertFalse(list(SOLUTIONS.glob("*/check.py")))
+        for checker in checkers:
+            with self.subTest(folder=checker.parent.name):
+                solution = SOLUTIONS / checker.parent.name / "exercise.py"
+                result = self.run_copied_checker(checker, solution_file=solution)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn("Correct! Your output matches every test.", result.stdout)
+                self.assertEqual(result.stderr, "")
 
     def test_copied_checker_simulates_input_and_accepts_a_solution(self):
         checker = LESSON / "homework-06-seconds-converter" / "check.py"

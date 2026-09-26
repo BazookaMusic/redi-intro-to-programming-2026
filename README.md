@@ -40,6 +40,10 @@ Use `input("...")` to ask questions and `print()` for the requested answer lines
 
 Use this section when adding, editing, previewing, or exporting slide decks.
 
+### Practice solutions
+
+[Lesson 03's solved exercises](solutions/03-arithmetic-and-user-input/) mirror the student exercise folders. Each contains only a completed `exercise.py`; the matching `check.py` stays in `exercises/`.
+
 ### Requirements
 
 The following tools are only needed to edit or export the slides:
