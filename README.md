@@ -18,7 +18,7 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 
 ## Exercises
 
-Open an exercise folder for a lesson, then choose a task inside it. After trying the task, you can find its matching solved file in the solutions folder.
+Each lesson has task folders with `exercise.py` for your code and `check.py` to check your answer. To run an exercise, follow [How to clone this repository to get access to exercises](#clone-repository), then [How to do exercises and check my answers](#do-exercises).
 
 | Lesson | Exercises (without solutions) | Solutions |
 | --- | --- | --- |
@@ -71,7 +71,7 @@ You now have a copy of the repository in Documents → ReDI Projects.
 
 </details>
 
-<details>
+<details id="do-exercises">
 <summary><strong>How to do exercises and check my answers</strong></summary>
 
 ### Work on an exercise in VS Code
