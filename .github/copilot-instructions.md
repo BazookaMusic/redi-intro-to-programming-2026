@@ -82,7 +82,7 @@ The answer goes here.
 - Start each student `exercise.py` with a plain-language task in comments, at least one accurate example output (and sample input if needed), and `# Write your solution below.` Use only concepts taught so far.
 - Make each `check.py` work with only the two files in its folder: no shared helper or third-party packages. Supply test input when the task uses `input()`, compare printed output, and show both expected and actual output on failure. Accept students' own values where the task lets them choose.
 - Test by copying each `check.py` with its matching solved `exercise.py` into a temporary folder and running the checker. Also check that an unsolved starter fails with helpful feedback.
-- Add direct GitHub folder links for new exercises and the matching lesson's solutions folder to the student-visible README Exercises section, not only the collapsed For teachers section.
+- In the student-visible README Exercises section, add one GitHub link per lesson to its exercise parent folder and one to its solutions parent folder, not a link for each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
 
 ## Design and code conventions
 

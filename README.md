@@ -59,49 +59,35 @@ You now have a copy of the repository in Documents → ReDI Projects.
 
 ## Exercises
 
-Each link opens an exercise folder on GitHub with an `exercise.py` task and a `check.py` to check your work.
+Each link opens a lesson's exercise folder on GitHub. Inside it, choose an exercise folder with `exercise.py` and `check.py`.
 
-### [02 · Variables and Data Types](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types)
-
-- [About Me](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/about-me)
-- [Type detective](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/type-detective)
-- [All About Me](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-01-all-about-me)
-- [Type inspector](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-02-type-inspector)
-- [Receipt](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-03-receipt)
-- [len() explorer](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-04-length-explorer)
-- [Mad libs](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-05-mad-libs)
-- [Converter chain](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-06-converter-chain)
-- [Interactive profile](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-07-interactive-profile)
-- [Swap two values (bonus)](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/bonus-swap-variables)
-
-### [03 · Arithmetic and User Input](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input)
-
-- [Personal calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/mini-project-calculator)
-- [All operators](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-01-all-operators)
-- [Average](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-02-average)
-- [Temperature difference](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-03-temperature-difference)
-- [Discount calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-04-discount-calculator)
-- [BMI calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-05-bmi-calculator)
-- [Seconds converter](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-06-seconds-converter)
-- [Extended calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-07-extended-calculator)
+- [02 · Variables and Data Types](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types)
+- [03 · Arithmetic and User Input](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input)
 
 [View Lesson 03 solutions on GitHub](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) after trying the exercises. The solved files are in matching folders.
 
-You need Python 3 to work on the exercises. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
+### Work on an exercise in VS Code
 
-On macOS:
+You need Python 3 and VS Code. After cloning the repository:
+
+1. In VS Code, choose **File → Open Folder...**.
+2. Browse to **Documents → ReDI Projects → redi-intro-to-programming-2026 → exercises**. Choose a lesson, then open one exercise folder. You should see `exercise.py` and `check.py` in VS Code.
+3. Open `exercise.py`, write your code below the instructions, and save it with **Ctrl+S** (Windows) or **Command+S** (macOS).
+4. Choose **Terminal → New Terminal** in VS Code. The terminal opens at the bottom, in your exercise folder.
+
+On macOS, type this in the VS Code terminal and press Enter:
 
 ```sh
 python3 check.py
 ```
 
-On Windows:
+On Windows, type this in the VS Code terminal and press Enter:
 
-```sh
+```powershell
 py check.py
 ```
 
-If you copy an exercise, keep `exercise.py` and `check.py` together in the same folder. You do not need any other files. Run the checker with Python as shown above, not with `./check.py`; this avoids executable-permission errors.
+If you copy an exercise somewhere else, keep `exercise.py` and `check.py` together and open that folder in VS Code. Run the checker with Python as shown above, not with `./check.py`; this avoids executable-permission errors.
 
 Use `input("...")` to ask questions and `print()` for the requested answer lines. The checker supplies any requested input. If the answers do not match, it shows what it expected and what your program printed.
 
