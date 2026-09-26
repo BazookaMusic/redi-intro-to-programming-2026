@@ -80,10 +80,11 @@ The answer goes here.
 - If a deck includes exercises, create standalone exercises **and solutions for every in-class and take-home task**, including homework and projects; add bonus exercises when requested. Keep learner-facing task names neutral rather than labeling them "in-class" or "take-home".
 - Mirror each task under `exercises/<NN>-<lesson-title>/<task-name>/` and `solutions/<NN>-<lesson-title>/<task-name>/`. The student folder contains an unsolved `exercise.py` and a standalone `check.py`; the solution folder contains only a simply solved `exercise.py`.
 - For lessons without Python tasks, such as Git or terminal practice, put all tasks in `exercises/<NN>-<lesson-title>/README.md` and their answers in `solutions/<NN>-<lesson-title>/README.md` instead.
+- For Python lessons, add `exercises/<NN>-<lesson-title>/README.md` that explains how to run `check.py` and lists every task in slide order, with a link to its folder and the description and example output copied from its `exercise.py` comments. Update it whenever a task's comments change.
 - Start each student `exercise.py` with a plain-language task in comments, at least one accurate example output (and sample input if needed), and `# Write your solution below.` Use only concepts taught so far.
 - Make each `check.py` work with only the two files in its folder: no shared helper or third-party packages. Supply test input when the task uses `input()`, compare printed output, and show both expected and actual output on failure. Accept students' own values where the task lets them choose.
 - Test by copying each `check.py` with its matching solved `exercise.py` into a temporary folder and running the checker. Also check that an unsolved starter fails with helpful feedback.
-- Keep the student-facing README exercise links up to date: link each lesson's exercise parent folder and solutions parent folder, not each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
+- Keep the student-facing README exercise links up to date: link each lesson's exercise `README.md` and solutions parent folder (or solutions `README.md`), not each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
 
 ## Design and code conventions
 

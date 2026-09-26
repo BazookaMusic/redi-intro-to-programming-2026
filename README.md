@@ -35,9 +35,9 @@ Lesson 01's exercises are in one README. From Lesson 02, each exercise folder ha
 
 | Lesson | Exercises |
 | --- | --- |
-| 01 · Git and GitHub | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/01-git-and-github) |
-| 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types) |
-| 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input) |
+| 01 · Git and GitHub | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/01-git-and-github/README.md) |
+| 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/02-variables-and-data-types/README.md) |
+| 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/03-arithmetic-and-user-input/README.md) |
 
 <details>
 <summary><strong>Show exercise solutions</strong></summary>
@@ -46,7 +46,7 @@ These folders contain the answers. Try the exercises first!
 
 | Lesson | Solutions |
 | --- | --- |
-| 01 · Git and GitHub | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/01-git-and-github) |
+| 01 · Git and GitHub | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/solutions/01-git-and-github/README.md) |
 | 02 · Variables and Data Types | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
 | 03 · Arithmetic and User Input | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
 
