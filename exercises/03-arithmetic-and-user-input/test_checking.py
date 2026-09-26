@@ -34,7 +34,7 @@ class CheckingTests(unittest.TestCase):
 
     def test_every_checker_runs_with_only_two_files(self):
         checkers = sorted(LESSON.glob("*/check.py"))
-        self.assertEqual(len(checkers), 8)
+        self.assertEqual(len(checkers), 9)
         for checker in checkers:
             with self.subTest(folder=checker.parent.name):
                 result = self.run_copied_checker(checker, "# Write your solution below.\n")
@@ -47,7 +47,7 @@ class CheckingTests(unittest.TestCase):
     def test_every_solution_passes_its_matching_checker(self):
         checkers = sorted(LESSON.glob("*/check.py"))
         solutions = sorted(SOLUTIONS.glob("*/exercise.py"))
-        self.assertEqual(len(solutions), 8)
+        self.assertEqual(len(solutions), 9)
         self.assertEqual(
             {checker.parent.name for checker in checkers},
             {solution.parent.name for solution in solutions},
@@ -106,6 +106,9 @@ class CheckingTests(unittest.TestCase):
                 self.assertFalse(matches("Total: 3", "Total: 3.001"))
 
     def test_all_expected_answers_match_the_math(self):
+        def number(line):
+            return float(line.partition(":")[2].strip().removeprefix("€"))
+
         def calculator(answers):
             a, b = map(float, answers)
             return (a + b, a - b, a * b, round(a / b, 2), a % b, a ** b)
@@ -119,6 +122,7 @@ class CheckingTests(unittest.TestCase):
             return (*calculator(answers), a // b)
 
         expected_values = {
+            "vat-calculator": lambda a: (round(float(a[0]) * 1.21, 2),),
             "mini-project-calculator": calculator,
             "homework-01-all-operators": operators,
             "homework-02-average": lambda _: (round((70 + 85 + 90) / 3, 1),),
@@ -142,13 +146,13 @@ class CheckingTests(unittest.TestCase):
                     self.assertEqual(len(output), len(values))
                     for line, value in zip(output, values):
                         self.assertTrue(
-                            isclose(float(line.partition(":")[2]), value, rel_tol=0, abs_tol=1e-9),
+                            isclose(number(line), value, rel_tol=0, abs_tol=1e-9),
                             line,
                         )
 
     def test_each_starter_example_matches_its_first_check(self):
         checkers = sorted(LESSON.glob("*/check.py"))
-        self.assertEqual(len(checkers), 8)
+        self.assertEqual(len(checkers), 9)
         for checker in checkers:
             with self.subTest(folder=checker.parent.name):
                 comments = checker.with_name("exercise.py").read_text(encoding="utf-8").splitlines()
@@ -166,8 +170,17 @@ class CheckingTests(unittest.TestCase):
                     shown_label, _, shown_number = shown.partition(":")
                     wanted_label, _, wanted_number = wanted.partition(":")
                     self.assertEqual(shown_label, wanted_label)
+                    self.assertEqual(
+                        shown_number.strip().startswith("€"),
+                        wanted_number.strip().startswith("€"),
+                    )
                     self.assertTrue(
-                        isclose(float(shown_number), float(wanted_number), rel_tol=0, abs_tol=1e-9)
+                        isclose(
+                            float(shown_number.strip().removeprefix("€")),
+                            float(wanted_number.strip().removeprefix("€")),
+                            rel_tol=0,
+                            abs_tol=1e-9,
+                        )
                     )
 
                 if answers:

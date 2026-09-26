@@ -27,6 +27,23 @@ py check.py
 
 New to this? Follow [How to clone this repository to get access to exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026#clone-repository) and [How to do exercises and check my answers](https://github.com/BazookaMusic/redi-intro-to-programming-2026#do-exercises) first.
 
+## VAT calculator
+
+**Folder:** [`vat-calculator`](vat-calculator/)
+
+VAT is a tax that is added to a price. Ask the user to enter a price. Add 21% VAT: `total = price * 1.21`
+
+Round the total to 2 decimal places and print one line in this format:
+`Price with VAT: €[total]`
+
+Example input: 10
+
+Example output:
+
+```text
+Price with VAT: €12.1
+```
+
 ## Mini project: Personal calculator
 
 **Folder:** [`mini-project-calculator`](mini-project-calculator/)
