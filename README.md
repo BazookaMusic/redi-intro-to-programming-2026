@@ -16,6 +16,45 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 | [02 · Variables and Data Types](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | [03 · Arithmetic and User Input](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 
+## How to get this repository on your computer
+
+You need [Git](https://git-scm.com/downloads) to copy the repository.
+
+### Open a terminal
+
+On Windows, open **Start**, search for **PowerShell**, and press Enter. On macOS, open **Applications → Utilities → Terminal**. A terminal is where you type commands.
+
+### Make a folder in Documents
+
+On Windows (PowerShell):
+
+```powershell
+cd ([Environment]::GetFolderPath('MyDocuments'))
+mkdir "ReDI Projects"
+cd "ReDI Projects"
+```
+
+On macOS:
+
+```sh
+cd "$HOME/Documents"
+mkdir "ReDI Projects"
+cd "ReDI Projects"
+```
+
+`cd` moves to a folder, and `mkdir` makes a new one. The Windows command finds your Documents folder even if it is in OneDrive. If `ReDI Projects` already exists, skip the `mkdir` command.
+
+### Clone the repository
+
+In your new `ReDI Projects` folder, run these commands on either computer:
+
+```sh
+git clone https://github.com/BazookaMusic/redi-intro-to-programming-2026.git
+cd redi-intro-to-programming-2026
+```
+
+`git clone` makes a copy in Documents → ReDI Projects. The last command moves into your new repository folder.
+
 ## Exercises
 
 Each link opens an exercise folder on GitHub with an `exercise.py` task and a `check.py` to check your work.
