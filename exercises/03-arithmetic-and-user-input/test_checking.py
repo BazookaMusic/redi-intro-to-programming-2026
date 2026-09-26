@@ -1,81 +1,88 @@
-from contextlib import redirect_stdout
-from io import StringIO
 from math import isclose
 from pathlib import Path
+from shutil import copyfile
 from tempfile import TemporaryDirectory
 import re
 import runpy
+import subprocess
+import sys
 import unittest
-
-from checking import check_output, run_check
 
 
 LESSON = Path(__file__).parent
 
 
 class CheckingTests(unittest.TestCase):
-    def run_source(self, source, cases):
+    def run_copied_checker(self, checker, source):
         with TemporaryDirectory() as folder:
-            exercise = Path(folder) / "exercise.py"
-            exercise.write_text(source, encoding="utf-8")
-            result = StringIO()
-            with redirect_stdout(result):
-                check_output(exercise, cases)
-            return result.getvalue()
+            copied = Path(folder)
+            copyfile(checker, copied / "check.py")
+            copyfile(checker.with_name("exercise.py"), copied / "exercise.py")
+            (copied / "exercise.py").write_text(source, encoding="utf-8")
+            return subprocess.run(
+                [sys.executable, "check.py"],
+                cwd=copied,
+                text=True,
+                capture_output=True,
+                timeout=5,
+                check=False,
+            )
 
-    def test_simulates_input_and_accepts_equivalent_numeric_output(self):
-        source = "number = float(input('Number: '))\nprint('Double: ', number * 2)\n"
-        cases = (
-            (("2",), ("Double: 4",)),
-            (("2.5",), ("Double: 5.0",)),
-        )
-        self.assertIn("Correct!", self.run_source(source, cases))
-
-    def test_wrong_answer_shows_expected_and_actual_output(self):
-        source = "number = float(input('Number: '))\nprint('Double:', number * 3)\n"
-        with self.assertRaises(AssertionError) as failure:
-            self.run_source(source, ((("2",), ("Double: 4",)),))
-        self.assertIn("Expected output:\nDouble: 4", str(failure.exception))
-        self.assertIn("Your output:\nDouble: 6.0", str(failure.exception))
-
-    def test_missing_input_fails_even_if_output_matches(self):
-        with self.assertRaises(AssertionError) as failure:
-            self.run_source("print('Double: 4')\n", ((("2",), ("Double: 4",)),))
-        self.assertIn("asked for 0 input(s)", str(failure.exception))
-
-    def test_extra_input_has_a_clear_error(self):
-        source = "input('First: ')\ninput('Second: ')\n"
-        with self.assertRaises(AssertionError) as failure:
-            self.run_source(source, ((("2",), ("Double: 4",)),))
-        self.assertIn("asked for more than 1 input(s)", str(failure.exception))
-        self.assertIn("Your output:\n(nothing)", str(failure.exception))
-
-    def test_wrong_label_and_unrounded_answer_fail(self):
-        for source in ("print('Triple: 4')\n", "print('Double: 4.001')\n"):
-            with self.subTest(source=source), self.assertRaises(AssertionError):
-                self.run_source(source, (((), ("Double: 4",)),))
-
-    def test_all_starter_files_fail_with_helpful_messages(self):
+    def test_every_checker_runs_with_only_two_files(self):
         checkers = sorted(LESSON.glob("*/check.py"))
         self.assertEqual(len(checkers), 8)
         for checker in checkers:
             with self.subTest(folder=checker.parent.name):
-                cases = runpy.run_path(str(checker))["CASES"]
-                with self.assertRaises(AssertionError) as failure:
-                    check_output(checker.with_name("exercise.py"), cases)
-                self.assertIn("Expected output:", str(failure.exception))
-                self.assertIn("Your output:\n(nothing)", str(failure.exception))
+                result = self.run_copied_checker(checker, "# Write your solution below.\n")
+                self.assertEqual(result.returncode, 1, result.stderr)
+                self.assertEqual(result.stderr, "")
+                self.assertIn("Not quite yet.", result.stdout)
+                self.assertIn("Expected output:", result.stdout)
+                self.assertIn("Your output:\n(nothing)", result.stdout)
 
-    def test_command_shows_feedback_without_a_traceback(self):
-        output = StringIO()
-        exercise = LESSON / "homework-02-average" / "exercise.py"
-        with redirect_stdout(output), self.assertRaises(SystemExit) as failure:
-            run_check(exercise, (((), ("Average: 81.7",)),))
-        self.assertEqual(failure.exception.code, 1)
-        self.assertIn("Not quite yet.", output.getvalue())
-        self.assertIn("Expected output:\nAverage: 81.7", output.getvalue())
-        self.assertIn("Your output:\n(nothing)", output.getvalue())
-        self.assertNotIn("Traceback", output.getvalue())
+    def test_copied_checker_simulates_input_and_accepts_a_solution(self):
+        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        source = (
+            "seconds = int(input('Seconds: '))\n"
+            "print('Minutes:', seconds // 60)\n"
+            "print('Seconds:', seconds % 60)\n"
+        )
+        result = self.run_copied_checker(checker, source)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Correct! Your output matches every test.", result.stdout)
+
+    def test_copied_checker_shows_expected_and_actual_output(self):
+        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        source = (
+            "seconds = int(input('Seconds: '))\n"
+            "print('Minutes:', seconds)\n"
+            "print('Seconds:', seconds)\n"
+        )
+        result = self.run_copied_checker(checker, source)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("Expected output:\nMinutes: 2\nSeconds: 5", result.stdout)
+        self.assertIn("Your output:\nMinutes: 125\nSeconds: 125", result.stdout)
+        self.assertEqual(result.stderr, "")
+
+    def test_copied_checker_requires_the_right_number_of_inputs(self):
+        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        for source, message in (
+            ("print('Minutes: 2')\nprint('Seconds: 5')\n", "asked for 0 input(s)"),
+            ("input('First: ')\ninput('Second: ')\n", "asked for more than 1 input(s)"),
+        ):
+            with self.subTest(source=source):
+                result = self.run_copied_checker(checker, source)
+                self.assertEqual(result.returncode, 1)
+                self.assertIn(message, result.stdout)
+                self.assertEqual(result.stderr, "")
+
+    def test_each_checker_preserves_numeric_and_label_comparisons(self):
+        for checker in sorted(LESSON.glob("*/check.py")):
+            with self.subTest(folder=checker.parent.name):
+                matches = runpy.run_path(str(checker))["_matches"]
+                self.assertTrue(matches("Total: 3", "total: 3.0"))
+                self.assertFalse(matches("Total: 3", "Wrong: 3"))
+                self.assertFalse(matches("Total: 3", "Total: 3.001"))
 
     def test_all_expected_answers_match_the_math(self):
         def calculator(answers):

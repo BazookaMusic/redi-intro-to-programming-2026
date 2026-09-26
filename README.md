@@ -32,6 +32,8 @@ On Windows:
 py check.py
 ```
 
+If you copy an exercise, keep `exercise.py` and `check.py` together in the same folder. You do not need any other files. Run the checker with Python as shown above, not with `./check.py`; this avoids executable-permission errors.
+
 Use `input("...")` to ask questions and `print()` for the requested answer lines. The checker supplies any requested input. If the answers do not match, it shows what it expected and what your program printed.
 
 ## For teachers
