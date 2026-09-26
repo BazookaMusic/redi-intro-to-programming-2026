@@ -52,8 +52,7 @@ npm run dev:no-solutions -- <deck>.md
 ```
 
 - Run `npm run build`, then confirm that matching `<deck>.pdf` and `<deck>.html` files exist in both `slides_solutions/` and `slides_no_solutions/`.
-- Add the lesson to the README Lessons table (`Title`, `Open in Browser`, `PDF`). Put its name and a short description grounded in the deck's learning goals in the `Title` cell.
-- In `Open in Browser`, link `Open` to the GitHub Pages HTML without solutions and `Open with solutions` to the HTML with solutions. In `PDF`, link `Download` to the PDF without solutions and `Download with solutions` to the PDF with solutions. Use absolute `raw.githubusercontent.com` URLs for PDFs.
+- Add the lesson to the README using its current layout. Include its title, a short description grounded in the deck's learning goals, and links to both HTML and PDF versions with and without solutions. Use GitHub Pages URLs for HTML and absolute `raw.githubusercontent.com` URLs for PDFs.
 - Include the source deck, shared assets, README update, and all four generated artifacts in the same change.
 
 ## Exercises and solutions
@@ -83,7 +82,7 @@ The answer goes here.
 - Start each student `exercise.py` with a plain-language task in comments, at least one accurate example output (and sample input if needed), and `# Write your solution below.` Use only concepts taught so far.
 - Make each `check.py` work with only the two files in its folder: no shared helper or third-party packages. Supply test input when the task uses `input()`, compare printed output, and show both expected and actual output on failure. Accept students' own values where the task lets them choose.
 - Test by copying each `check.py` with its matching solved `exercise.py` into a temporary folder and running the checker. Also check that an unsolved starter fails with helpful feedback.
-- In the student-visible README Exercises section, add one GitHub link per lesson to its exercise parent folder and one to its solutions parent folder, not a link for each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
+- Keep the student-facing README exercise links up to date: link each lesson's exercise parent folder and solutions parent folder, not each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
 
 ## Design and code conventions
 
