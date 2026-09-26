@@ -18,7 +18,7 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 
 ## Exercises
 
-Each lesson has task folders with `exercise.py` for your code and `check.py` to check your answer. To run an exercise, follow [How to clone this repository to get access to exercises](#clone-repository), then [How to do exercises and check my answers](#do-exercises).
+Each lesson has task folders with `exercise.py` for your code and `check.py` to check your answer. To run an exercise, follow [How to clone this repository to get access to exercises](#clone-repository-start), then [How to do exercises and check my answers](#work-on-an-exercise-in-vs-code).
 
 | Lesson | Exercises (without solutions) | Solutions |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ Each lesson has task folders with `exercise.py` for your code and `check.py` to 
 <details id="clone-repository">
 <summary><strong>How to clone this repository to get access to exercises</strong></summary>
 
-You need [Git](https://git-scm.com/downloads) to copy the repository.
+<span id="clone-repository-start"></span>You need [Git](https://git-scm.com/downloads) to copy the repository.
 
 ### Open a terminal
 
@@ -76,7 +76,7 @@ You now have a copy of the repository in Documents → ReDI Projects.
 
 ### Work on an exercise in VS Code
 
-You need Python 3 and VS Code. After [cloning the repository](#clone-repository):
+You need Python 3 and VS Code. After [cloning the repository](#clone-repository-start):
 
 1. In VS Code, choose **File → Open Folder...**.
 2. Browse to **Documents → ReDI Projects → redi-intro-to-programming-2026 → exercises**. Choose a lesson, then open one exercise folder. You should see `exercise.py` and `check.py` in VS Code.
