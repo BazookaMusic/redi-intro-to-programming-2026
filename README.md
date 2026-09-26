@@ -18,7 +18,9 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 
 ## Practice
 
-[Lesson 03's mini project and homework](exercises/03-arithmetic-and-user-input/) have one folder per task. You need Python 3 to work on them. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
+[Lesson 02 practice](exercises/02-variables-and-data-types/) covers variables, types, and a bonus exercise for swapping two values. [Lesson 03 practice](exercises/03-arithmetic-and-user-input/) covers the calculator mini project and homework. Each task has its own folder with `exercise.py` and `check.py`.
+
+You need Python 3 to work on the exercises. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
 
 On macOS:
 
@@ -35,6 +37,8 @@ py check.py
 If you copy an exercise, keep `exercise.py` and `check.py` together in the same folder. You do not need any other files. Run the checker with Python as shown above, not with `./check.py`; this avoids executable-permission errors.
 
 Use `input("...")` to ask questions and `print()` for the requested answer lines. The checker supplies any requested input. If the answers do not match, it shows what it expected and what your program printed.
+
+For Lesson 02, you can choose your own values where the exercise asks you to. The checker compares your printed answers with the variables you created.
 
 ## For teachers
 
