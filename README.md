@@ -25,10 +25,10 @@ Open an exercise folder for a lesson, then choose a task inside it. After trying
 | 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
 | 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input) | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
 
-## How to get this repository on your computer
+## Tutorials
 
 <details>
-<summary>Start here: Copy the repository to your computer</summary>
+<summary><h3>How to clone this repository to get access to exercises</h3></summary>
 
 You need [Git](https://git-scm.com/downloads) to copy the repository.
 
@@ -72,11 +72,11 @@ You now have a copy of the repository in Documents → ReDI Projects.
 </details>
 
 <details>
-<summary>Ready to code? Open an exercise in VS Code</summary>
+<summary><h3>How to do exercises and check my answers</h3></summary>
 
 ### Work on an exercise in VS Code
 
-You need Python 3 and VS Code. After [cloning the repository](#how-to-get-this-repository-on-your-computer):
+You need Python 3 and VS Code. After [cloning the repository](#how-to-clone-this-repository-to-get-access-to-exercises):
 
 1. In VS Code, choose **File → Open Folder...**.
 2. Browse to **Documents → ReDI Projects → redi-intro-to-programming-2026 → exercises**. Choose a lesson, then open one exercise folder. You should see `exercise.py` and `check.py` in VS Code.
