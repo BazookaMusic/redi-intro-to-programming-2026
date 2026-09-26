@@ -1,4 +1,4 @@
-# Homework 5: BMI calculator
+# Homework 6: BMI calculator
 # Ask for weight and height, then print BMI rounded to 1 decimal place.
 
 weight = float(input("Enter your weight in kg: "))

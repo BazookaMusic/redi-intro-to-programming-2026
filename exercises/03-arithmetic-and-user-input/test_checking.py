@@ -62,7 +62,7 @@ class CheckingTests(unittest.TestCase):
                 self.assertEqual(result.stderr, "")
 
     def test_copied_checker_simulates_input_and_accepts_a_solution(self):
-        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        checker = LESSON / "homework-07-seconds-converter" / "check.py"
         source = (
             "seconds = int(input('Seconds: '))\n"
             "print('Minutes:', seconds // 60)\n"
@@ -73,7 +73,7 @@ class CheckingTests(unittest.TestCase):
         self.assertIn("Correct! Your output matches every test.", result.stdout)
 
     def test_copied_checker_shows_expected_and_actual_output(self):
-        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        checker = LESSON / "homework-07-seconds-converter" / "check.py"
         source = (
             "seconds = int(input('Seconds: '))\n"
             "print('Minutes:', seconds)\n"
@@ -86,7 +86,7 @@ class CheckingTests(unittest.TestCase):
         self.assertEqual(result.stderr, "")
 
     def test_copied_checker_requires_the_right_number_of_inputs(self):
-        checker = LESSON / "homework-06-seconds-converter" / "check.py"
+        checker = LESSON / "homework-07-seconds-converter" / "check.py"
         for source, message in (
             ("print('Minutes: 2')\nprint('Seconds: 5')\n", "asked for 0 input(s)"),
             ("input('First: ')\ninput('Second: ')\n", "asked for more than 1 input(s)"),
@@ -124,19 +124,19 @@ class CheckingTests(unittest.TestCase):
         expected_values = {
             "vat-calculator": lambda a: (round(float(a[0]) * 1.21, 2),),
             "mini-project-calculator": calculator,
-            "homework-01-all-operators": operators,
-            "homework-02-average": lambda _: (round((70 + 85 + 90) / 3, 1),),
-            "homework-03-temperature-difference": lambda _: (abs(-3 - 9),),
-            "homework-04-discount-calculator": lambda a: (
+            "homework-02-all-operators": operators,
+            "homework-03-average": lambda _: (round((70 + 85 + 90) / 3, 1),),
+            "homework-04-temperature-difference": lambda _: (abs(-3 - 9),),
+            "homework-05-discount-calculator": lambda a: (
                 round(float(a[0]) * (1 - float(a[1]) / 100), 2),
             ),
-            "homework-05-bmi-calculator": lambda a: (
+            "homework-06-bmi-calculator": lambda a: (
                 round(float(a[0]) / float(a[1]) ** 2, 1),
             ),
-            "homework-06-seconds-converter": lambda a: (
+            "homework-07-seconds-converter": lambda a: (
                 int(a[0]) // 60, int(a[0]) % 60
             ),
-            "homework-07-extended-calculator": extended,
+            "homework-08-extended-calculator": extended,
         }
         for folder, calculate in expected_values.items():
             cases = runpy.run_path(str(LESSON / folder / "check.py"))["CASES"]

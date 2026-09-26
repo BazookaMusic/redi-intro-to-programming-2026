@@ -1,4 +1,4 @@
-# Homework 6: Seconds converter
+# Homework 7: Seconds converter
 # Ask for seconds, then print full minutes and leftover seconds.
 
 seconds = int(input("Enter the number of seconds: "))

@@ -1,4 +1,4 @@
-# Homework 2: Average
+# Homework 3: Average
 # Find the average of three test scores, rounded to 1 decimal place.
 
 score1 = 70

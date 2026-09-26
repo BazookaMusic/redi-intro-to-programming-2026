@@ -1,4 +1,4 @@
-# Homework 7: Extended personal calculator
+# Homework 8: Extended personal calculator
 # Ask for two numbers and print all seven labeled arithmetic results.
 
 a = float(input("Enter the first number: "))

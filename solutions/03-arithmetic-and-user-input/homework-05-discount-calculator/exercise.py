@@ -1,4 +1,4 @@
-# Homework 4: Discount calculator
+# Homework 5: Discount calculator
 # Ask for a price and discount percentage, then print the final price.
 
 price = float(input("Enter the price: "))

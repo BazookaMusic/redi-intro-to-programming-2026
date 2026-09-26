@@ -1,4 +1,4 @@
-# Homework 4: Discount calculator
+# Homework 5: Discount calculator
 # Ask the user for a price and a discount percentage. A discount of 15
 # means 15% off. Calculate the final price after the discount and round it
 # to 2 decimal places.

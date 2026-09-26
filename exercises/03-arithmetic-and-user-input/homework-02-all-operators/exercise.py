@@ -1,4 +1,4 @@
-# Homework 1: All operators
+# Homework 2: All operators
 # Create a = 17 and b = 5. Print the results of all seven operations:
 # addition, subtraction, multiplication, division, whole-number division,
 # remainder, and power, in that order.

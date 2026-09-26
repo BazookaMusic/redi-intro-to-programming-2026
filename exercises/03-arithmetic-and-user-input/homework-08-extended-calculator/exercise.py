@@ -1,4 +1,4 @@
-# Homework 7: Extend the personal calculator
+# Homework 8: Extend the personal calculator
 # Ask the user for two numbers. Print their sum, difference (first minus
 # second), product, quotient rounded to 2 decimal places, remainder,
 # first number to the power of the second number, and whole-number

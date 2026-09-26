@@ -1,4 +1,4 @@
-# Homework 1: All operators
+# Homework 2: All operators
 # Use a = 17 and b = 5 to print all seven labeled results.
 
 a = 17

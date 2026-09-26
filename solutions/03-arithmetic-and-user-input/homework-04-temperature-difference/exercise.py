@@ -1,4 +1,4 @@
-# Homework 3: abs() practice
+# Homework 4: abs() practice
 # Print the positive difference between two temperatures.
 
 morning_temp = -3
