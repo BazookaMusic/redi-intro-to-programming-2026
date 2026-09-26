@@ -29,7 +29,7 @@ On Windows, open **Start**, search for **PowerShell**, and press Enter. On macOS
 On Windows (PowerShell):
 
 ```powershell
-cd ([Environment]::GetFolderPath('MyDocuments'))
+cd "$HOME\Documents"
 mkdir "ReDI Projects"
 cd "ReDI Projects"
 ```
@@ -42,7 +42,7 @@ mkdir "ReDI Projects"
 cd "ReDI Projects"
 ```
 
-`cd` moves to a folder, and `mkdir` makes a new one. The Windows command finds your Documents folder even if it is in OneDrive. If `ReDI Projects` already exists, skip the `mkdir` command.
+`cd` moves to a folder, and `mkdir` makes a new one. If `ReDI Projects` already exists, skip the `mkdir` command. If Windows cannot find Documents, open it in File Explorer and use its full path in quotes for the first `cd` command.
 
 ### Clone the repository
 
