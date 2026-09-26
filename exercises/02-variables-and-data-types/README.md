@@ -2,29 +2,6 @@
 
 These exercises come from the [Variables and Data Types slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html). When you finish, compare your work with the [solutions](../../solutions/02-variables-and-data-types/).
 
-Each exercise has its own folder with two files:
-
-- `exercise.py` has the instructions at the top. Write your code below them.
-- `check.py` runs your code and tells you if your answer is correct.
-
-## How to check your answer
-
-1. In VS Code, open the exercise folder with **File → Open Folder...**.
-2. Write your code in `exercise.py` and save it.
-3. Choose **Terminal → New Terminal**, then run the checker.
-
-On macOS:
-
-```sh
-python3 check.py
-```
-
-On Windows:
-
-```powershell
-py check.py
-```
-
 New to this? Follow [How to clone this repository to get access to exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026#clone-repository) and [How to do exercises and check my answers](https://github.com/BazookaMusic/redi-intro-to-programming-2026#do-exercises) first.
 
 ## Build an About Me program
