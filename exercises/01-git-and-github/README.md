@@ -4,16 +4,17 @@ These exercises come from the [Git and GitHub slides](https://bazookamusic.githu
 
 You need GitHub Desktop, VS Code, and Git.
 
-## 1. Create and publish your repository
+## Before you start: open your repository
 
-1. In GitHub Desktop, choose **File → New Repository…**.
-2. Name it, choose a folder, and add a README.
-3. Click **Publish repository**.
-4. Choose **Repository → Open in Visual Studio Code**.
+Use the repository you created and published in class.
 
-**Done when:** your repository is online and open in VS Code.
+1. Open GitHub Desktop.
+2. Click **Current Repository** at the top left and choose your repository.
+3. Choose **Repository → Open in Visual Studio Code**.
 
-## 2. Create a file in your repository
+Your repository folder now opens in VS Code.
+
+## 1. Create a file in your repository
 
 1. In the VS Code Explorer, click **New File**.
 2. Type `my-file.py`, then press **Enter**.
@@ -21,7 +22,7 @@ You need GitHub Desktop, VS Code, and Git.
 
 **Done when:** `my-file.py` appears inside your repository folder.
 
-## 3. Make and publish a commit
+## 2. Make and publish a commit
 
 1. Open `my-file.py` and add a new line, for example:
 
@@ -44,7 +45,7 @@ git push              # Send it to GitHub
 
 **Done when:** you open your repository on GitHub and see the new commit.
 
-## 4. Read this folder structure
+## 3. Read this folder structure
 
 Study this tree:
 
@@ -63,7 +64,7 @@ Then answer these questions:
 3. What is the file extension of `hello.py`?
 4. What path leads from `my-project` to `logo.png`?
 
-## 5. Clone and play a Python game
+## 4. Clone and play a Python game
 
 1. In VS Code, choose **File → New Window**.
 2. Choose **Terminal → New Terminal**. Run every command below in that terminal.
@@ -94,7 +95,7 @@ Then answer these questions:
 
 **Done when:** you play Bagels and guess the secret three-digit number using the clues.
 
-## 6. Build folders using commands (advanced)
+## 5. Build folders using commands (advanced)
 
 Use the terminal to build this structure in your home folder:
 
