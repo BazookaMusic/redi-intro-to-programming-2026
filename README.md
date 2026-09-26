@@ -16,9 +16,33 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 | [02 · Variables and Data Types](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | [03 · Arithmetic and User Input](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [With solutions](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) | [Without solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) · [With solutions](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 
-## Practice
+## Exercises
 
-[Lesson 02 practice](exercises/02-variables-and-data-types/) covers variables, types, and a bonus exercise for swapping two values. [Lesson 03 practice](exercises/03-arithmetic-and-user-input/) covers the calculator mini project and homework. Each task has its own folder with `exercise.py` and `check.py`.
+Each link opens a folder with an `exercise.py` task and a `check.py` to check your work.
+
+### [02 · Variables and Data Types](exercises/02-variables-and-data-types/)
+
+- [About Me](exercises/02-variables-and-data-types/about-me/)
+- [Type detective](exercises/02-variables-and-data-types/type-detective/)
+- [All About Me](exercises/02-variables-and-data-types/homework-01-all-about-me/)
+- [Type inspector](exercises/02-variables-and-data-types/homework-02-type-inspector/)
+- [Receipt](exercises/02-variables-and-data-types/homework-03-receipt/)
+- [len() explorer](exercises/02-variables-and-data-types/homework-04-length-explorer/)
+- [Mad libs](exercises/02-variables-and-data-types/homework-05-mad-libs/)
+- [Converter chain](exercises/02-variables-and-data-types/homework-06-converter-chain/)
+- [Interactive profile](exercises/02-variables-and-data-types/homework-07-interactive-profile/)
+- [Swap two values (bonus)](exercises/02-variables-and-data-types/bonus-swap-variables/)
+
+### [03 · Arithmetic and User Input](exercises/03-arithmetic-and-user-input/)
+
+- [Personal calculator](exercises/03-arithmetic-and-user-input/mini-project-calculator/)
+- [All operators](exercises/03-arithmetic-and-user-input/homework-01-all-operators/)
+- [Average](exercises/03-arithmetic-and-user-input/homework-02-average/)
+- [Temperature difference](exercises/03-arithmetic-and-user-input/homework-03-temperature-difference/)
+- [Discount calculator](exercises/03-arithmetic-and-user-input/homework-04-discount-calculator/)
+- [BMI calculator](exercises/03-arithmetic-and-user-input/homework-05-bmi-calculator/)
+- [Seconds converter](exercises/03-arithmetic-and-user-input/homework-06-seconds-converter/)
+- [Extended calculator](exercises/03-arithmetic-and-user-input/homework-07-extended-calculator/)
 
 You need Python 3 to work on the exercises. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
 
@@ -40,7 +64,8 @@ Use `input("...")` to ask questions and `print()` for the requested answer lines
 
 For Lesson 02, you can choose your own values where the exercise asks you to. The checker compares your printed answers with the variables you created.
 
-## For teachers
+<details>
+<summary>For teachers</summary>
 
 Use this section when adding, editing, previewing, or exporting slide decks.
 
@@ -122,3 +147,5 @@ This temporarily generates the learner Markdown and exports every deck as a PDF 
 - `slides_no_solutions/` contains PDFs and HTML without solutions.
 
 Each HTML deck is one self-contained file that works offline. These two root folders are for generated student artifacts only. Do not put source Markdown or development files in them.
+
+</details>
