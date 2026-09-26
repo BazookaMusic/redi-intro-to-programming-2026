@@ -324,6 +324,39 @@ print(final)               # 42.49
 ```
 
 ---
+
+# Expression vs statement
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+**Expression**: code that becomes one value
+
+```python
+15 + 13            # 28
+abs(-8)            # 8
+round(2.49, 1)     # 2.5
+```
+
+</div>
+<div>
+
+**Statement**: one complete instruction
+
+```python
+a = 3              # store 3 in a
+total = a + 5      # store 8 in total
+print(total)       # show 8
+```
+
+</div>
+</div>
+
+<div class="concept-box">
+Statements often contain expressions. In <code>total = a + 5</code>, Python evaluates the expression <code>a + 5</code> first. Then the statement stores the result in <code>total</code>.
+</div>
+
+---
 layout: center
 ---
 
