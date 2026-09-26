@@ -44,6 +44,8 @@ Each link opens an exercise folder on GitHub with an `exercise.py` task and a `c
 - [Seconds converter](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-06-seconds-converter)
 - [Extended calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-07-extended-calculator)
 
+[View Lesson 03 solutions on GitHub](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) after trying the exercises. The solved files are in matching folders.
+
 You need Python 3 to work on the exercises. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
 
 On macOS:
