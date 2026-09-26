@@ -18,31 +18,31 @@ Choose a lesson below. The lesson name opens the browser slides without solution
 
 ## Exercises
 
-Each link opens a folder with an `exercise.py` task and a `check.py` to check your work.
+Each link opens an exercise folder on GitHub with an `exercise.py` task and a `check.py` to check your work.
 
-### [02 · Variables and Data Types](exercises/02-variables-and-data-types/)
+### [02 · Variables and Data Types](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types)
 
-- [About Me](exercises/02-variables-and-data-types/about-me/)
-- [Type detective](exercises/02-variables-and-data-types/type-detective/)
-- [All About Me](exercises/02-variables-and-data-types/homework-01-all-about-me/)
-- [Type inspector](exercises/02-variables-and-data-types/homework-02-type-inspector/)
-- [Receipt](exercises/02-variables-and-data-types/homework-03-receipt/)
-- [len() explorer](exercises/02-variables-and-data-types/homework-04-length-explorer/)
-- [Mad libs](exercises/02-variables-and-data-types/homework-05-mad-libs/)
-- [Converter chain](exercises/02-variables-and-data-types/homework-06-converter-chain/)
-- [Interactive profile](exercises/02-variables-and-data-types/homework-07-interactive-profile/)
-- [Swap two values (bonus)](exercises/02-variables-and-data-types/bonus-swap-variables/)
+- [About Me](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/about-me)
+- [Type detective](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/type-detective)
+- [All About Me](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-01-all-about-me)
+- [Type inspector](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-02-type-inspector)
+- [Receipt](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-03-receipt)
+- [len() explorer](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-04-length-explorer)
+- [Mad libs](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-05-mad-libs)
+- [Converter chain](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-06-converter-chain)
+- [Interactive profile](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/homework-07-interactive-profile)
+- [Swap two values (bonus)](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/02-variables-and-data-types/bonus-swap-variables)
 
-### [03 · Arithmetic and User Input](exercises/03-arithmetic-and-user-input/)
+### [03 · Arithmetic and User Input](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input)
 
-- [Personal calculator](exercises/03-arithmetic-and-user-input/mini-project-calculator/)
-- [All operators](exercises/03-arithmetic-and-user-input/homework-01-all-operators/)
-- [Average](exercises/03-arithmetic-and-user-input/homework-02-average/)
-- [Temperature difference](exercises/03-arithmetic-and-user-input/homework-03-temperature-difference/)
-- [Discount calculator](exercises/03-arithmetic-and-user-input/homework-04-discount-calculator/)
-- [BMI calculator](exercises/03-arithmetic-and-user-input/homework-05-bmi-calculator/)
-- [Seconds converter](exercises/03-arithmetic-and-user-input/homework-06-seconds-converter/)
-- [Extended calculator](exercises/03-arithmetic-and-user-input/homework-07-extended-calculator/)
+- [Personal calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/mini-project-calculator)
+- [All operators](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-01-all-operators)
+- [Average](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-02-average)
+- [Temperature difference](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-03-temperature-difference)
+- [Discount calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-04-discount-calculator)
+- [BMI calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-05-bmi-calculator)
+- [Seconds converter](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-06-seconds-converter)
+- [Extended calculator](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/03-arithmetic-and-user-input/homework-07-extended-calculator)
 
 You need Python 3 to work on the exercises. Open a folder, read the instructions at the top of `exercise.py`, and write your code below them. Open a terminal in that folder to check your work.
 
