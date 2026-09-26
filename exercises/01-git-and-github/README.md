@@ -1,51 +1,14 @@
 # 01 · Git and GitHub exercises
 
-These exercises come from the [Git and GitHub slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html). Do them in order. When you finish, compare your work with the [solutions](../../solutions/01-git-and-github/README.md).
+These exercises come from the [Git and GitHub slides](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html). When you finish, compare your work with the [solutions](../../solutions/01-git-and-github/README.md).
 
 You need GitHub Desktop, VS Code, and Git.
 
-## Before you start: open your repository
+## Homework
 
-Use the repository you created and published in class.
+Do these at home after the lesson.
 
-1. Open GitHub Desktop.
-2. Click **Current Repository** at the top left and choose your repository.
-3. Choose **Repository → Open in Visual Studio Code**.
-
-Your repository folder now opens in VS Code.
-
-## 1. Create a file in your repository
-
-1. In the VS Code Explorer, click **New File**.
-2. Type `my-file.py`, then press **Enter**.
-3. Type `print("hello")`, then save with **Ctrl+S** (Windows) or **Command+S** (macOS).
-
-**Done when:** `my-file.py` appears inside your repository folder.
-
-## 2. Make and publish a commit
-
-1. Open `my-file.py` and add a new line, for example:
-
-   ```python
-   print("I made a commit!")
-   ```
-
-2. Save the file with **Ctrl+S** (Windows) or **Command+S** (macOS).
-3. In VS Code, choose **Terminal → New Terminal**.
-4. Type these commands one line at a time. Press **Enter** after each line.
-
-```sh
-git status            # Check what changed
-git add ./my-file.py  # Choose my-file.py for the commit
-git status            # Check that my-file.py is green
-git commit -m "Update my file" # Create the commit
-git status            # Check that the commit is ready
-git push              # Send it to GitHub
-```
-
-**Done when:** you open your repository on GitHub and see the new commit.
-
-## 3. Read this folder structure
+### Homework 1: Read this folder structure
 
 Study this tree:
 
@@ -64,7 +27,7 @@ Then answer these questions:
 3. What is the file extension of `hello.py`?
 4. What path leads from `my-project` to `logo.png`?
 
-## 4. Clone and play a Python game
+### Homework 2: Clone and play a Python game
 
 1. In VS Code, choose **File → New Window**.
 2. Choose **Terminal → New Terminal**. Run every command below in that terminal.
@@ -95,7 +58,7 @@ Then answer these questions:
 
 **Done when:** you play Bagels and guess the secret three-digit number using the clues.
 
-## 5. Build folders using commands (advanced)
+### Homework 3: Build folders using commands (advanced)
 
 Use the terminal to build this structure in your home folder:
 
@@ -122,3 +85,48 @@ ls                # List what is in the current folder
 ```
 
 **Done when:** your final `ls` in `terminal-practice` shows `notes` and `projects`.
+
+## Classroom exercises
+
+We do these together during the lesson.
+
+### Before you start: open your repository
+
+Use the repository you created and published in class.
+
+1. Open GitHub Desktop.
+2. Click **Current Repository** at the top left and choose your repository.
+3. Choose **Repository → Open in Visual Studio Code**.
+
+Your repository folder now opens in VS Code.
+
+### Create a file in your repository
+
+1. In the VS Code Explorer, click **New File**.
+2. Type `my-file.py`, then press **Enter**.
+3. Type `print("hello")`, then save with **Ctrl+S** (Windows) or **Command+S** (macOS).
+
+**Done when:** `my-file.py` appears inside your repository folder.
+
+### Make and publish a commit
+
+1. Open `my-file.py` and add a new line, for example:
+
+   ```python
+   print("I made a commit!")
+   ```
+
+2. Save the file with **Ctrl+S** (Windows) or **Command+S** (macOS).
+3. In VS Code, choose **Terminal → New Terminal**.
+4. Type these commands one line at a time. Press **Enter** after each line.
+
+```sh
+git status            # Check what changed
+git add ./my-file.py  # Choose my-file.py for the commit
+git status            # Check that my-file.py is green
+git commit -m "Update my file" # Create the commit
+git status            # Check that the commit is ready
+git push              # Send it to GitHub
+```
+
+**Done when:** you open your repository on GitHub and see the new commit.

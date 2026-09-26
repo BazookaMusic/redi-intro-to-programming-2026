@@ -4,43 +4,11 @@ These exercises come from the [Arithmetic and User Input slides](https://bazooka
 
 New to this? Follow [How to clone this repository to get access to exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026#clone-repository) and [How to do exercises and check my answers](https://github.com/BazookaMusic/redi-intro-to-programming-2026#do-exercises) first.
 
-## VAT calculator
+## Homework
 
-**Folder:** [`vat-calculator`](vat-calculator/)
+Do these at home after the lesson.
 
-VAT is a tax that is added to a price. Ask the user to enter a price. Add 21% VAT: `total = price * 1.21`
-
-Round the total to 2 decimal places and print one line in this format:
-`Price with VAT: €[total]`
-
-Example input: 10
-
-Example output:
-
-```text
-Price with VAT: €12.1
-```
-
-## Mini project: Personal calculator
-
-**Folder:** [`mini-project-calculator`](mini-project-calculator/)
-
-Ask the user for two numbers. Print their sum, difference (first minus second), product, quotient rounded to 2 decimal places, remainder, and first number to the power of the second number, in that order. Label the six lines `Sum`, `Difference`, `Product`, `Quotient`, `Remainder`, and `Power`, with a colon after each label. The second number will not be zero.
-
-Example input: 10, then 3
-
-Example output:
-
-```text
-Sum: 13.0
-Difference: 7.0
-Product: 30.0
-Quotient: 3.33
-Remainder: 1.0
-Power: 1000.0
-```
-
-## Homework 1: All operators
+### Homework 1: All operators
 
 **Folder:** [`homework-01-all-operators`](homework-01-all-operators/)
 
@@ -58,7 +26,7 @@ Remainder: 2
 Power: 1419857
 ```
 
-## Homework 2: Average
+### Homework 2: Average
 
 **Folder:** [`homework-02-average`](homework-02-average/)
 
@@ -70,7 +38,7 @@ Example output:
 Average: 81.7
 ```
 
-## Homework 3: abs() practice
+### Homework 3: abs() practice
 
 **Folder:** [`homework-03-temperature-difference`](homework-03-temperature-difference/)
 
@@ -82,7 +50,7 @@ Example output:
 Temperature difference: 12
 ```
 
-## Homework 4: Discount calculator
+### Homework 4: Discount calculator
 
 **Folder:** [`homework-04-discount-calculator`](homework-04-discount-calculator/)
 
@@ -96,7 +64,7 @@ Example output:
 Final price: 68.0
 ```
 
-## Homework 5: BMI calculator
+### Homework 5: BMI calculator
 
 **Folder:** [`homework-05-bmi-calculator`](homework-05-bmi-calculator/)
 
@@ -110,7 +78,7 @@ Example output:
 BMI: 22.9
 ```
 
-## Homework 6: Seconds converter
+### Homework 6: Seconds converter
 
 **Folder:** [`homework-06-seconds-converter`](homework-06-seconds-converter/)
 
@@ -125,7 +93,7 @@ Minutes: 2
 Seconds: 5
 ```
 
-## Homework 7: Extend the personal calculator
+### Homework 7: Extend the personal calculator
 
 **Folder:** [`homework-07-extended-calculator`](homework-07-extended-calculator/)
 
@@ -143,4 +111,44 @@ Quotient: 3.33
 Remainder: 1.0
 Power: 1000.0
 Whole number division: 3.0
+```
+
+## Classroom exercises
+
+We do these together during the lesson.
+
+### VAT calculator
+
+**Folder:** [`vat-calculator`](vat-calculator/)
+
+VAT is a tax that is added to a price. Ask the user to enter a price. Add 21% VAT: `total = price * 1.21`
+
+Round the total to 2 decimal places and print one line in this format:
+`Price with VAT: €[total]`
+
+Example input: 10
+
+Example output:
+
+```text
+Price with VAT: €12.1
+```
+
+### Mini project: Personal calculator
+
+**Folder:** [`mini-project-calculator`](mini-project-calculator/)
+
+Ask the user for two numbers. Print their sum, difference (first minus second), product, quotient rounded to 2 decimal places, remainder, and first number to the power of the second number, in that order. Label the six lines `Sum`, `Difference`, `Product`, `Quotient`, `Remainder`, and `Power`, with a colon after each label. The second number will not be zero.
+
+Example input: 10, then 3
+
+Example output:
+
+```text
+Sum: 13.0
+Difference: 7.0
+Product: 30.0
+Quotient: 3.33
+Remainder: 1.0
+Power: 1000.0
 ```

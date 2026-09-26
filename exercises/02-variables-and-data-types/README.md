@@ -4,7 +4,127 @@ These exercises come from the [Variables and Data Types slides](https://bazookam
 
 New to this? Follow [How to clone this repository to get access to exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026#clone-repository) and [How to do exercises and check my answers](https://github.com/BazookaMusic/redi-intro-to-programming-2026#do-exercises) first.
 
-## Build an About Me program
+## Homework
+
+Do these at home after the lesson.
+
+### Homework 1: All About Me
+
+**Folder:** [`homework-01-all-about-me`](homework-01-all-about-me/)
+
+Choose your own name, age, city, favourite food, favourite colour, and whether you are working. Create variables named `name`, `age`, `city`, `favourite_food`, `favourite_colour`, and `is_working`. Use a whole number for `age` and True or False for `is_working`. Print each value on its own line, in that order, with no extra labels.
+
+Example values: `"Sara"`, `25`, `"Berlin"`, `"Pizza"`, `"Blue"`, `False`
+
+Example output:
+
+```text
+Sara
+25
+Berlin
+Pizza
+Blue
+False
+```
+
+### Homework 2: Type inspector
+
+**Folder:** [`homework-02-type-inspector`](homework-02-type-inspector/)
+
+Create the same six variables as in All About Me: `name`, `age`, `city`, `favourite_food`, `favourite_colour`, and `is_working`. You can choose your own values again. Use a whole number for `age` and True or False for `is_working`. Print the type of each variable, one per line, in order.
+
+Example output:
+
+```text
+<class 'str'>
+<class 'int'>
+<class 'str'>
+<class 'str'>
+<class 'str'>
+<class 'bool'>
+```
+
+### Homework 3: Receipt
+
+**Folder:** [`homework-03-receipt`](homework-03-receipt/)
+
+Create `item` (text), `price` (a decimal number), and `quantity` (a whole number). Choose your own values. Print one line in this format:
+`[item] — quantity: [quantity] — price: [price]`
+
+Example values: `item = "Bread"`, `price = 1.5`, `quantity = 2`
+
+Example output:
+
+```text
+Bread — quantity: 2 — price: 1.5
+```
+
+### Homework 4: len() explorer
+
+**Folder:** [`homework-04-length-explorer`](homework-04-length-explorer/)
+
+Create three text variables named `name`, `city`, and `food`. Choose words so that one of them is clearly the longest (no equal longest lengths). Print the length of each, then print the longest word. Use the labels shown below. You can decide which is longest by looking at the lengths.
+
+Example values: `name = "Sara"`, `city = "Berlin"`, `food = "Pizza"`
+
+Example output:
+
+```text
+Name length: 4
+City length: 6
+Food length: 5
+Longest: Berlin
+```
+
+### Homework 5: Mad libs
+
+**Folder:** [`homework-05-mad-libs`](homework-05-mad-libs/)
+
+Choose your own adjective, animal, place, and whole number. Create variables named `adjective`, `animal`, `place`, and `number`. Print this sentence with your values:
+`The [adjective] [animal] visited [number] places in [place].`
+
+Example values: `"happy"`, `"cat"`, `"Berlin"`, `3`
+
+Example output:
+
+```text
+The happy cat visited 3 places in Berlin.
+```
+
+### Homework 6: Converter chain
+
+**Folder:** [`homework-06-converter-chain`](homework-06-converter-chain/)
+
+Start with `age_text = "28"`. Change it to an int, then to a float, then back to a str. After each change, print its type on a new line. You can reuse `age_text` or create new variables as you go.
+
+Example output:
+
+```text
+<class 'int'>
+<class 'float'>
+<class 'str'>
+```
+
+### Homework 7: Interactive profile
+
+**Folder:** [`homework-07-interactive-profile`](homework-07-interactive-profile/)
+
+Ask for a name and an age using `input()`. Print one sentence with both, in the format shown below. Bonus: print the name's length on a second line. The bonus line is optional, but the checker checks it if you add it.
+
+Example input: Sara, then 25
+
+Example output:
+
+```text
+Hello, Sara! You are 25 years old.
+Name length: 4
+```
+
+## Classroom exercises
+
+We do these together during the lesson.
+
+### Build an About Me program
 
 **Folder:** [`about-me`](about-me/)
 
@@ -29,7 +149,7 @@ True
 4
 ```
 
-## Type detective
+### Type detective
 
 **Folder:** [`type-detective`](type-detective/)
 
@@ -53,7 +173,11 @@ True
 <class 'float'>
 ```
 
-## Bonus: Swap two values
+## Bonus
+
+Try this when you finish the other exercises.
+
+### Bonus: Swap two values
 
 **Folder:** [`bonus-swap-variables`](bonus-swap-variables/)
 
@@ -64,116 +188,4 @@ Example output:
 ```text
 First: 9
 Second: 5
-```
-
-## Homework 1: All About Me
-
-**Folder:** [`homework-01-all-about-me`](homework-01-all-about-me/)
-
-Choose your own name, age, city, favourite food, favourite colour, and whether you are working. Create variables named `name`, `age`, `city`, `favourite_food`, `favourite_colour`, and `is_working`. Use a whole number for `age` and True or False for `is_working`. Print each value on its own line, in that order, with no extra labels.
-
-Example values: `"Sara"`, `25`, `"Berlin"`, `"Pizza"`, `"Blue"`, `False`
-
-Example output:
-
-```text
-Sara
-25
-Berlin
-Pizza
-Blue
-False
-```
-
-## Homework 2: Type inspector
-
-**Folder:** [`homework-02-type-inspector`](homework-02-type-inspector/)
-
-Create the same six variables as in All About Me: `name`, `age`, `city`, `favourite_food`, `favourite_colour`, and `is_working`. You can choose your own values again. Use a whole number for `age` and True or False for `is_working`. Print the type of each variable, one per line, in order.
-
-Example output:
-
-```text
-<class 'str'>
-<class 'int'>
-<class 'str'>
-<class 'str'>
-<class 'str'>
-<class 'bool'>
-```
-
-## Homework 3: Receipt
-
-**Folder:** [`homework-03-receipt`](homework-03-receipt/)
-
-Create `item` (text), `price` (a decimal number), and `quantity` (a whole number). Choose your own values. Print one line in this format:
-`[item] — quantity: [quantity] — price: [price]`
-
-Example values: `item = "Bread"`, `price = 1.5`, `quantity = 2`
-
-Example output:
-
-```text
-Bread — quantity: 2 — price: 1.5
-```
-
-## Homework 4: len() explorer
-
-**Folder:** [`homework-04-length-explorer`](homework-04-length-explorer/)
-
-Create three text variables named `name`, `city`, and `food`. Choose words so that one of them is clearly the longest (no equal longest lengths). Print the length of each, then print the longest word. Use the labels shown below. You can decide which is longest by looking at the lengths.
-
-Example values: `name = "Sara"`, `city = "Berlin"`, `food = "Pizza"`
-
-Example output:
-
-```text
-Name length: 4
-City length: 6
-Food length: 5
-Longest: Berlin
-```
-
-## Homework 5: Mad libs
-
-**Folder:** [`homework-05-mad-libs`](homework-05-mad-libs/)
-
-Choose your own adjective, animal, place, and whole number. Create variables named `adjective`, `animal`, `place`, and `number`. Print this sentence with your values:
-`The [adjective] [animal] visited [number] places in [place].`
-
-Example values: `"happy"`, `"cat"`, `"Berlin"`, `3`
-
-Example output:
-
-```text
-The happy cat visited 3 places in Berlin.
-```
-
-## Homework 6: Converter chain
-
-**Folder:** [`homework-06-converter-chain`](homework-06-converter-chain/)
-
-Start with `age_text = "28"`. Change it to an int, then to a float, then back to a str. After each change, print its type on a new line. You can reuse `age_text` or create new variables as you go.
-
-Example output:
-
-```text
-<class 'int'>
-<class 'float'>
-<class 'str'>
-```
-
-## Homework 7: Interactive profile
-
-**Folder:** [`homework-07-interactive-profile`](homework-07-interactive-profile/)
-
-Ask for a name and an age using `input()`. Print one sentence with both, in the format shown below. Bonus: print the name's length on a second line. The bonus line is optional, but the checker checks it if you add it.
-
-Example input: Sara, then 25
-
-Example output:
-
-```text
-Hello, Sara! You are 25 years old.
-Name length: 4
 ```
