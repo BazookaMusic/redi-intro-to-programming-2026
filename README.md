@@ -24,36 +24,38 @@ You need [Git](https://git-scm.com/downloads) to copy the repository.
 
 On Windows, open **Start**, search for **PowerShell**, and press Enter. On macOS, open **Applications → Utilities → Terminal**. A terminal is where you type commands.
 
+Type the commands below one line at a time. Press **Enter** after each line to run it, and wait for it to finish before typing the next line. Text after `#` is a note for you; the terminal ignores it.
+
 ### Make a folder in Documents
 
 On Windows (PowerShell):
 
 ```powershell
-cd "$HOME\Documents"
-mkdir "ReDI Projects"
-cd "ReDI Projects"
+cd "$HOME\Documents"  # Go to Documents
+mkdir "ReDI Projects" # Make a new folder
+cd "ReDI Projects"    # Go into the new folder
 ```
 
 On macOS:
 
 ```sh
-cd "$HOME/Documents"
-mkdir "ReDI Projects"
-cd "ReDI Projects"
+cd "$HOME/Documents"  # Go to Documents
+mkdir "ReDI Projects" # Make a new folder
+cd "ReDI Projects"    # Go into the new folder
 ```
 
-`cd` moves to a folder, and `mkdir` makes a new one. If `ReDI Projects` already exists, skip the `mkdir` command. If Windows cannot find Documents, open it in File Explorer and use its full path in quotes for the first `cd` command.
+If `ReDI Projects` already exists, skip the `mkdir` command. If Windows cannot find Documents, open it in File Explorer and use its full path in quotes for the first `cd` command.
 
 ### Clone the repository
 
 In your new `ReDI Projects` folder, run these commands on either computer:
 
 ```sh
-git clone https://github.com/BazookaMusic/redi-intro-to-programming-2026.git
-cd redi-intro-to-programming-2026
+git clone https://github.com/BazookaMusic/redi-intro-to-programming-2026.git # Copy the repository
+cd redi-intro-to-programming-2026 # Go into the copied folder
 ```
 
-`git clone` makes a copy in Documents → ReDI Projects. The last command moves into your new repository folder.
+You now have a copy of the repository in Documents → ReDI Projects.
 
 ## Exercises
 
