@@ -193,6 +193,44 @@ print(sweets % friends)    # 2 left over
 
 # Order of operations
 
+<<<<<<< HEAD
+=======
+- An **expression** is code that becomes one value, like `15 + 13`.
+- Python **evaluates** (works out) the right side of `=` first, then stores the result in `a`.
+- `+` is **left associative**: Python groups it from the left, so the first pair goes first.
+
+<div class="grid grid-cols-[2fr_3fr] gap-6">
+<div>
+
+**Your code**
+
+```python
+a = 3
+a = 15 + 13 + 17 + a + 18
+```
+
+</div>
+<div>
+
+**How Python evaluates line 2**
+
+```python {1|2|3|4|5|6|all}
+a = ((15 + 13) + 17 + a + 18)   # Start with the first pair
+a = ((28 + 17) + a + 18)        # 15 + 13 = 28
+a = ((45 + a) + 18)             # 28 + 17 = 45
+a = ((45 + 3) + 18)             # a is still 3
+a = (48 + 18)                   # 45 + 3 = 48
+a = 66                          # 48 + 18 = 66, store it in a
+```
+
+</div>
+</div>
+
+---
+
+# Order of operations
+
+>>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 Brackets run first, then powers, then multiply and divide, then add and subtract.
 
 ```python
@@ -289,6 +327,42 @@ print(final)               # 42.49
 ```
 
 ---
+<<<<<<< HEAD
+=======
+
+# Expression vs statement
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+**Expression**: code that becomes one value
+
+```python
+15 + 13            # 28
+abs(-8)            # 8
+round(2.49, 1)     # 2.5
+```
+
+</div>
+<div>
+
+**Statement**: one complete instruction
+
+```python
+a = 3              # store 3 in a
+total = a + 5      # store 8 in total
+print(total)       # show 8
+```
+
+</div>
+</div>
+
+<div class="concept-box">
+Statements often contain expressions. In <code>total = a + 5</code>, Python evaluates the expression <code>a + 5</code> first. Then the statement stores the result in <code>total</code>.
+</div>
+
+---
+>>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 layout: center
 ---
 
@@ -562,7 +636,11 @@ print("Power:          ", a ** b)
 
 ---
 
+<<<<<<< HEAD
 # 📅 Next Week — Strings and String Methods
+=======
+# 📅 Next Week — Strings, Conditions and Logic
+>>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 
 Next lesson we will look at:
 
@@ -570,6 +648,11 @@ Next lesson we will look at:
 - Checking string content: `.isdigit()`, `.isalpha()`
 - Slicing strings: `name[0:3]`
 - f-strings: `f"Hello, {name}!"`
+<<<<<<< HEAD
+=======
+- `if` conditions: run code only when a condition is true
+- Logic: combine conditions with `and`, `or`, and `not`
+>>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 
 ---
 layout: center

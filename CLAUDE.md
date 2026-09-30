@@ -52,7 +52,7 @@ npm run dev:no-solutions -- <deck>.md
 ```
 
 - Run `npm run build`, then confirm that matching `<deck>.pdf` and `<deck>.html` files exist in both `slides_solutions/` and `slides_no_solutions/`.
-- Add the lesson to the README table. Link the lesson name to the no-solutions GitHub Pages HTML file by default, add a separate `With solutions` HTML link, include a short description grounded in the deck's learning goals, and link both generated PDFs with absolute `raw.githubusercontent.com` URLs so they download reliably.
+- Add the lesson to the README using its current layout. Include its title, a short description grounded in the deck's learning goals, and links to both HTML and PDF versions with and without solutions. Use GitHub Pages URLs for HTML and absolute `raw.githubusercontent.com` URLs for PDFs.
 - Include the source deck, shared assets, README update, and all four generated artifacts in the same change.
 
 ## Exercises and solutions
@@ -74,6 +74,19 @@ The answer goes here.
 
 - Use `knowledge-solution-slide` on solution slides for styling and semantics. The generator removes content by markers, not by title or class.
 - Keep every start marker paired with one end marker. Do not nest solution markers.
+
+## Standalone practice exercises
+
+- If a deck includes exercises, create standalone exercises **and solutions for every in-class and take-home task**, including homework and projects; add bonus exercises when requested.
+- In each lesson's exercise `README.md` and any README-based solutions file, list homework first under `## Homework`, in homework-number order. Then list the tasks done during the lesson under `## Classroom exercises`, in slide order. Put extra bonus tasks that are not in the slides last, under `## Bonus`. Use `###` headings for the tasks.
+- Mirror each task under `exercises/<NN>-<lesson-title>/<task-name>/` and `solutions/<NN>-<lesson-title>/<task-name>/`. The student folder contains an unsolved `exercise.py` and a standalone `check.py`; the solution folder contains only a simply solved `exercise.py`.
+- For lessons without Python tasks, such as Git or terminal practice, put all tasks in `exercises/<NN>-<lesson-title>/README.md` and their answers in `solutions/<NN>-<lesson-title>/README.md` instead.
+- A Python lesson can also include tasks that need no code, such as telling expressions and statements apart. Describe them only in the lesson's exercise `README.md`, with no task folder, and put their answers in `solutions/<NN>-<lesson-title>/README.md`. When you insert a homework task, renumber the later homework headings, folders, starter comments, and tests so the numbers still match.
+- For Python lessons, add `exercises/<NN>-<lesson-title>/README.md` that links to the root README tutorials for cloning and checking answers, then lists every task using the grouping above, with a link to its folder and the description and example output copied from its `exercise.py` comments. Update it whenever a task's comments change.
+- Start each student `exercise.py` with a plain-language task in comments, at least one accurate example output (and sample input if needed), and `# Write your solution below.` Use only concepts taught so far.
+- Make each `check.py` work with only the two files in its folder: no shared helper or third-party packages. Supply test input when the task uses `input()`, compare printed output, and show both expected and actual output on failure. Accept students' own values where the task lets them choose.
+- Test by copying each `check.py` with its matching solved `exercise.py` into a temporary folder and running the checker. Also check that an unsolved starter fails with helpful feedback.
+- Keep the student-facing README exercise links up to date: link each lesson's exercise `README.md` and solutions parent folder (or solutions `README.md`), not each task. Explain how to open a task folder in VS Code and run `check.py` using **Terminal → New Terminal**.
 
 ## Design and code conventions
 

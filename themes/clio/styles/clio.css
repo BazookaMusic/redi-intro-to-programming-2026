@@ -16,6 +16,11 @@
     --lesson-panel: rgb(4 16 26 / 62%);
 }
 
+/* Slides use a fixed canvas, so ignore the browser's default font size setting. */
+html {
+    font-size: 16px;
+}
+
 .slidev-layout {
     background:
         linear-gradient(145deg, rgb(169 130 255 / 10%), transparent 46%),
