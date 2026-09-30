@@ -193,8 +193,6 @@ print(sweets % friends)    # 2 left over
 
 # Order of operations
 
-<<<<<<< HEAD
-=======
 - An **expression** is code that becomes one value, like `15 + 13`.
 - Python **evaluates** (works out) the right side of `=` first, then stores the result in `a`.
 - `+` is **left associative**: Python groups it from the left, so the first pair goes first.
@@ -230,7 +228,7 @@ a = 66                          # 48 + 18 = 66, store it in a
 
 # Order of operations
 
->>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
+
 Brackets run first, then powers, then multiply and divide, then add and subtract.
 
 ```python
@@ -327,8 +325,6 @@ print(final)               # 42.49
 ```
 
 ---
-<<<<<<< HEAD
-=======
 
 # Expression vs statement
 
@@ -362,7 +358,6 @@ Statements often contain expressions. In <code>total = a + 5</code>, Python eval
 </div>
 
 ---
->>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 layout: center
 ---
 
@@ -636,11 +631,7 @@ print("Power:          ", a ** b)
 
 ---
 
-<<<<<<< HEAD
-# 📅 Next Week — Strings and String Methods
-=======
 # 📅 Next Week — Strings, Conditions and Logic
->>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 
 Next lesson we will look at:
 
@@ -648,11 +639,8 @@ Next lesson we will look at:
 - Checking string content: `.isdigit()`, `.isalpha()`
 - Slicing strings: `name[0:3]`
 - f-strings: `f"Hello, {name}!"`
-<<<<<<< HEAD
-=======
 - `if` conditions: run code only when a condition is true
 - Logic: combine conditions with `and`, `or`, and `not`
->>>>>>> 5af57241494f2795d9735dfaed7c76f510bbf462
 
 ---
 layout: center
