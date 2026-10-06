@@ -15,6 +15,7 @@ Choose a lesson below. Open the slides in your browser or download them as a PDF
 | 01 · Git and GitHub | Learn about files, folders, and paths, then use Git, GitHub Desktop, and the terminal to save and share code. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/01-github-desktop.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/01-github-desktop.pdf) |
 | 02 · Variables and Data Types | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) |
 | 03 · Arithmetic and User Input | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) |
+| 04 · Strings and Conditionals | Learn string operations and methods, build output with f-strings, compare values and combine checks with and/or/not and `in`, then make decisions with if/elif/else, nesting, and conditional expressions. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/04-strings-and-conditionals.pdf) |
 
 <details>
 <summary><strong>Show slides with solutions</strong></summary>
@@ -26,6 +27,7 @@ These slides include the answers. Try the questions first!
 | 01 · Git and GitHub | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/01-github-desktop.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/01-github-desktop.pdf) |
 | 02 · Variables and Data Types | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | 03 · Arithmetic and User Input | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
+| 04 · Strings and Conditionals | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/04-strings-and-conditionals.pdf) |
 
 </details>
 
