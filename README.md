@@ -16,6 +16,7 @@ Choose a lesson below. Open the slides in your browser or download them as a PDF
 | 02 · Variables and Data Types | Learn about print(), variables, the four basic data types, type conversion, and reading user input. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/02-variables.pdf) |
 | 03 · Arithmetic and User Input | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) |
 | 04 · Strings and Conditionals | Learn string operations and methods, build output with f-strings, compare values and combine checks with and/or/not and `in`, then make decisions with if/elif/else, nesting, and conditional expressions. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/04-strings-and-conditionals.pdf) |
+| 05 · Loops | Learn to repeat code with for loops, range(), and while loops, control loops with break and continue, loop over lists, and use common patterns such as filter, find, accumulate, max, and nested loops. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/05-loops.pdf) |
 
 <details>
 <summary><strong>Show slides with solutions</strong></summary>
@@ -28,6 +29,7 @@ These slides include the answers. Try the questions first!
 | 02 · Variables and Data Types | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/02-variables.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/02-variables.pdf) |
 | 03 · Arithmetic and User Input | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 | 04 · Strings and Conditionals | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/04-strings-and-conditionals.pdf) |
+| 05 · Loops | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/05-loops.pdf) |
 
 </details>
 
@@ -40,6 +42,7 @@ Lesson 01's exercises are in one README. From Lesson 02, each exercise folder ha
 | 01 · Git and GitHub | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/01-git-and-github/README.md) |
 | 02 · Variables and Data Types | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/02-variables-and-data-types/README.md) |
 | 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/03-arithmetic-and-user-input/README.md) |
+| 05 · Loops | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/05-loops/README.md) |
 
 <details>
 <summary><strong>Show exercise solutions</strong></summary>
@@ -51,6 +54,7 @@ These folders contain the answers. Try the exercises first!
 | 01 · Git and GitHub | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/solutions/01-git-and-github/README.md) |
 | 02 · Variables and Data Types | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/02-variables-and-data-types) |
 | 03 · Arithmetic and User Input | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
+| 05 · Loops | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/05-loops) |
 
 </details>
 
