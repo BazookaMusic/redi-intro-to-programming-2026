@@ -852,7 +852,7 @@ print(f"Average: {average:.1f}°C")
 
 <div class="absolute bottom-32 left-12 right-12 text-white">
   <h1 class="text-6xl font-light leading-tight mb-6" style="font-size: 60px;">05 - More list methods 🧰</h1>
-  <p class="text-2xl font-light opacity-90 mt-4">Sorting, searching and slicing</p>
+  <p class="text-2xl font-light opacity-90 mt-4">Sorting, searching, slicing and merging</p>
 </div>
 
 ---
@@ -1009,6 +1009,399 @@ print(f"Scores above 50: {count}")
 
 - After sorting from highest to lowest, the **lowest** score is the **last** item: `scores[-1]`.
 <!-- solution:end -->
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Two Sorted Lists
+<br>
+
+<div class="grid grid-cols-2 gap-8 items-start">
+<div>
+
+We have two lists that are **already sorted**. We want **one** sorted list with every item — without sorting again.
+
+The idea:
+
+1. Look at the **front** item of each list
+2. Take the **smaller** one and add it to the result
+3. Move forward in the list you took it from
+4. When one list runs out, add **the rest** of the other
+
+</div>
+<div>
+
+```python
+a = [1, 4, 7]
+b = [2, 3, 8]
+
+# Goal:
+# [1, 2, 3, 4, 7, 8]
+```
+
+We remember our place in each list with an **index**:
+
+- `i` is our position in `a`
+- `j` is our position in `b`
+- Both start at `0`
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Start
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">1</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">4</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">7</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">2</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">8</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="h-12 flex items-center font-mono text-lg text-gray-400">[ ] empty</div>
+</div>
+
+</div>
+<div>
+
+- `i = 0` points at `a[0]`, which is `1`
+- `j = 0` points at `b[0]`, which is `2`
+- `result` starts as an empty list
+
+<br>
+
+<span class="font-bold text-[#E8522A]">Orange</span> = the front item of each list<br>
+<span class="font-bold text-[#2e9e5b]">Green</span> = the item we take<br>
+<span class="font-bold opacity-40">Faded</span> = already used
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 1 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">1</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">4</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">7</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">2</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">8</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">1</div>
+</div>
+
+</div>
+<div>
+
+Compare `a[0]` and `b[0]`: `1` vs `2`
+
+`1` is smaller → take it from `a`
+
+```python
+result.append(a[i])
+i = i + 1  # i is now 1
+```
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 2 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">1</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">4</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">7</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">2</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">8</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">1</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">2</div>
+</div>
+
+</div>
+<div>
+
+Compare `a[1]` and `b[0]`: `4` vs `2`
+
+`2` is smaller → take it from `b`
+
+```python
+result.append(b[j])
+j = j + 1  # j is now 1
+```
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 3 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">1</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">4</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">7</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">2</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">3</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">8</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">1</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">2</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">3</div>
+</div>
+
+</div>
+<div>
+
+Compare `a[1]` and `b[1]`: `4` vs `3`
+
+`3` is smaller → take it from `b`
+
+```python
+result.append(b[j])
+j = j + 1  # j is now 2
+```
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 4 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">1</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">4</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400">7</div><div class="h-6"></div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">2</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">8</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">1</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">2</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">3</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">4</div>
+</div>
+
+</div>
+<div>
+
+Compare `a[1]` and `b[2]`: `4` vs `8`
+
+`4` is smaller → take it from `a`
+
+```python
+result.append(a[i])
+i = i + 1  # i is now 2
+```
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 5 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">1</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">4</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">7</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ i</div></div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">2</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#E8522A] bg-[#E8522A]/15 text-[#E8522A] font-bold">8</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">1</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">2</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">3</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">4</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">7</div>
+</div>
+
+</div>
+<div>
+
+Compare `a[2]` and `b[2]`: `7` vs `8`
+
+`7` is smaller → take it from `a`
+
+```python
+result.append(a[i])
+i = i + 1  # i is now 3
+```
+
+`i` is now `3`, which is `len(a)`. `a` is **used up**, so we stop comparing.
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Step by Step — Step 6 of 6
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-6 items-start">
+<div>
+
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">a</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">1</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">4</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">7</div><div class="h-6"></div></div>
+  <div class="h-12 flex items-center pl-2 text-base font-bold text-gray-400">used up</div>
+</div>
+<div class="flex items-start gap-2 mb-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">b</div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">2</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-gray-400 opacity-30">3</div><div class="h-6"></div></div>
+  <div class="flex flex-col items-center"><div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">8</div><div class="h-6 text-base font-bold text-[#E8522A]">↑ j</div></div>
+</div>
+<div class="flex items-start gap-2">
+  <div class="w-20 h-12 flex items-center font-mono text-lg">result</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">1</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">2</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">3</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">4</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] text-[#2e9e5b]">7</div>
+  <div class="w-12 h-12 flex items-center justify-center rounded-lg border-2 font-mono text-2xl border-[#2e9e5b] bg-[#2e9e5b] text-white font-bold">8</div>
+</div>
+
+</div>
+<div>
+
+**Add the rest.** `b` is sorted, so everything left in it can go straight to the end.
+
+`b[j:]` is `b[2:]`, which is `[8]`
+
+```python
+for item in b[j:]:
+    result.append(item)
+```
+
+Done! `[1, 2, 3, 4, 7, 8]` ✅
+
+</div>
+</div>
+
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 6 — Lists &amp; Tuples</div>
+
+## Merging Two Sorted Lists — The Code
+
+<div class="grid grid-cols-[3fr_2fr] gap-8 mt-4 items-start compact-code">
+<div>
+
+```python
+result = []
+i = 0  # position in a
+j = 0  # position in b
+
+# Compare front items while both lists have some left
+while i < len(a) and j < len(b):
+    if a[i] <= b[j]:
+        result.append(a[i])
+        i = i + 1
+    else:
+        result.append(b[j])
+        j = j + 1
+
+# One list is used up: add the rest of the other
+for item in a[i:]:
+    result.append(item)
+for item in b[j:]:
+    result.append(item)
+print(result)  # [1, 2, 3, 4, 7, 8]
+```
+
+</div>
+<div>
+
+- Same `a` and `b` as before.
+- We use `while`, not `for`: `i` and `j` move at **different** times.
+- The `while` loop stops as soon as **one** list is used up.
+- After the loop, one of `a[i:]` and `b[j:]` is always **empty**, so only one `for` loop adds anything.
+
+</div>
+</div>
+
+<style>
+.compact-code pre { font-size: 12px !important; line-height: 1.35 !important; }
+</style>
 
 ---
 
