@@ -1,0 +1,71 @@
+from pathlib import Path
+import io
+import os
+import subprocess
+import sys
+import tokenize
+
+
+EXPECTED = ("108",)
+LOOP_WORDS = ("for", "while")
+LOOP_HINT = "Use a loop to add up the numbers."
+TIME_LIMIT = 3
+
+
+def _fail(expected, actual, reason=""):
+    print("Not quite yet.")
+    if reason:
+        print(reason)
+    print("Expected output:\n" + "\n".join(expected))
+    print("Your output:\n" + ("\n".join(actual) or "(nothing)"))
+    raise SystemExit(1)
+
+
+def _name_tokens(source):
+    try:
+        return {
+            token.string
+            for token in tokenize.generate_tokens(io.StringIO(source).readline)
+            if token.type == tokenize.NAME
+        }
+    except (tokenize.TokenError, SyntaxError):
+        return set()
+
+
+def check():
+    exercise = Path(__file__).with_name("exercise.py")
+    source = exercise.read_text(encoding="utf-8")
+    if "sum" in _name_tokens(source):
+        _fail(EXPECTED, [], "Do not use the built-in sum() function. Add the numbers with a loop.")
+
+    try:
+        result = subprocess.run(
+            [sys.executable, str(exercise)],
+            capture_output=True,
+            encoding="utf-8",
+            errors="replace",
+            stdin=subprocess.DEVNULL,
+            env=dict(os.environ, PYTHONIOENCODING="utf-8"),
+            timeout=TIME_LIMIT,
+        )
+    except subprocess.TimeoutExpired as error:
+        output = error.stdout or ""
+        if isinstance(output, bytes):
+            output = output.decode("utf-8", errors="replace")
+        _fail(EXPECTED, output.splitlines()[:20] + ["..."],
+              f"Your program was still running after {TIME_LIMIT} seconds. Does your loop ever stop?")
+
+    actual = [line.strip() for line in (result.stdout or "").splitlines() if line.strip()]
+    if result.returncode != 0:
+        errors = result.stderr.strip().splitlines() or ["unknown error"]
+        _fail(EXPECTED, actual, "Your program stopped with an error: " + errors[-1])
+    if actual != list(EXPECTED):
+        _fail(EXPECTED, actual)
+    if not any(word in _name_tokens(source) for word in LOOP_WORDS):
+        _fail(EXPECTED, actual, LOOP_HINT)
+
+    print("Correct! Your output matches every test.")
+
+
+if __name__ == "__main__":
+    check()
