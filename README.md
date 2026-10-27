@@ -17,6 +17,7 @@ Choose a lesson below. Open the slides in your browser or download them as a PDF
 | 03 · Arithmetic and User Input | Learn arithmetic operators, order of operations, abs() and round(), reading keyboard input, and converting between types. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/03-arithmetic.pdf) |
 | 04 · Strings and Conditionals | Learn string operations and methods, build output with f-strings, compare values and combine checks with and/or/not and `in`, then make decisions with if/elif/else, nesting, and conditional expressions. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/04-strings-and-conditionals.pdf) |
 | 05 · Loops | Learn to repeat code with for loops, range(), and while loops, control loops with break and continue, loop over lists, and use common patterns such as filter, find, accumulate, max, and nested loops. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/05-loops.pdf) |
+| 06 · Lists and Tuples | Learn to create, read, and change lists, loop over them with for and enumerate(), store fixed values in tuples and unpack them, then sort, search, and slice lists. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/06-lists-and-tuples.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/06-lists-and-tuples.pdf) |
 
 <details>
 <summary><strong>Show slides with solutions</strong></summary>
@@ -30,6 +31,7 @@ These slides include the answers. Try the questions first!
 | 03 · Arithmetic and User Input | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/03-arithmetic.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/03-arithmetic.pdf) |
 | 04 · Strings and Conditionals | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/04-strings-and-conditionals.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/04-strings-and-conditionals.pdf) |
 | 05 · Loops | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/05-loops.pdf) |
+| 06 · Lists and Tuples | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/06-lists-and-tuples.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/06-lists-and-tuples.pdf) |
 
 </details>
 
@@ -44,6 +46,7 @@ Lesson 01's exercises are in one README. From Lesson 02, each exercise folder ha
 | 03 · Arithmetic and User Input | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/03-arithmetic-and-user-input/README.md) |
 | 04 · Strings and Conditionals | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/04-strings-and-conditionals/README.md) |
 | 05 · Loops | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/05-loops/README.md) |
+| 06 · Lists and Tuples | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/06-lists-and-tuples/README.md) |
 
 <details>
 <summary><strong>Show exercise solutions</strong></summary>
@@ -57,6 +60,7 @@ These folders contain the answers. Try the exercises first!
 | 03 · Arithmetic and User Input | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/03-arithmetic-and-user-input) |
 | 04 · Strings and Conditionals | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/04-strings-and-conditionals) |
 | 05 · Loops | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/05-loops) |
+| 06 · Lists and Tuples | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/06-lists-and-tuples) |
 
 </details>
 
