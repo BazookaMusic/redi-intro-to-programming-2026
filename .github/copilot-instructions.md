@@ -77,6 +77,15 @@ The answer goes here.
 
 ## Standalone practice exercises
 
+- Write every exercise in this order, on the slides, in the starter comments and in the exercise `README.md`:
+  1. **Intro to the problem:** a short scenario saying what the student is building. Example: "You are building the code for a wallet. The wallet starts with 20 euros. You will buy different items with it and check whether you can afford them." Use a simple, everyday scenario that students understand at once, such as shopping, a wallet or a game score. Keep the story short and focus it on what the student should implement; avoid unusual settings or extra details that need explaining.
+  2. **Numbered steps:** say specifically **what** to build, such as function names, parameters and what they calculate or return. Do not give operational, line-by-line instructions. End with one or two steps marked **(Advanced)**. Advanced steps should be harder in programming, for example looping over a list, building a list or reusing an earlier function. They should not be harder maths or a logic puzzle.
+  3. **Expected input and output:** for example, a table of calls and their results, under that heading.
+  4. **Help:** useful code snippets and, on the slides, a GitHub link to the starter folder, such as `[exercises/07-functions/shopping-budget/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/shopping-budget)`.
+- When students must build on supplied starter code, start the slide instructions with "Copy the code from the starter:" and a GitHub link to its `exercise.py`, instead of a starter link under Help.
+- Keep the whole exercise on one slide: the intro and steps at full width, then the expected input and output and the help side by side below them. Keep the wording short so it stays readable.
+- Checkers must test the required steps. Test advanced steps only when the student has written them, and say when they are missing.
+
 - If a deck includes exercises, create standalone exercises **and solutions for every in-class and take-home task**, including homework and projects; add bonus exercises when requested.
 - In each lesson's exercise `README.md` and any README-based solutions file, list homework first under `## Homework`, in homework-number order. Then list the tasks done during the lesson under `## Classroom exercises`, in slide order. Put extra bonus tasks that are not in the slides last, under `## Bonus`. Use `###` headings for the tasks.
 - Mirror each task under `exercises/<NN>-<lesson-title>/<task-name>/` and `solutions/<NN>-<lesson-title>/<task-name>/`. The student folder contains an unsolved `exercise.py` and a standalone `check.py`; the solution folder contains only a simply solved `exercise.py`.
