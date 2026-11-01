@@ -1,44 +1,63 @@
 ---
-theme: ../../themes/clio
+theme: default
 title: Functions
 info: |
   Intro to Programming
   ReDI School 2026 - Week 7
 drawings:
   persist: false
+highlighter: shiki
 transition: slide-left
 preloadImages: false
 mdc: true
-class: foundation-slide
+fonts:
+  mono: Fira Mono
 ---
 
-<div class="eyebrow">Week 7 - Intro to Programming</div>
+<div class="absolute inset-0 bg-[#E8522A]" />
 
-# Functions
+<div class="absolute top-6 left-8 flex items-center gap-3 text-white">
+  <div class="w-10 h-10 bg-white rounded flex items-center justify-center">
+    <svg viewBox="0 0 40 40" class="w-8 h-8" fill="#E8522A" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ReDI School logo">
+      <rect x="4" y="4" width="14" height="14" rx="1"/>
+      <rect x="22" y="4" width="14" height="14" rx="1"/>
+      <rect x="4" y="22" width="14" height="14" rx="1"/>
+      <rect x="22" y="22" width="14" height="14" rx="1"/>
+    </svg>
+  </div>
+  <span class="text-lg font-semibold tracking-wide">ReDISchool</span>
+</div>
+<div class="absolute top-8 right-8 text-white text-lg font-medium">Week 7</div>
 
-Write a piece of code once. Give it inputs. Use its result.
-
-Today we will write our own functions, use functions from libraries,
-and build a small Pokemon battle game.
-
----
-class: foundation-slide lesson-overview-slide
----
-
-# Part 1: Writing functions
-
-<p class="lesson-overview-intro">From a named block of code to a result you can use.</p>
-
-<div class="lesson-overview-path">
-  <section><b>1</b><span><strong>Quick recap</strong>Lists, tuples and loops</span></section>
-  <section><b>2</b><span><strong>What is a function?</strong>Code we can use again</span></section>
-  <section><b>3</b><span><strong>Defining and calling</strong>Write it, then run it</span></section>
-  <section><b>4</b><span><strong>Parameters and arguments</strong>Give a function inputs</span></section>
-  <section><b>5</b><span><strong>Return values</strong>Get a result back</span></section>
-  <section><b>6</b><span><strong>Execution and scope</strong>Follow calls and variable names</span></section>
+<div class="absolute bottom-32 left-12 right-12 text-white">
+  <p class="text-xl font-light opacity-90 mb-2">Introduction to Programming - Fall 2026</p>
+  <h1 class="text-6xl font-light leading-tight mb-6">Functions</h1>
+  <p class="text-2xl font-light opacity-90 mt-4">Write a piece of code once. Give it inputs. Use its result.</p>
+  <p class="text-xl font-light opacity-90 mt-4">Write our own functions, use functions from libraries, and build a small Pokemon battle game.</p>
 </div>
 
-<p class="lesson-overview-goal">Practice: draw a face, track pizza slices, and trace a function.</p>
+---
+
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 7 - Functions</div>
+
+## Part 1: Writing functions
+
+From a named block of code to a result you can use.
+
+<div class="agenda [&_td]:py-1">
+
+|  |  |
+|---|---|
+| 01 | Quick recap |
+| 02 | What is a function? |
+| 03 | Defining and calling |
+| 04 | Parameters and arguments |
+| 05 | Return values |
+| 06 / 07 | Execution and scope |
+
+</div>
+
+Practice: draw a face, track pizza slices, and trace a function.
 
 ---
 
@@ -629,19 +648,23 @@ layout: center
 15 minutes
 
 ---
-class: foundation-slide lesson-overview-slide
----
 
-# Part 2: Reusing code
+<div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest mb-4">Week 7 - Functions</div>
 
-<p class="lesson-overview-intro">Document our functions, use libraries, and build a game.</p>
+## Part 2: Reusing code
 
-<div class="lesson-overview-path">
-  <section><b>8</b><span><strong>Docstrings</strong>Explain a function's purpose</span></section>
-  <section><b>9</b><span><strong>Libraries and imports</strong>Use code supplied by others</span></section>
-  <section><b>10</b><span><strong>Installing with pip</strong>Fetch real Pokemon data</span></section>
-  <section><b>11</b><span><strong>Mini project</strong>A simple Pokemon battle</span></section>
-  <section><b>12</b><span><strong>Homework and questions</strong>Practise the main ideas</span></section>
+Document our functions, use libraries, and build a game.
+
+<div class="agenda [&_td]:py-1">
+
+|  |  |
+|---|---|
+| 08 | Docstrings |
+| 09 | Libraries and imports |
+| 10 | Installing with pip |
+| 11 | Mini project: Pokemon battle |
+| 12 | Homework and questions |
+
 </div>
 
 ---
