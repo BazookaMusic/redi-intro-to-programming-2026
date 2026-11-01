@@ -44,7 +44,6 @@ namespace = {}
 exec(compile(ast.Module(body=definitions, type_ignores=[]), "exercise.py", "exec"), namespace)
 for name in ("get_hp", "attack"):
     assert callable(namespace.get(name)), f"Expected: function {name}. Actual: it is missing."
-    assert inspect.getdoc(namespace[name]), f"Expected: a docstring on {name}. Actual: none."
 
 for name in ("pikachu", "eevee", "mewtwo"):
     lookups.clear()
@@ -132,19 +131,30 @@ def play(inputs, damage_values, expected_end, expected_player, expected_exit=0,
         assert "has -" not in actual, f"Expected: health never below zero. Actual output: {actual!r}."
     return actual, prompts
 
-win, prompts = play(["pikachu", "", "", ""], [15, 15, 15, 15, 15], "You win!", "pikachu")
+win, prompts = play(["pikachu"], [15, 15, 15, 15, 15], "You win!", "pikachu")
 assert win.count("pikachu has") == 2, f"Expected: two counterattacks. Actual output: {win!r}."
 assert "bulbasaur has 0 HP." in win, f"Expected: opponent reaches zero. Actual output: {win!r}."
-loss, prompts = play(["pikachu", "", "", ""], [5, 15, 5, 15, 5, 15], "You lose!", "pikachu")
+loss, prompts = play(["pikachu"], [5, 15, 5, 15, 5, 15], "You lose!", "pikachu")
 assert "pikachu has 0 HP." in loss, f"Expected: player reaches zero. Actual output: {loss!r}."
-play(["eevee", "", "", ""], [15, 15, 15, 15, 15], "You win!", "eevee")
-retry, prompts = play(["not-a-pokemon", " PIKACHU ", "", "", ""],
+play(["eevee"], [15, 15, 15, 15, 15], "You win!", "eevee")
+retry, prompts = play(["not-a-pokemon", " PIKACHU "],
                       [15, 15, 15, 15, 15], "You win!", "pikachu")
 assert "Pokemon not found" in retry, f"Expected: explain the invalid name. Actual output: {retry!r}."
-play(["", "pikachu", "", "", ""], [15, 15, 15, 15, 15], "You win!", "pikachu")
+play(["", "pikachu"], [15, 15, 15, 15, 15], "You win!", "pikachu")
 play(["offline"], [], "Could not load Pokemon data", "pikachu", expected_exit=1)
-play(["pikachu"], [], "Could not load opponent data", "pikachu", expected_exit=1, fail_opponent=True)
+play(["pikachu"], [], "Could not load Pokemon data", "pikachu", expected_exit=1, fail_opponent=True)
 play([], [], "Could not load Pokemon data", "pikachu", expected_exit=1, fail_names=True)
+
+bar = namespace.get("health_bar")
+if bar is None:
+    print("Advanced task: health_bar is not written yet.")
+else:
+    for hp, expected in [(35, "###"), (9, ""), (0, ""), (100, "##########"), (45, "####")]:
+        actual = bar(hp)
+        assert actual == expected, (
+            f"Expected health_bar({hp}) to return {expected!r}. Actual: {actual!r}."
+        )
+    print("Advanced task: health_bar passed every test.")
 '''
 
 
@@ -159,11 +169,13 @@ def check():
         print("Actual: the program was still running after 5 seconds. Did you fill both loop gaps?")
         raise SystemExit(1)
     if result.returncode:
-        print("Not quite yet.\nExpected: implemented functions, docstrings, and a finishing battle.")
+        print("Not quite yet.\nExpected input and output:")
+        print("get_hp('pikachu') returns 35\nattack(35, 10) returns 25\nattack(5, 10) returns 0")
         print("Your output:\n" + (result.stdout or "(nothing; see the function or battle error below)"))
         print(result.stderr.strip().splitlines()[-1])
         raise SystemExit(1)
-    print("Correct! Functions, wins, losses, random bounds and lookup errors all passed offline.")
+    print(result.stdout.strip().splitlines()[-1])
+    print("Correct! Your functions and the battle passed offline with sample data.")
 
 
 if __name__ == "__main__":

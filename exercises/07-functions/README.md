@@ -20,7 +20,6 @@ python3 check.py
 
 Each checker works with just `exercise.py` and `check.py`. The Pokemon checkers
 use sample data and need neither internet access nor installed packages.
-You do not need to understand the checker code.
 
 ## Homework
 
@@ -107,22 +106,38 @@ o o
  v
 ```
 
-### Pizza slices
+### Shopping budget
 
-[Open the task folder](pizza-slices/)
+[Open the task folder](shopping-budget/)
 
-Write `slices_left(slices, eaten)` that returns the slices remaining.
-Start with `8` slices and eat `3`.
-Save the returned value in `remaining` and print it.
-Use `remaining` in another call: eat `2` more slices.
-Save and print the new result.
-Assume no one eats more slices than are available.
+You are building the code for a wallet. The wallet starts with **20 euros**.
+You will buy different items with it and check whether you can afford them.
 
-Example output:
+1. Write a function `total_price(unit_price, quantity)`. It **returns** a
+   number: the total cost of buying **quantity** items, each costing
+   **unit_price**.
+2. A notebook costs 3 euros. Print the total for 4 notebooks and for
+   8 notebooks.
+3. **(Advanced)** Define a shopping basket: a list of tuples, each with a
+   price and a quantity. Write `can_afford(shopping_basket, wallet_amount)`.
+   It **returns** `True` if the wallet can pay for the whole basket,
+   otherwise `False`.
 
-```text
-5
-3
+Expected input and output:
+
+```python
+total_price(3, 4)       # returns 12
+total_price(3, 8)       # returns 24
+basket = [(3, 4), (2, 3)]
+can_afford(basket, 20)  # returns True
+can_afford(basket, 10)  # returns False
+```
+
+Helpful code: loop over a list of tuples.
+
+```python
+for unit_price, quantity in basket:
+    print(unit_price, quantity)
 ```
 
 ### Trace execution and scope
@@ -144,65 +159,110 @@ print(answer)
 print(value)
 ```
 
-### Circle area
+### Lunch picker
 
-[Open the task folder](circle-area/)
+[Open the task folder](lunch-picker/)
 
-Import `math`. Write `circle_area(radius)` that returns
-`math.pi * radius * radius`.
-Call it with radius `2` and print its result rounded to two decimal places.
-Keep the unrounded value inside the function.
+You and your friends can never decide what to eat for lunch.
+You will write a program that picks a lunch for you at random.
 
-Example output:
+1. Import `random`. Write a function `pick_lunch(options)`. It takes a list
+   of foods and **returns** one of them, chosen at random.
+2. Make a list called `foods` with at least three foods. Print the lunch that
+   `pick_lunch` chooses from it.
+3. **(Advanced)** Write `plan_week(options, days)`. It **returns** a list with
+   one random lunch for each day, so the list has `days` items. Use
+   `pick_lunch` inside it.
+
+Expected input and output (your results are random):
+
+```python
+foods = ["pizza", "sushi", "falafel"]
+pick_lunch(foods)     # returns "sushi" (or another food from the list)
+plan_week(foods, 3)   # returns ["pizza", "pizza", "falafel"]
+```
+
+Your program prints one food from your list, for example:
 
 ```text
-12.57
+sushi
+```
+
+Helpful code:
+
+```python
+import random
+print(random.choice(["heads", "tails"]))  # heads or tails
 ```
 
 ### Pokemon stats
 
 [Open the task folder](pokemon-stats/)
 
+You are building a Pokedex app. Players want to know how strong each Pokemon
+is. A Pokemon's strength is the total of its six base stats.
 Install `pokebase` as explained below.
-Import `pokebase` and fetch Pikachu with `pokebase.pokemon("pikachu")`.
-Loop over `pokemon.stats`; each number is in `stat.base_stat`.
-Add the six numbers together. Do not use `sum()`.
-Print the total.
-The real program needs internet access; `check.py` uses sample data offline.
 
-Example output:
+1. Import `pokebase`. Write a function `total_stats(name)`. It fetches the
+   Pokemon and **returns** the total of its six base stats.
+2. Print the totals for Pikachu and Bulbasaur.
+3. **(Advanced)** Write `strongest(names)`. It takes a list of names and
+   **returns** the name with the highest total. Use `total_stats` inside it.
+
+Expected input and output:
+
+```python
+total_stats("pikachu")               # returns 320
+strongest(["bulbasaur", "pikachu"])  # returns "pikachu"
+```
+
+Your program prints:
 
 ```text
 320
+318
 ```
+
+Helpful code: each stat has a `base_stat` number.
+
+```python
+pokemon = pokebase.pokemon("pikachu")
+for stat in pokemon.stats:
+    print(stat.base_stat)  # 35, 55, 40, 50, 50, 90
+```
+
+The real program needs internet access; `check.py` uses sample data offline.
 
 ### Mini project: Pokemon battle
 
 [Open the task folder](mini-project-pokemon-battle/)
 
-Install `pokebase` as explained below.
-Implement `get_hp(name)`: fetch the Pokemon with `pokebase.pokemon(name)`
-and return `pokemon.stats[0].base_stat`, its starting health.
-Implement `attack(hp, damage)`: return `hp` minus `damage`, never below zero.
-Add a docstring to each function. Replace both `pass` placeholders.
-Fill the two missing `attack()` calls in the supplied loop.
-Enter any supported Pokemon name. Press Enter to attack.
-Damage is a random integer from `5` to `15`. A defeated opponent cannot attack.
-The input and error-handling code is supplied; leave it unchanged.
+You are building a battle game. You and the computer each pick a Pokemon and
+the program simulates the battle: they take turns hitting each other for random
+damage until one has 0 **HP** (health points). The
+starter already runs the game. Install `pokebase` as explained below.
 
-**HP** means health points.
+1. Write `get_hp(name)`. It fetches the Pokemon and **returns** its starting HP.
+2. Write `attack(hp, damage)`. It **returns** the HP left after the hit,
+   never below 0.
+3. In the game loop, use `attack` to update `opponent_hp` and `player_hp`.
+4. **(Advanced)** Write `health_bar(hp)`. It **returns** one `#` for every
+   full 10 HP. Print it after each hit.
 
-Sample input: `pikachu`, then Enter for each attack.
+Expected input and output:
 
-One possible start of the output:
+```python
+get_hp("pikachu")   # returns 35
+attack(35, 10)      # returns 25
+attack(5, 10)       # returns 0
+health_bar(35)      # returns "###"
+```
 
-```text
-Your Pokemon: pikachu
-You: pikachu (35 HP)
-Opponent: bulbasaur (45 HP)
-Press Enter to attack:
-bulbasaur has 33 HP.
-pikachu has 28 HP.
+Helpful code: the first stat is HP.
+
+```python
+pokemon = pokebase.pokemon(name)
+print(pokemon.stats[0].base_stat)
 ```
 
 ## Running the Pokemon programs with real data
@@ -210,24 +270,20 @@ pikachu has 28 HP.
 Only **Pokemon stats** and **Pokemon battle** need this setup.
 Open that task folder and choose **Terminal → New Terminal**.
 
-A **virtual environment** is a folder containing a separate Python environment
-and its packages. Create a `.venv` folder in each Pokemon task folder.
-No activation command is needed: the commands below use its Python directly.
+Install `pokebase` once, then run the program.
 
 On Windows (PowerShell):
 
 ```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install pokebase==1.4.1
-.\.venv\Scripts\python.exe exercise.py
+py -m pip install pokebase==1.4.1
+py exercise.py
 ```
 
 On macOS:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install pokebase==1.4.1
-.venv/bin/python exercise.py
+python3 -m pip install pokebase==1.4.1
+python3 exercise.py
 ```
 
 Installation and live lookups need an internet connection. The library may keep
@@ -235,8 +291,6 @@ downloaded data in its own cache. If a name is not found, check its spelling;
 for example, use `pikachu` or `mewtwo`, not a nickname.
 The battle starter asks again for unknown names and reports connection failures.
 
-If you use VS Code's Run button, choose **Python: Select Interpreter** from the
-Command Palette and select the Python in this task's `.venv`.
-Do not commit `.venv`.
+`-m pip` installs the package for the same Python that runs your code.
 
 [See the solutions after trying the tasks](../../solutions/07-functions/README.md).

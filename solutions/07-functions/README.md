@@ -30,9 +30,9 @@ matching student `check.py` into a separate folder, then run `check.py`.
 
 Other choices of eyes and mouth are valid.
 
-### Pizza slices
+### Shopping budget
 
-[Solved program](pizza-slices/exercise.py)
+[Solved program](shopping-budget/exercise.py)
 
 ### Trace execution and scope
 
@@ -50,9 +50,9 @@ The caller saves the returned `3` in `answer`. The global `value` stays `10`.
 `result` is a local name: using it outside the function would cause a `NameError`.
 Returning the value does not expose the local name to the caller.
 
-### Circle area
+### Lunch picker
 
-[Solved program](circle-area/exercise.py)
+[Solved program](lunch-picker/exercise.py)
 
 ### Pokemon stats
 
@@ -62,9 +62,7 @@ Returning the value does not expose the local name to the caller.
 
 [Solved program](mini-project-pokemon-battle/exercise.py)
 
-Both function bodies and both loop gaps are completed. The supplied lookup-error
-handling is unchanged. The game fetches each fighter's data before the battle,
-not on every turn.
+Both functions, both loop gaps and the advanced `health_bar` are completed.
 
 For the Pokemon programs, follow the exercise README's
 [real-data setup](../../exercises/07-functions/README.md#running-the-pokemon-programs-with-real-data)
