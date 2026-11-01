@@ -80,16 +80,11 @@ print(person[0])             # Mina
 Today, we will put code like this inside **functions**.
 
 ---
-layout: center
----
 
 # 02 - What is a function?
 
 A named piece of code that performs a task.
-
----
-
-# You already call functions
+You already call functions:
 
 ```python
 name = input("Your name: ")
@@ -123,16 +118,10 @@ A name such as `show_menu` tells us what the code is for.
 Next, we will learn how to write that function.
 
 ---
-layout: center
----
 
 # 03 - Defining and calling
 
 Defining writes the instructions. Calling runs them.
-
----
-
-# Anatomy of a function
 
 ```python
 def show_menu():
@@ -190,16 +179,10 @@ Write the definition before the first call runs.
 Use parentheses to call a function: `show_menu()`, not just `show_menu`.
 
 ---
-layout: center
----
 
 # 04 - Parameters and arguments
 
 Run the same instructions with different inputs.
-
----
-
-# Give a function an input
 
 ```python
 def show_score(score):
@@ -304,16 +287,10 @@ The function stays the same; its arguments change the face.
 <!-- solution:end -->
 
 ---
-layout: center
----
 
 # 05 - Return values
 
 Give a result back to the code that called the function.
-
----
-
-# A result we can use
 
 ```python
 def double(number):
@@ -437,16 +414,10 @@ If the function only printed the number, we could not use it like this.
 <!-- solution:end -->
 
 ---
-layout: center
----
 
 # 06 - How a function runs
 
 Follow a call from start to finish.
-
----
-
-# Follow the value
 
 ```python
 def double(number):
@@ -501,16 +472,10 @@ print(answer)                # 7
 Both functions can also be called on their own.
 
 ---
-layout: center
----
 
 # 07 - Variable scope
 
 Scope means where a variable name can be used.
-
----
-
-# Parameters and variables are local
 
 ```python
 def double(number):
@@ -719,16 +684,10 @@ def circle_area(radius):
 You will add docstrings to both functions in the battle project.
 
 ---
-layout: center
----
 
 # 09 - Libraries and imports
 
 We do not have to write everything ourselves.
-
----
-
-# What is a library?
 
 A **library** is reusable code supplied for other programs to use.
 
@@ -853,16 +812,10 @@ Python already supplies `math`; we do not need to install it.
 <!-- solution:end -->
 
 ---
-layout: center
----
 
 # 10 - Installing with pip
 
-Use a library that does not come with Python.
-
----
-
-# Install first, then import
+Install a library that does not come with Python, then import it.
 
 **pip** installs Python packages.
 A **package** is an installable bundle of code and other files.
@@ -1026,16 +979,10 @@ The next task reuses this data in a game.
 <!-- solution:end -->
 
 ---
-layout: center
----
 
 # 11 - Mini project: Pokemon battle
 
 Your functions make the game work.
-
----
-
-# The rules
 
 **HP** means health points.
 
