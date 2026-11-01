@@ -57,7 +57,7 @@ From a named block of code to a result you can use.
 
 </div>
 
-Practice: draw a face, track pizza slices, and trace a function.
+Practice: draw a face, check a shopping budget, and trace a function.
 
 ---
 
@@ -243,7 +243,7 @@ Put parameters without defaults before parameters with defaults.
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Draw a face
+# Exercise: Draw a face · 10 min
 
 Write `draw_face(eyes, mouth)`.
 
@@ -251,14 +251,32 @@ Write `draw_face(eyes, mouth)`.
 - Print the mouth on the next line, with one space before it.
 - Call it twice with different characters. Choose your own!
 
-For `draw_face("o", "-")`, the output is:
+Examples:
+
+<div class="grid grid-cols-2 gap-8">
+<div>
+
+`draw_face("o", "-")`
 
 ```text
 o o
  -
 ```
 
-Folder: `exercises/07-functions/draw-a-face/`
+</div>
+<div>
+
+`draw_face("^", "v")`
+
+```text
+^ ^
+ v
+```
+
+</div>
+</div>
+
+Folder: [exercises/07-functions/draw-a-face/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/draw-a-face)
 
 <!-- solution:start -->
 ---
@@ -372,45 +390,66 @@ For age `8`, the second `return` is never reached.
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Pizza slices
+# Exercise: Shopping budget · 10 min
 
-Write `slices_left(slices, eaten)` that **returns** the slices remaining.
+You are building the code for a wallet. The wallet starts with **20 euros**.
+You will buy different items with it and check whether you can afford them.
 
-1. Start with 8 slices and eat 3.
-2. Save the returned value in `remaining` and print it.
-3. Use `remaining` in another call: eat 2 more slices.
-4. Save and print the new result.
+1. Write `total_price(unit_price, quantity)`. It **returns** a number: the cost of **quantity** items at **unit_price** each.
+2. A notebook costs 3 euros. Print the total for 4 and for 8 notebooks.
+3. **(Advanced)** Make a basket: a list of `(price, quantity)` tuples. Write `can_afford(shopping_basket, wallet_amount)`. It **returns** `True` if the wallet can pay for the whole basket, otherwise `False`.
 
-```text
-5
-3
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+**Expected input and output**
+
+```python
+basket = [(3, 4), (2, 3)]
+total_price(3, 4)       # returns 12
+total_price(3, 8)       # returns 24
+can_afford(basket, 20)  # returns True
+can_afford(basket, 10)  # returns False
 ```
 
-Assume no one eats more slices than are available.
+</div>
+<div>
 
-Folder: `exercises/07-functions/pizza-slices/`
+**Help:** loop over a list of tuples
+
+```python
+for unit_price, quantity in basket:
+    print(unit_price, quantity)
+```
+
+Starter: [exercises/07-functions/shopping-budget/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/shopping-budget)
+
+</div>
+</div>
 
 <!-- solution:start -->
 ---
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: Pizza slices
+# Solution: Shopping budget
 
 ```python
-def slices_left(slices, eaten):
-    return slices - eaten
+def total_price(unit_price, quantity):
+    return unit_price * quantity
 
-remaining = slices_left(8, 3)
-print(remaining)
+print(total_price(3, 4))
+print(total_price(3, 8))
 
-remaining = slices_left(remaining, 2)
-print(remaining)
+def can_afford(shopping_basket, wallet_amount):
+    total = 0
+    for unit_price, quantity in shopping_basket:
+        total += total_price(unit_price, quantity)
+    return total <= wallet_amount
 ```
 
-The first returned value becomes an argument to the next call.
-
-If the function only printed the number, we could not use it like this.
+`can_afford` reuses the value that `total_price` returns.
+If `total_price` only printed it, we could not add it up.
 <!-- solution:end -->
 
 ---
@@ -566,7 +605,7 @@ Parameters and return values make a function's inputs and outputs easier to see.
 class: knowledge-check-slide
 ---
 
-# Trace execution and scope
+# Trace execution and scope · 5 min
 
 ```python
 value = 10
@@ -714,7 +753,10 @@ print(round(math.pi, 2))     # 3.14
 
 `import math` makes the module available in this program.
 
-The dot means "use this name from that module":
+A module has **members**: the names defined inside it.
+Some are functions, like `math.sqrt`. Some are values, like `math.pi`.
+
+The dot means "use this member of that module":
 `math.sqrt` is the square-root function in `math`.
 
 ---
@@ -728,24 +770,15 @@ print(sqrt(25))              # 5.0
 ```
 
 Now we can call `sqrt()` without writing `math.`.
+Import only the names you need. Avoid `from math import *`.
 
-Import only the names you need. Avoid `from math import *`,
-which makes it harder to see where names came from.
-
----
-
-# An import can have a shorter name
+**Shorter name:** `as` gives an import an **alias**, another name to use.
 
 ```python
 import random as rand
 
 print(rand.randint(1, 6))
 ```
-
-`as` gives an imported name an **alias**: another name to use here.
-
-It does not install or change the library.
-Use clear names; an alias is optional.
 
 ---
 
@@ -772,43 +805,70 @@ The output can change each time we run the program.
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Circle area
+# Exercise: Lunch picker · 10 min
 
-Write `circle_area(radius)` that **returns**:
+You and your friends can never decide what to eat for lunch.
+You will write a program that picks a lunch for you at random.
+
+1. Import `random`. Write `pick_lunch(options)`. It takes a list of foods and **returns** one of them, chosen at random.
+2. Make a list called `foods` with at least three foods. Print the lunch that `pick_lunch` chooses from it.
+3. **(Advanced)** Write `plan_week(options, days)`. It **returns** a list with one random lunch for each day, so the list has `days` items. Use `pick_lunch` inside it.
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+**Expected input and output** (random)
 
 ```python
-math.pi * radius * radius
+foods = ["pizza", "sushi", "falafel"]
+pick_lunch(foods)
+# returns "sushi" (or another food)
+plan_week(foods, 3)
+# returns ["pizza", "pizza", "falafel"]
 ```
 
-Import `math`. Call your function with radius `2`.
-Print its result rounded to two decimal places.
+Your program prints one food, e.g. `sushi`
 
-```text
-12.57
+</div>
+<div>
+
+**Help**
+
+```python
+import random
+print(random.choice(["heads", "tails"]))
+# heads or tails
 ```
 
-Keep the unrounded value inside the function.
+Starter: [exercises/07-functions/lunch-picker/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/lunch-picker)
 
-Folder: `exercises/07-functions/circle-area/`
+</div>
+</div>
 
 <!-- solution:start -->
 ---
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: Circle area
+# Solution: Lunch picker
 
 ```python
-import math
+import random
 
-def circle_area(radius):
-    return math.pi * radius * radius
+def pick_lunch(options):
+    return random.choice(options)
 
-area = circle_area(2)
-print(round(area, 2))
+foods = ["pizza", "sushi", "falafel"]
+print(pick_lunch(foods))
+
+def plan_week(options, days):
+    lunches = []
+    for day in range(days):
+        lunches.append(pick_lunch(options))
+    return lunches
 ```
 
-Python already supplies `math`; we do not need to install it.
+Python already supplies `random`; we do not need to install it.
 <!-- solution:end -->
 
 ---
@@ -822,7 +882,7 @@ A **package** is an installable bundle of code and other files.
 
 We will use `pokebase` to fetch real Pokemon data.
 
-- Install it once in your Python environment.
+- Install it once on your computer.
 - Import it in each program that uses it.
 - Installation and fetching the data need internet access.
 
@@ -831,10 +891,7 @@ Importing a missing package causes `ModuleNotFoundError`.
 
 ---
 
-# Give the project its own packages
-
-A **virtual environment** is a folder containing a separate Python environment.
-We will name the folder `.venv`.
+# Install `pokebase`
 
 Open your exercise folder in VS Code and choose **Terminal → New Terminal**.
 
@@ -844,7 +901,13 @@ Open your exercise folder in VS Code and choose **Terminal → New Terminal**.
 ## Windows (PowerShell)
 
 ```powershell
-py -m venv .venv
+py -m pip install pokebase==1.4.1
+```
+
+Then run your code:
+
+```powershell
+py exercise.py
 ```
 
 </div>
@@ -853,109 +916,81 @@ py -m venv .venv
 ## macOS
 
 ```sh
-python3 -m venv .venv
-```
-
-</div>
-</div>
-
-Do this once per exercise folder that needs the package.
-
----
-
-# Install using that environment
-
-<div class="grid grid-cols-2 gap-8">
-<div>
-
-## Windows (PowerShell)
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install pokebase==1.4.1
-```
-
-Then run your code:
-
-```powershell
-.\.venv\Scripts\python.exe exercise.py
-```
-
-</div>
-<div>
-
-## macOS
-
-```sh
-.venv/bin/python -m pip install pokebase==1.4.1
+python3 -m pip install pokebase==1.4.1
 ```
 
 Then run your code:
 
 ```sh
-.venv/bin/python exercise.py
+python3 exercise.py
 ```
 
 </div>
 </div>
 
-`-m pip` runs pip using that Python. No activation command is needed.
-Do not commit `.venv`; it is not part of your solution.
+`-m pip` installs the package for the same Python that runs your code.
 
 ---
 
-# Fetch data with a library function
+# Use `pokebase` in our code
 
 ```python
 import pokebase
 
 pokemon = pokebase.pokemon("pikachu")
-stats = []
-for stat in pokemon.stats:
-    stats.append(stat.base_stat)
 
-print(stats)                 # [35, 55, 40, 50, 50, 90]
+print(pokemon.name)          # pikachu
+print(pokemon.height)        # 4
+print(pokemon.weight)        # 60
 ```
 
 The library handles downloading and reading the data for us.
 
-`pokemon.stats` gives us a list of stats. Each `stat.base_stat` is a number:
-health, attack, defense, special attack, special defense, and speed.
-
-We can loop over that list. **No dictionaries are needed.**
-
----
-
-# External data can fail
-
-- Check spelling if a name is not found. Try `pikachu` first.
-- Check your connection if the data cannot be downloaded.
-- Use the same Python environment to install and run the program.
-
-The project starter includes the error-handling code.
-You do not need to write it yourself.
-
-The checkers use sample data: they work without internet or installed packages.
-Run the program with `pokebase` to try the real data.
+`pokebase.pokemon()` is a library function. It **returns** an object with the Pokemon's data.
+We read each piece of data with a dot, such as `pokemon.height`.
 
 ---
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Pokemon stats
+# Exercise: Pokemon stats · 10 min
 
-Fetch Pikachu using `pokebase`.
+You are building a Pokedex app. Players want to know how strong each Pokemon is.
+A Pokemon's strength is the total of its six base stats.
 
-- Loop over `pokemon.stats`; each number is in `stat.base_stat`.
-- Use a loop to add them together. Do not use `sum()`.
-- Print the total.
+1. Import `pokebase`. Write `total_stats(name)`. It fetches the Pokemon and **returns** the total of its six base stats.
+2. Print the totals for Pikachu and Bulbasaur.
+3. **(Advanced)** Write `strongest(names)`. It takes a list of names and **returns** the name with the highest total. Use `total_stats` inside it.
 
-```text
-320
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+**Expected input and output**
+
+```python
+total_stats("pikachu")
+# returns 320
+strongest(["bulbasaur", "pikachu"])
+# returns "pikachu"
 ```
 
-The numbers are external data; the calculation is our own Python code.
+Your program prints: `320` then `318`
 
-Folder: `exercises/07-functions/pokemon-stats/`
+</div>
+<div>
+
+**Help:** each stat has a `base_stat` number
+
+```python
+for stat in pokemon.stats:
+    print(stat.base_stat)
+# 35, 55, 40, 50, 50, 90
+```
+
+Starter: [exercises/07-functions/pokemon-stats/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/pokemon-stats)
+
+</div>
+</div>
 
 <!-- solution:start -->
 ---
@@ -967,117 +1002,103 @@ class: knowledge-check-slide knowledge-solution-slide
 ```python
 import pokebase
 
-pokemon = pokebase.pokemon("pikachu")
-total = 0
-for stat in pokemon.stats:
-    total += stat.base_stat
+def total_stats(name):
+    pokemon = pokebase.pokemon(name)
+    total = 0
+    for stat in pokemon.stats:
+        total += stat.base_stat
+    return total
 
-print(total)                 # 320
+print(total_stats("pikachu"))    # 320
+print(total_stats("bulbasaur"))  # 318
+
+def strongest(names):
+    best = names[0]
+    for name in names:
+        if total_stats(name) > total_stats(best):
+            best = name
+    return best
 ```
-
-The next task reuses this data in a game.
 <!-- solution:end -->
 
 ---
 
 # 11 - Mini project: Pokemon battle
 
-Your functions make the game work.
+Every Pokemon has six **base stats**. The first one is **HP** (health points):
+how much damage it can take before it loses.
 
-**HP** means health points.
+In our game, you pick a Pokemon and the computer picks an opponent. The program
+then simulates the battle: they take turns hitting each other for a random amount
+of damage, so luck decides who wins. The first Pokemon to reach 0 HP loses.
 
-- Enter any supported Pokemon name.
-- The computer chooses its Pokemon from a short list.
-- Both start with their real health from the library.
-- Press Enter to attack. Each hit does random damage from **5 to 15**.
-- If the opponent survives, it attacks back.
-- The first Pokemon to reach zero health loses.
-
-This is a simplified classroom game, not the official Pokemon battle system.
-
-Folder: `exercises/07-functions/mini-project-pokemon-battle/`
+<div class="grid grid-cols-2 gap-6 mt-4">
+  <img src="/images/functions/pikachu-stats.svg" alt="Bar chart of Pikachu's six base stats; HP is 35 and highlighted">
+  <img src="/images/functions/pokemon-battle.svg" alt="A terminal running the game: pikachu fights bulbasaur and both lose HP each turn">
+</div>
 
 ---
 class: knowledge-check-slide exercise-slide
 ---
 
-# Write both functions
+# Exercise: Pokemon battle · 20 min
 
-The starter has placeholders, **not function solutions**.
+Copy the code from the starter: [mini-project-pokemon-battle/exercise.py](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/07-functions/mini-project-pokemon-battle/exercise.py). It already runs the game; your functions make it work.
 
-| Function | What students implement |
-|---|---|
-| `get_hp(name)` | Fetch the Pokemon and return `pokemon.stats[0].base_stat`: its health |
-| `attack(hp, damage)` | Subtract damage and return the remaining health, never below zero |
+1. Write `get_hp(name)`. It fetches the Pokemon and **returns** its starting HP.
+2. Write `attack(hp, damage)`. It **returns** the HP left after the hit, never below 0.
+3. In the game loop, use `attack` to update `opponent_hp` and `player_hp`.
+4. **(Advanced)** Write `health_bar(hp)`. It **returns** one `#` for every full 10 HP. Print it after each hit.
 
-Add a docstring to each function.
+<div class="grid grid-cols-2 gap-6">
+<div>
 
-The input and error-handling code is already supplied.
-It asks again for unknown names and stops clearly if the service fails.
-
----
-class: knowledge-check-slide exercise-slide
----
-
-# Connect your functions to the loop
-
-The starter supplies this structure. Fill the two missing function calls.
+**Expected input and output**
 
 ```python
-while player_hp > 0 and opponent_hp > 0:
-    input("Press Enter to attack: ")
-    damage = random.randint(5, 15)
-    # Update opponent_hp using attack(...).
-    print(f"{opponent_name} has {opponent_hp} HP.")
-
-    if opponent_hp > 0:
-        damage = random.randint(5, 15)
-        # Update player_hp using attack(...).
-        print(f"{player_name} has {player_hp} HP.")
+get_hp("pikachu")   # returns 35
+attack(35, 10)      # returns 25
+attack(5, 10)       # returns 0
+health_bar(35)      # returns "###"
 ```
 
-Save each returned result. Do not let a defeated opponent attack back.
+</div>
+<div>
 
----
+**Help:** the first stat is HP
 
-# Try your game
-
-```text
-Your Pokemon: pikachu
-You: pikachu (35 HP)
-Opponent: bulbasaur (45 HP)
-Press Enter to attack:
-bulbasaur has 33 HP.
-pikachu has 28 HP.
+```python
+pokemon = pokebase.pokemon(name)
+print(pokemon.stats[0].base_stat)
 ```
 
-This is one possible start. The opponent and damage can change.
-
-Check that health never goes below zero and the game ends.
-Run `check.py` for predictable tests using sample data.
+</div>
+</div>
 
 <!-- solution:start -->
 ---
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: The two functions
+# Solution: The functions
 
 ```python
 def get_hp(name):
-    """Fetch a Pokemon and return its starting health."""
     pokemon = pokebase.pokemon(name)
     return pokemon.stats[0].base_stat
 
 def attack(hp, damage):
-    """Return health after damage, with a minimum of zero."""
     remaining = hp - damage
     if remaining < 0:
         return 0
     return remaining
-```
 
-The lookup and input helpers in the starter stay unchanged.
+def health_bar(hp):
+    bar = ""
+    for i in range(hp // 10):
+        bar += "#"
+    return bar
+```
 <!-- solution:end -->
 
 <!-- solution:start -->
@@ -1088,20 +1109,20 @@ class: knowledge-check-slide knowledge-solution-slide
 # Solution: The battle loop
 
 ```python
-while player_hp > 0 and opponent_hp > 0:
-    input("Press Enter to attack: ")
-    damage = random.randint(5, 15)
-    opponent_hp = attack(opponent_hp, damage)
-    print(f"{opponent_name} has {opponent_hp} HP.")
-
-    if opponent_hp > 0:
+    while player_hp > 0 and opponent_hp > 0:
         damage = random.randint(5, 15)
-        player_hp = attack(player_hp, damage)
-        print(f"{player_name} has {player_hp} HP.")
+        opponent_hp = attack(opponent_hp, damage)
+        print(f"{opponent_name} has {opponent_hp} HP.")
+        print(health_bar(opponent_hp))
+
+        if opponent_hp > 0:
+            damage = random.randint(5, 15)
+            player_hp = attack(player_hp, damage)
+            print(f"{player_name} has {player_hp} HP.")
+            print(health_bar(player_hp))
 ```
 
-The starter's final condition announces a win or loss.
-The full solved program is in the matching `solutions/` folder.
+This loop is inside `main()`. The full solved program is in the matching `solutions/` folder.
 <!-- solution:end -->
 
 ---
@@ -1117,7 +1138,7 @@ Four short tasks. Each has an `exercise.py` and its own `check.py`.
 | 3. Average score | Returning a calculation for the caller to use |
 | 4. Roll a die | Default parameters, a library and a docstring |
 
-Folder: `exercises/07-functions/`
+Folder: [exercises/07-functions/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions)
 
 ---
 class: knowledge-check-slide exercise-slide

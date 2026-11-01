@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">The Pokemon battle game in a terminal</title>
+  <desc id="desc">A terminal window running the game. The player picks pikachu with 35 HP and the computer picks bulbasaur with 45 HP. The program simulates the battle: each turn, both Pokemon lose a random amount of HP and a bar of hash signs shows their health.</desc>
+  <rect width="480" height="300" rx="16" fill="#1f1f1f"/>
+  <rect width="480" height="34" rx="16" fill="#2d2d2d"/>
+  <rect y="18" width="480" height="16" fill="#2d2d2d"/>
+  <circle cx="24" cy="17" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="17" r="6" fill="#febc2e"/>
+  <circle cx="64" cy="17" r="6" fill="#28c840"/>
+  <text x="240" y="22" fill="#a0a0a0" text-anchor="middle" font-family="Avenir Next, Segoe UI, sans-serif" font-size="13">Terminal</text>
+  <g font-family="Fira Mono, Menlo, Consolas, monospace" font-size="15" fill="#e5e5e5">
+    <text x="24" y="62">Your Pokemon: <tspan fill="#facc15">pikachu</tspan></text>
+    <text x="24" y="84">You: pikachu (35 HP)</text>
+    <text x="24" y="106">Opponent: bulbasaur (45 HP)</text>
+    <text x="24" y="134">bulbasaur has 33 HP.</text>
+    <text x="24" y="156" fill="#E8522A">###</text>
+    <text x="24" y="178">pikachu has 28 HP.</text>
+    <text x="24" y="200" fill="#E8522A">##</text>
+    <text x="24" y="222">bulbasaur has 26 HP.</text>
+    <text x="24" y="244" fill="#E8522A">##</text>
+    <text x="24" y="266">pikachu has 15 HP.</text>
+    <text x="24" y="288" fill="#E8522A">#</text>
+  </g>
+</svg>

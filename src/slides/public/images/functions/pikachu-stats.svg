@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">Pikachu's six base stats</title>
+  <desc id="desc">A bar chart of Pikachu's base stats: HP 35, Attack 55, Defense 40, Special attack 50, Special defense 50 and Speed 90. The HP bar is highlighted.</desc>
+  <rect width="480" height="300" rx="16" fill="#1f1f1f"/>
+  <text x="24" y="40" fill="#ffffff" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="600">Pikachu's base stats</text>
+  <g font-family="Avenir Next, Segoe UI, sans-serif" font-size="16" fill="#d4d4d4">
+    <text x="24" y="85" fill="#ffffff" font-weight="700">HP</text>
+    <rect x="170" y="70" width="88" height="20" rx="4" fill="#E8522A"/>
+    <text x="268" y="85" fill="#ffffff" font-weight="700">35</text>
+
+    <text x="24" y="122">Attack</text>
+    <rect x="170" y="107" width="138" height="20" rx="4" fill="#6b6b6b"/>
+    <text x="318" y="122">55</text>
+
+    <text x="24" y="159">Defense</text>
+    <rect x="170" y="144" width="100" height="20" rx="4" fill="#6b6b6b"/>
+    <text x="280" y="159">40</text>
+
+    <text x="24" y="196">Special attack</text>
+    <rect x="170" y="181" width="125" height="20" rx="4" fill="#6b6b6b"/>
+    <text x="305" y="196">50</text>
+
+    <text x="24" y="233">Special defense</text>
+    <rect x="170" y="218" width="125" height="20" rx="4" fill="#6b6b6b"/>
+    <text x="305" y="233">50</text>
+
+    <text x="24" y="270">Speed</text>
+    <rect x="170" y="255" width="225" height="20" rx="4" fill="#6b6b6b"/>
+    <text x="405" y="270">90</text>
+  </g>
+</svg>
