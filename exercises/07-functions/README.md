@@ -18,8 +18,8 @@ On macOS, run:
 python3 check.py
 ```
 
-Each checker works with just `exercise.py` and `check.py`. The Pokemon checkers
-use sample data and need neither internet access nor installed packages.
+Each checker works with just `exercise.py` and `check.py`. The Hangman checker
+uses sample words and needs neither internet access nor installed packages.
 
 ## Homework
 
@@ -195,101 +195,112 @@ import random
 print(random.choice(["heads", "tails"]))  # heads or tails
 ```
 
-### Pokemon stats
+### Words for Hangman
 
-[Open the task folder](pokemon-stats/)
+[Open the task folder](hangman-words/)
 
-You are building a Pokedex app. Players want to know how strong each Pokemon
-is. A Pokemon's strength is the total of its six base stats.
-Install `pokebase` as explained below.
+Our Hangman game needs words that are not too long or too short.
+For this task, use a small list of words before connecting the library.
 
-1. Import `pokebase`. Write a function `total_stats(name)`. It fetches the
-   Pokemon and **returns** the total of its six base stats.
-2. Print the totals for Pikachu and Bulbasaur.
-3. **(Advanced)** Write `strongest(names)`. It takes a list of names and
-   **returns** the name with the highest total. Use `total_stats` inside it.
+1. Write `game_words(words)`. It **returns** a list containing only words
+   with 4 to 8 letters, including both ends.
+2. Print the result for `["cat", "apple", "banana", "watermelon"]`.
+3. **(Advanced)** Write `pick_word(words)`. It **returns** a random word from
+   `game_words(words)`. Assume at least one word fits.
 
-Expected input and output:
+**Expected input and output**
 
 ```python
-total_stats("pikachu")               # returns 320
-strongest(["bulbasaur", "pikachu"])  # returns "pikachu"
+game_words(["cat", "apple", "banana", "watermelon"])
+# returns ["apple", "banana"]
+pick_word(["cat", "apple", "banana"])
+# returns "apple" or "banana"
 ```
 
 Your program prints:
 
 ```text
-320
-318
+['apple', 'banana']
 ```
 
-Helpful code: each stat has a `base_stat` number.
+**Help**
 
 ```python
-pokemon = pokebase.pokemon("pikachu")
-for stat in pokemon.stats:
-    print(stat.base_stat)  # 35, 55, 40, 50, 50, 90
+result = []
+for word in words:
+    if 4 <= len(word) <= 8:
+        result.append(word)
 ```
 
-The real program needs internet access; `check.py` uses sample data offline.
+### Mini project: Hangman
 
-### Mini project: Pokemon battle
+Copy the code from the starter: [mini-project-hangman/exercise.py](mini-project-hangman/exercise.py).
+[Open the task folder](mini-project-hangman/).
 
-[Open the task folder](mini-project-pokemon-battle/)
+Guess a secret eight-letter English word, one letter at a time.
+Correct guesses reveal letters. You can make six mistakes before losing.
+A skeleton moves towards the player after each mistake.
+Install `english-words` using the setup below.
 
-You are building a battle game. You and the computer each pick a Pokemon and
-the program simulates the battle: they take turns hitting each other for random
-damage until one has 0 **HP** (health points). The
-starter already runs the game. Install `pokebase` as explained below.
+1. Write `victory(word)`. It **returns** `True` if the displayed word has no `_`,
+   otherwise `False`.
+2. Write `display_hidden_word(secret_word, guessed_letters)`. It **returns** the word
+   with `_` for each letter not yet guessed.
+3. Write `get_user_guess(guessed_letters)`. It asks for one letter from `a` to `z`
+   and **returns** it in lowercase. Ask again for invalid or repeated guesses.
 
-1. Write `get_hp(name)`. It fetches the Pokemon and **returns** its starting HP.
-2. Write `attack(hp, damage)`. It **returns** the HP left after the hit,
-   never below 0.
-3. In the game loop, use `attack` to update `opponent_hp` and `player_hp`.
-4. **(Advanced)** Write `health_bar(hp)`. It **returns** one `#` for every
-   full 10 HP. Print it after each hit.
-
-Expected input and output:
+**Expected input and output**
 
 ```python
-get_hp("pikachu")   # returns 35
-attack(35, 10)      # returns 25
-attack(5, 10)       # returns 0
-health_bar(35)      # returns "###"
+display_hidden_word("linguist", ["i"])  # returns "_i___i__"
+victory("_i___i__")             # returns False
+victory("linguist")             # returns True
+get_user_guess(["i"])           # input " A " returns "a"; "i" asks again
+lives_bar(6, 6)                 # returns "💀______😊"
+lives_bar(6, 5)                 # returns "_💀_____😊"
+lives_bar(6, 0)                 # returns "______💀😊"
 ```
 
-Helpful code: the first stat is HP.
+**Help**
 
 ```python
-pokemon = pokebase.pokemon(name)
-print(pokemon.stats[0].base_stat)
+words = list(get_english_words_set(["web2"], lower=True))
+print(random.choice(words))
+for letter in secret_word:
+    if letter in guessed_letters:
+        print(letter)
+guess = input("Guess a letter: ").strip().lower()
 ```
 
-## Running the Pokemon programs with real data
+The starter supplies the game loop, lives bar and word picker.
+The supplied helpers are below `hangman()`.
+Invalid or repeated guesses do not use a chance.
 
-Only **Pokemon stats** and **Pokemon battle** need this setup.
-Open that task folder and choose **Terminal → New Terminal**.
+## Running Hangman with the English word collection
 
-Install `pokebase` once, then run the program.
+Only **Hangman** needs this setup. Open its task folder and choose
+**Terminal → New Terminal**.
+
+Install `english-words` once, then run the program.
 
 On Windows (PowerShell):
 
 ```powershell
-py -m pip install pokebase==1.4.1
+py -m pip install english-words==2.0.2
 py exercise.py
 ```
 
 On macOS:
 
 ```sh
-python3 -m pip install pokebase==1.4.1
+python3 -m pip install english-words==2.0.2
 python3 exercise.py
 ```
 
-Installation and live lookups need an internet connection. The library may keep
-downloaded data in its own cache. If a name is not found, check its spelling;
-for example, use `pikachu` or `mewtwo`, not a nickname.
-The battle starter asks again for unknown names and reports connection failures.
+Installation needs internet access. The library includes the word collection,
+so the game runs offline afterwards. It provides words, not their definitions.
+The game selects alphabetic English words with eight letters.
+Some dictionary words are uncommon; their length does not guarantee difficulty.
 
 `-m pip` installs the package for the same Python that runs your code.
 

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title description">
+  <title id="title">Hangman with a skeleton approaching the player</title>
+  <desc id="description">The secret word is linguist. Start with eight blanks and six lives. Guess i to reveal both i letters. Guess z incorrectly: the skeleton moves one step closer. Guess l, n, g, u, s and t to reveal linguist and win.</desc>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(0)">
+      <rect x="4" y="4" width="226" height="290" rx="16" fill="#202020" stroke="#454545"/>
+      <text x="117" y="40" fill="#ffffff" font-size="20" font-weight="bold">1. Start</text>
+      <text x="117" y="102" fill="#ffffff" font-family="monospace" font-size="27">________</text>
+      <text x="117" y="163" fill="#ffffff" font-size="25">💀______😊</text>
+      <text x="117" y="216" fill="#cccccc" font-size="17">Secret word: linguist</text>
+      <text x="117" y="260" fill="#cccccc" font-size="17">6 lives left</text>
+    </g>
+    <g transform="translate(255)">
+      <rect x="4" y="4" width="226" height="290" rx="16" fill="#202020" stroke="#454545"/>
+      <text x="117" y="40" fill="#ffffff" font-size="20" font-weight="bold">2. Guess i</text>
+      <text x="117" y="102" fill="#7ec699" font-family="monospace" font-size="27">_i___i__</text>
+      <text x="117" y="163" fill="#ffffff" font-size="25">💀______😊</text>
+      <text x="117" y="216" fill="#7ec699" font-size="17">Both i letters appear</text>
+      <text x="117" y="260" fill="#cccccc" font-size="17">Still 6 lives</text>
+    </g>
+    <g transform="translate(510)">
+      <rect x="4" y="4" width="226" height="290" rx="16" fill="#202020" stroke="#454545"/>
+      <text x="117" y="40" fill="#ffffff" font-size="20" font-weight="bold">3. Guess z</text>
+      <text x="117" y="102" fill="#ffffff" font-family="monospace" font-size="27">_i___i__</text>
+      <text x="117" y="163" fill="#ffffff" font-size="25">_💀_____😊</text>
+      <text x="117" y="216" fill="#E8522A" font-size="17">Skeleton moves closer</text>
+      <text x="117" y="260" fill="#cccccc" font-size="17">5 lives left</text>
+    </g>
+    <g transform="translate(765)">
+      <rect x="4" y="4" width="226" height="290" rx="16" fill="#202020" stroke="#7ec699"/>
+      <text x="117" y="40" fill="#ffffff" font-size="18" font-weight="bold">4. Guess l, n, g, u, s, t</text>
+      <text x="117" y="102" fill="#7ec699" font-family="monospace" font-size="27">linguist</text>
+      <text x="117" y="163" fill="#ffffff" font-size="25">_💀_____😊</text>
+      <text x="117" y="216" fill="#7ec699" font-size="20" font-weight="bold">You won!</text>
+      <text x="117" y="260" fill="#cccccc" font-size="17">5 lives left</text>
+    </g>
+    <g fill="none" stroke="#E8522A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M235 145 H250 M244 139 L250 145 L244 151"/>
+      <path d="M490 145 H505 M499 139 L505 145 L499 151"/>
+      <path d="M745 145 H760 M754 139 L760 145 L754 151"/>
+    </g>
+  </g>
+</svg>

@@ -54,23 +54,17 @@ Returning the value does not expose the local name to the caller.
 
 [Solved program](lunch-picker/exercise.py)
 
-### Pokemon stats
+### Words for Hangman
 
-[Solved program](pokemon-stats/exercise.py)
+[Solved program](hangman-words/exercise.py)
 
-### Mini project: Pokemon battle
+### Mini project: Hangman
 
-[Solved program](mini-project-pokemon-battle/exercise.py)
+[Solved program](mini-project-hangman/exercise.py)
 
-Both functions, both loop gaps and the advanced `health_bar` are completed.
+The three required functions are completed; `lives_bar` is supplied in the starter.
+The skeleton reaches the player on the sixth mistake.
 
-For the Pokemon programs, follow the exercise README's
-[real-data setup](../../exercises/07-functions/README.md#running-the-pokemon-programs-with-real-data)
-in the folder where you run the solution. The matching checkers also work offline.
-
-## Teacher note
-
-The lesson uses `pokebase==1.4.1`. A live check found that `pypokedex==1.6.0`
-fails while parsing changed sprite data from PokeAPI, before returning the stats.
-`pokebase` was checked against live stats and a complete battle.
-External services can change; try the live example before teaching the lesson.
+For Hangman, follow the exercise README's
+[library setup](../../exercises/07-functions/README.md#running-hangman-with-the-english-word-collection)
+in the folder where you run the solution. The matching checker works offline.

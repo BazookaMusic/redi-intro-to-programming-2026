@@ -33,7 +33,7 @@ fonts:
   <p class="text-xl font-light opacity-90 mb-2">Introduction to Programming - Fall 2026</p>
   <h1 class="text-6xl font-light leading-tight mb-6">Functions</h1>
   <p class="text-2xl font-light opacity-90 mt-4">Write a piece of code once. Give it inputs. Use its result.</p>
-  <p class="text-xl font-light opacity-90 mt-4">Write our own functions, use functions from libraries, and build a small Pokemon battle game.</p>
+  <p class="text-xl font-light opacity-90 mt-4">Write our own functions, use functions from libraries, and build a Hangman word game.</p>
 </div>
 
 ---
@@ -666,7 +666,7 @@ Document our functions, use libraries, and build a game.
 | 08 | Docstrings |
 | 09 | Libraries and imports |
 | 10 | Installing with pip |
-| 11 | Mini project: Pokemon battle |
+| 11 | Mini project: Hangman |
 | 12 | Homework and questions |
 
 </div>
@@ -720,7 +720,7 @@ def circle_area(radius):
 - A **comment** can explain a particular line of code.
 - `pass` is a placeholder that does nothing. Replace it with working code.
 
-You will add docstrings to both functions in the battle project.
+A docstring can explain what a game function takes in and returns.
 
 ---
 
@@ -873,6 +873,18 @@ Python already supplies `random`; we do not need to install it.
 
 ---
 
+# What is Hangman?
+
+Guess a **secret word**, one letter at a time. Correct guesses reveal letters.
+Each wrong guess moves a skeleton one step closer to the player.
+
+<img src="/images/functions/hangman-sequence.svg" alt="Four stages: eight blanks for linguist; guessing i reveals both i letters; guessing z moves a skeleton towards the player; guessing the remaining letters wins." class="w-full my-4">
+
+Reveal the word to win. After **six wrong guesses**, the skeleton reaches you
+and you lose. Our Python game shows this in the terminal.
+
+---
+
 # 10 - Installing with pip
 
 Install a library that does not come with Python, then import it.
@@ -880,18 +892,18 @@ Install a library that does not come with Python, then import it.
 **pip** installs Python packages.
 A **package** is an installable bundle of code and other files.
 
-We will use `pokebase` to fetch real Pokemon data.
+We will use `english-words` to get a collection of English words for Hangman.
 
 - Install it once on your computer.
 - Import it in each program that uses it.
-- Installation and fetching the data need internet access.
+- Installation needs internet access. The word collection works offline.
 
 Installing a package does **not** run it in your program.
 Importing a missing package causes `ModuleNotFoundError`.
 
 ---
 
-# Install `pokebase`
+# Install `english-words`
 
 Open your exercise folder in VS Code and choose **Terminal → New Terminal**.
 
@@ -901,7 +913,7 @@ Open your exercise folder in VS Code and choose **Terminal → New Terminal**.
 ## Windows (PowerShell)
 
 ```powershell
-py -m pip install pokebase==1.4.1
+py -m pip install english-words==2.0.2
 ```
 
 Then run your code:
@@ -916,7 +928,7 @@ py exercise.py
 ## macOS
 
 ```sh
-python3 -m pip install pokebase==1.4.1
+python3 -m pip install english-words==2.0.2
 ```
 
 Then run your code:
@@ -932,35 +944,36 @@ python3 exercise.py
 
 ---
 
-# Use `pokebase` in our code
+# Get English words for our game
 
 ```python
-import pokebase
+import random
+from english_words import get_english_words_set
 
-pokemon = pokebase.pokemon("pikachu")
-
-print(pokemon.name)          # pikachu
-print(pokemon.height)        # 4
-print(pokemon.weight)        # 60
+word_set = get_english_words_set(["web2"], lower=True)
+words = list(word_set)
+word = random.choice(words)
+print(word)                 # a different word each time
 ```
 
-The library handles downloading and reading the data for us.
+The library includes a dictionary's word collection, not definitions.
+`"web2"` selects the collection; `lower=True` makes the words lowercase.
 
-`pokebase.pokemon()` is a library function. It **returns** an object with the Pokemon's data.
-We read each piece of data with a dot, such as `pokemon.height`.
+The function **returns** a **set**, a collection without duplicates.
+`list()` converts it to a list so `random.choice()` can pick an item.
 
 ---
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Pokemon stats · 10 min
+# Exercise: Words for Hangman · 10 min
 
-You are building a Pokedex app. Players want to know how strong each Pokemon is.
-A Pokemon's strength is the total of its six base stats.
+Our Hangman game needs words that are not too long or too short.
+For this task, use a small list of words before connecting the library.
 
-1. Import `pokebase`. Write `total_stats(name)`. It fetches the Pokemon and **returns** the total of its six base stats.
-2. Print the totals for Pikachu and Bulbasaur.
-3. **(Advanced)** Write `strongest(names)`. It takes a list of names and **returns** the name with the highest total. Use `total_stats` inside it.
+1. Write `game_words(words)`. It **returns** a list containing only words with 4 to 8 letters, including both ends.
+2. Print the result for `["cat", "apple", "banana", "watermelon"]`.
+3. **(Advanced)** Write `pick_word(words)`. It **returns** a random word from `game_words(words)`. Assume at least one word fits.
 
 <div class="grid grid-cols-2 gap-6">
 <div>
@@ -968,26 +981,27 @@ A Pokemon's strength is the total of its six base stats.
 **Expected input and output**
 
 ```python
-total_stats("pikachu")
-# returns 320
-strongest(["bulbasaur", "pikachu"])
-# returns "pikachu"
+game_words(["cat", "apple", "banana", "watermelon"])
+# returns ["apple", "banana"]
+pick_word(["cat", "apple", "banana"])
+# returns "apple" or "banana"
 ```
 
-Your program prints: `320` then `318`
+Your program prints: `['apple', 'banana']`
 
 </div>
 <div>
 
-**Help:** each stat has a `base_stat` number
+**Help:** build a list with a loop
 
 ```python
-for stat in pokemon.stats:
-    print(stat.base_stat)
-# 35, 55, 40, 50, 50, 90
+result = []
+for word in words:
+    if 4 <= len(word) <= 8:
+        result.append(word)
 ```
 
-Starter: [exercises/07-functions/pokemon-stats/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/pokemon-stats)
+Starter: [exercises/07-functions/hangman-words/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/07-functions/hangman-words)
 
 </div>
 </div>
@@ -997,58 +1011,58 @@ Starter: [exercises/07-functions/pokemon-stats/](https://github.com/BazookaMusic
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: Pokemon stats
+# Solution: Words for Hangman
 
 ```python
-import pokebase
+import random
 
-def total_stats(name):
-    pokemon = pokebase.pokemon(name)
-    total = 0
-    for stat in pokemon.stats:
-        total += stat.base_stat
-    return total
+def game_words(words):
+    result = []
+    for word in words:
+        if 4 <= len(word) <= 8:
+            result.append(word)
+    return result
 
-print(total_stats("pikachu"))    # 320
-print(total_stats("bulbasaur"))  # 318
+print(game_words(["cat", "apple", "banana", "watermelon"]))
 
-def strongest(names):
-    best = names[0]
-    for name in names:
-        if total_stats(name) > total_stats(best):
-            best = name
-    return best
+def pick_word(words):
+    return random.choice(game_words(words))
 ```
 <!-- solution:end -->
 
 ---
 
-# 11 - Mini project: Pokemon battle
+# 11 - Mini project: Hangman
 
-Every Pokemon has six **base stats**. The first one is **HP** (health points):
-how much damage it can take before it loses.
+Now put the pieces together. Choose an eight-letter word, reveal guessed
+letters and check for victory. A skeleton shows how many mistakes are left.
 
-In our game, you pick a Pokemon and the computer picks an opponent. The program
-then simulates the battle: they take turns hitting each other for a random amount
-of damage, so luck decides who wins. The first Pokemon to reach 0 HP loses.
+The game repeats: show the word, read a guess, then update the game.
 
-<div class="grid grid-cols-2 gap-6 mt-4">
-  <img src="/images/functions/pikachu-stats.svg" alt="Bar chart of Pikachu's six base stats; HP is 35 and highlighted">
-  <img src="/images/functions/pokemon-battle.svg" alt="A terminal running the game: pikachu fights bulbasaur and both lose HP each turn">
-</div>
+```text
+________
+💀______😊
+Guess a letter: i
+Correct!
+_i___i__
+💀______😊
+Guess a letter: z
+Wrong guess!
+_i___i__
+_💀_____😊
+```
 
 ---
 class: knowledge-check-slide exercise-slide
 ---
 
-# Exercise: Pokemon battle · 20 min
+# Exercise: Hangman · 20 min
 
-Copy the code from the starter: [mini-project-pokemon-battle/exercise.py](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/07-functions/mini-project-pokemon-battle/exercise.py). It already runs the game; your functions make it work.
+Copy the code from the starter: [exercise.py](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/07-functions/mini-project-hangman/exercise.py). The word picker, lives bar and game loop are supplied.
 
-1. Write `get_hp(name)`. It fetches the Pokemon and **returns** its starting HP.
-2. Write `attack(hp, damage)`. It **returns** the HP left after the hit, never below 0.
-3. In the game loop, use `attack` to update `opponent_hp` and `player_hp`.
-4. **(Advanced)** Write `health_bar(hp)`. It **returns** one `#` for every full 10 HP. Print it after each hit.
+1. Write `victory(word)`: **return** `True` if there is no `_`, otherwise `False`.
+2. Write `display_hidden_word(secret_word, guessed_letters)`: **return** the word with `_` for unguessed letters.
+3. Write `get_user_guess(guessed_letters)`: ask until a new `a`–`z` letter is entered; **return** it lowercase.
 
 <div class="grid grid-cols-2 gap-6">
 <div>
@@ -1056,20 +1070,23 @@ Copy the code from the starter: [mini-project-pokemon-battle/exercise.py](https:
 **Expected input and output**
 
 ```python
-get_hp("pikachu")   # returns 35
-attack(35, 10)      # returns 25
-attack(5, 10)       # returns 0
-health_bar(35)      # returns "###"
+display_hidden_word("linguist", ["i"])
+# "_i___i__"
+victory("_i___i__")             # False
+get_user_guess(["i"])           # " A " → "a"
+lives_bar(6, 5)                 # "_💀_____😊"
 ```
 
 </div>
 <div>
 
-**Help:** the first stat is HP
+**Help:** loop over letters
 
 ```python
-pokemon = pokebase.pokemon(name)
-print(pokemon.stats[0].base_stat)
+for letter in secret_word:
+    if letter in guessed_letters:
+        print(letter)
+guess = input("Letter: ").strip().lower()
 ```
 
 </div>
@@ -1080,24 +1097,45 @@ print(pokemon.stats[0].base_stat)
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: The functions
+# Supplied code: Choose a secret word
 
 ```python
-def get_hp(name):
-    pokemon = pokebase.pokemon(name)
-    return pokemon.stats[0].base_stat
+def get_random_secret_word(length):
+    """Gets a random secret word for our game."""
+    web2lowerset = get_english_words_set(["web2"], lower=True)
+    result = []
+    for word in web2lowerset:
+        if word.isascii() and word.isalpha() and len(word) == length:
+            result.append(word)
+    if not result:
+        raise ValueError(f"No English words found with {length} letters.")
+    return random.choice(result)
+```
 
-def attack(hp, damage):
-    remaining = hp - damage
-    if remaining < 0:
-        return 0
-    return remaining
+`isascii()` and `isalpha()` keep words made of letters from `a` to `z`.
+<!-- solution:end -->
 
-def health_bar(hp):
-    bar = ""
-    for i in range(hp // 10):
-        bar += "#"
-    return bar
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+# Solution: Reveal letters and check victory
+
+```python
+def display_hidden_word(secret_word, guessed_letters):
+    """Returns underscores for unguessed letters."""
+    display = ""
+    for letter in secret_word:
+        if letter in guessed_letters:
+            display += letter
+        else:
+            display += "_"
+    return display
+
+def victory(word):
+    """Returns True when no letters are hidden."""
+    return "_" not in word
 ```
 <!-- solution:end -->
 
@@ -1106,23 +1144,45 @@ def health_bar(hp):
 class: knowledge-check-slide knowledge-solution-slide
 ---
 
-# Solution: The battle loop
+# Solution: Read a new letter
 
 ```python
-    while player_hp > 0 and opponent_hp > 0:
-        damage = random.randint(5, 15)
-        opponent_hp = attack(opponent_hp, damage)
-        print(f"{opponent_name} has {opponent_hp} HP.")
-        print(health_bar(opponent_hp))
+def get_user_guess(guessed_letters):
+    """Returns a new letter in lowercase."""
+    while True:
+        guess = input("Guess a letter: ").strip().lower()
+        if len(guess) != 1 or guess not in "abcdefghijklmnopqrstuvwxyz":
+            print("Not a letter. Try again.")
+        elif guess in guessed_letters:
+            print("You have already guessed this letter.")
+        else:
+            return guess
+```
+<!-- solution:end -->
 
-        if opponent_hp > 0:
-            damage = random.randint(5, 15)
-            player_hp = attack(player_hp, damage)
-            print(f"{player_name} has {player_hp} HP.")
-            print(health_bar(player_hp))
+<!-- solution:start -->
+---
+class: knowledge-check-slide knowledge-solution-slide
+---
+
+# Supplied code: The lives bar
+
+```python
+def lives_bar(total_lives, lives_left):
+    """Moves the skeleton towards the player."""
+    skeleton_position = total_lives - lives_left
+    lives_display = ""
+    for i in range(skeleton_position):
+        lives_display += "_"
+    lives_display += "💀"
+    for i in range(total_lives - skeleton_position):
+        lives_display += "_"
+    lives_display += "😊"
+    return lives_display
 ```
 
-This loop is inside `main()`. The full solved program is in the matching `solutions/` folder.
+The starter already prints `lives_bar(total_lives, lives_left)` inside `hangman()`.
+The full solved game is in the matching `solutions/` folder.
 <!-- solution:end -->
 
 ---
