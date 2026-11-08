@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" role="img" aria-labelledby="title desc" font-family="Fira Sans, Arial, sans-serif">
+  <title id="title">Ana's and Max's friends</title>
+  <desc id="desc">Two overlapping circles. Only in Ana's friends: Ben. In both: Cleo and Dan. Only in Max's friends: Eva.</desc>
+  <circle cx="190" cy="155" r="115" fill="#E8522A" fill-opacity="0.18" stroke="#E8522A" stroke-width="3"/>
+  <circle cx="330" cy="155" r="115" fill="#2A7DE8" fill-opacity="0.18" stroke="#2A7DE8" stroke-width="3"/>
+  <text x="150" y="26" text-anchor="middle" font-size="20" font-weight="600" fill="#E8522A">ana_friends</text>
+  <text x="370" y="26" text-anchor="middle" font-size="20" font-weight="600" fill="#2A7DE8">max_friends</text>
+  <text x="130" y="163" text-anchor="middle" font-size="24" fill="#222">Ben</text>
+  <text x="260" y="140" text-anchor="middle" font-size="24" fill="#222">Cleo</text>
+  <text x="260" y="185" text-anchor="middle" font-size="24" fill="#222">Dan</text>
+  <text x="390" y="163" text-anchor="middle" font-size="24" fill="#222">Eva</text>
+</svg>
