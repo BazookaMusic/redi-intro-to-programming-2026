@@ -764,14 +764,6 @@ max_friends = {"Cleo", "Dan", "Eva"}
 
 Each method returns a **new** set. The original sets do not change.
 
-Shortcuts you may see in other code:
-
-```python
-ana_friends | max_friends    # union
-ana_friends & max_friends    # intersection
-ana_friends - max_friends    # difference
-```
-
 ---
 class: knowledge-check-slide exercise-slide
 ---
@@ -841,6 +833,20 @@ def everyone(groups):
     return guests
 ```
 <!-- solution:end -->
+
+---
+
+# Shorter set operators
+
+You have used the set methods. The same operations also have shorter forms:
+
+| Method | Operator | Meaning |
+|---|---|---|
+| `a.union(b)` | `a \| b` | In either set |
+| `a.intersection(b)` | `a & b` | In both sets |
+| `a.difference(b)` | `a - b` | In `a`, but not in `b` |
+
+Both forms return a new set. The method names can be easier to read when you are learning.
 
 ---
 
