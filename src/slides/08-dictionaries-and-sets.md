@@ -84,6 +84,24 @@ Today, we find values by a **name** instead of a number.
 
 ---
 
+# Quick recap: Functions
+
+A function is a named piece of code that performs a task.
+
+```python
+def total_price(price, quantity):
+    return price * quantity
+
+cost = total_price(3, 2)
+print(cost)  # 6
+```
+
+- `def` defines a function; `price` and `quantity` are its **parameters**.
+- `total_price(3, 2)` **calls** it with the arguments `3` and `2`.
+- `return` gives the result back. `print()` displays it.
+
+---
+
 # 02 - Dictionaries are everywhere
 
 Many things in daily life connect a **key** to a **value**.
@@ -258,11 +276,11 @@ class: knowledge-check-slide exercise-slide
 
 # Exercise: Café menu · 5 min
 
-You are building the till for a small café. A dictionary stores the price of each item.
+You are building a café till. A dictionary stores each dish's price.
 
-1. Make a dictionary `menu`: tea costs 2, coffee costs 3 and cake costs 4.
-2. Write `price_of(menu, item)`. It **returns** the item's price, or `0` if the item is not on the menu. Print the price of `"coffee"` and of `"pizza"`.
-3. **(Advanced)** Write `order_total(menu, items)`. `items` is a list of item names. It **returns** the total price. Reuse `price_of`.
+1. Make `menu`: soup costs 2, salad costs 3 and pasta costs 4.
+2. Complete `price_of(menu, dish)`. **Return** the dish's price, or `0` if it is not on the menu. Print the prices of `"salad"` and `"pizza"`.
+3. **(Advanced)** Write `order_total(menu, dishes)` to **return** the total for a list of dishes. Reuse `price_of`.
 
 <div class="grid grid-cols-2 gap-6">
 <div>
@@ -270,9 +288,9 @@ You are building the till for a small café. A dictionary stores the price of ea
 **Expected input and output**
 
 ```python
-price_of(menu, "coffee")   # returns 3
+price_of(menu, "salad")    # returns 3
 price_of(menu, "pizza")    # returns 0
-order_total(menu, ["tea", "cake", "tea"])
+order_total(menu, ["soup", "pasta", "soup"])
 # returns 8
 ```
 
@@ -282,11 +300,14 @@ order_total(menu, ["tea", "cake", "tea"])
 **Help**
 
 ```python
-"tea" in menu            # True
-menu.get("water", 0)     # 0
+def price_of(menu, dish):
+    pass
+
+def double(number):
+    return number * 2
 ```
 
-Starter: [exercises/08-dictionaries-and-sets/cafe-menu/](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/exercises/08-dictionaries-and-sets/cafe-menu)
+Replace `pass` with your code.
 
 </div>
 </div>
@@ -299,22 +320,22 @@ class: knowledge-check-slide knowledge-solution-slide
 # Solution: Café menu
 
 ```python
-menu = {"tea": 2, "coffee": 3, "cake": 4}
+menu = {"soup": 2, "salad": 3, "pasta": 4}
 
-def price_of(menu, item):
-    return menu.get(item, 0)
+def price_of(menu, dish):
+    return menu.get(dish, 0)
 
-print(price_of(menu, "coffee"))
+print(price_of(menu, "salad"))
 print(price_of(menu, "pizza"))
 
-def order_total(menu, items):
+def order_total(menu, dishes):
     total = 0
-    for item in items:
-        total += price_of(menu, item)
+    for dish in dishes:
+        total += price_of(menu, dish)
     return total
 ```
 
-`if item in menu: return menu[item]` followed by `return 0` also works.
+`if dish in menu: return menu[dish]` followed by `return 0` also works.
 <!-- solution:end -->
 
 ---
@@ -363,13 +384,13 @@ Lists work the same way: `append` inside a function changes the caller's list.
 
 # 06 - Looping over a dictionary
 
-A `for` loop over a dictionary gives us the **keys**.
+Use `.keys()` to loop over a dictionary's **keys**.
 
 ```python
 menu = {"tea": 2, "coffee": 3, "cake": 4}
 
-for item in menu:
-    print(item, menu[item])
+for key in menu.keys():
+    print(key, menu[key])
 ```
 
 ```text
