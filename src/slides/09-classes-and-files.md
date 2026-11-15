@@ -16,7 +16,7 @@ fonts:
 
 <style>
 /* The default theme greys out the first paragraph under a title; keep it readable. */
-:global(.slidev-layout h1 + p) {
+:global(.slidev-page .slidev-layout h1 + p) {
   opacity: 1;
 }
 </style>
