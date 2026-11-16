@@ -19,6 +19,7 @@ Choose a lesson below. Open the slides in your browser or download them as a PDF
 | 05 · Loops | Learn to repeat code with for loops, range(), and while loops, control loops with break and continue, loop over lists, and use common patterns such as filter, find, accumulate, max, and nested loops. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/05-loops.pdf) |
 | 06 · Lists and Tuples | Learn to create, read, and change lists, loop over them with for and enumerate(), store fixed values in tuples and unpack them, then sort, search, and slice lists. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/06-lists-and-tuples.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/06-lists-and-tuples.pdf) |
 | 08 · Dictionaries and Sets | Learn to store related information in dictionaries, update and loop over it, and use sets to track unique values and compare groups. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/08-dictionaries-and-sets.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/08-dictionaries-and-sets.pdf) |
+| 09 · Classes and Files | Learn to make your own objects with classes, `__init__`, attributes, and methods, then read, write, and add to text files. Ends with an introduction to your own project. | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_no_solutions/09-classes-and-files.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_no_solutions/09-classes-and-files.pdf) |
 
 <details>
 <summary><strong>Show slides with solutions</strong></summary>
@@ -34,6 +35,7 @@ These slides include the answers. Try the questions first!
 | 05 · Loops | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/05-loops.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/05-loops.pdf) |
 | 06 · Lists and Tuples | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/06-lists-and-tuples.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/06-lists-and-tuples.pdf) |
 | 08 · Dictionaries and Sets | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/08-dictionaries-and-sets.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/08-dictionaries-and-sets.pdf) |
+| 09 · Classes and Files | [Open](https://bazookamusic.github.io/redi-intro-to-programming-2026/slides_solutions/09-classes-and-files.html) · [PDF](https://raw.githubusercontent.com/BazookaMusic/redi-intro-to-programming-2026/main/slides_solutions/09-classes-and-files.pdf) |
 
 </details>
 
@@ -49,6 +51,7 @@ Lesson 01's exercises are in one README. From Lesson 02, each exercise folder ha
 | 04 · Strings and Conditionals | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/04-strings-and-conditionals/README.md) |
 | 05 · Loops | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/05-loops/README.md) |
 | 06 · Lists and Tuples | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/06-lists-and-tuples/README.md) |
+| 09 · Classes and Files | [Open exercises](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/exercises/09-classes-and-files/README.md) |
 
 <details>
 <summary><strong>Show exercise solutions</strong></summary>
@@ -63,6 +66,7 @@ These folders contain the answers. Try the exercises first!
 | 04 · Strings and Conditionals | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/04-strings-and-conditionals) |
 | 05 · Loops | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/05-loops) |
 | 06 · Lists and Tuples | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/tree/main/solutions/06-lists-and-tuples) |
+| 09 · Classes and Files | [Open solutions](https://github.com/BazookaMusic/redi-intro-to-programming-2026/blob/main/solutions/09-classes-and-files/README.md) |
 
 </details>
 
