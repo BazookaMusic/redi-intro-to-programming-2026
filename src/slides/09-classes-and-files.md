@@ -103,50 +103,147 @@ The data and the actions live apart.
 
 # 02 - What is an object?
 
-A dog **has** things and **does** things.
+Something that **has** things and **does** things.
 
-**A dog has:** a name, an age, hungry or not<br>
-**A dog does:** bark, eat
+<div class="rounded p-5 mt-6" style="background: rgba(232, 82, 42, 0.12); border-left: 4px solid #E8522A;">
+  <div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest">Object</div>
+  <div class="mt-2">A value that groups together some data and the functions that work on that data.</div>
+  <div class="mt-2 opacity-80">In Python, every value is an object, even <code>3</code> and <code>"Rex"</code>.</div>
+</div>
 
-| Word | Meaning |
-|---|---|
-| **Object** | A value in your program that holds data and can do actions |
-| **Attribute** | Something the object **has**, such as its name |
-| **Method** | Something the object **does**, such as bark |
-| **State** | The values of its attributes right now. After the dog eats, it is no longer hungry. |
+<div class="grid grid-cols-2 gap-8 items-start mt-6">
+<div>
+
+You have already used one: a **list**.
+
+```python
+dogs = ["Rex"]          # a list object
+print(dogs)             # ['Rex']   (data)
+dogs.append("Bella")    # (action)
+print(dogs)             # ['Rex', 'Bella']
+```
+
+</div>
+<div>
+
+Imagine a **dog** object. You will build it today.
+
+```python
+rex = Dog("Rex", 3)     # a Dog object
+print(rex.name)         # Rex   (data)
+rex.bark()              # Rex says Woof!  (action)
+```
+
+</div>
+</div>
+
+<div class="mt-4 opacity-80">The next slides give a name to each part.</div>
 
 ---
 
-# Objects in code
+# Attribute
 
-You have already used objects.
+The data an object holds.
 
-<div class="grid grid-cols-2 gap-8 items-start">
+<div class="rounded p-5 mt-6" style="background: rgba(232, 82, 42, 0.12); border-left: 4px solid #E8522A;">
+  <div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest">Attribute</div>
+  <div class="mt-2">A variable that belongs to an object. For example, <code>rex.name</code> stores the dog's name.</div>
+</div>
+
+<div class="grid grid-cols-2 gap-8 items-start mt-6">
 <div>
 
+Last week, a dictionary:
+
 ```python
-name = "rex"
-print(name.upper())   # REX
-print(type(name))     # <class 'str'>
+print(dog["name"])     # Rex
+print(dog["age"])      # 3
+print(dog["hungry"])   # True
 ```
 
 </div>
 <div>
 
+Today, an object:
+
 ```python
-dogs = ["Rex"]
-dogs.append("Bella")
-print(dogs)           # ['Rex', 'Bella']
-print(type(dogs))     # <class 'list'>
+print(rex.name)        # Rex
+print(rex.age)         # 3
+print(rex.hungry)      # True
 ```
 
 </div>
 </div>
 
-`.upper()` and `.append()` are **methods**.
-`str` and `list` are **classes**.
+Read an attribute with a dot: `object.attribute`. The attributes belong to the object.
 
-`type()` tells you which class an object was made from. Today you will write your own class.
+---
+
+# Method
+
+The actions an object can do.
+
+<div class="rounded p-5 mt-6" style="background: rgba(232, 82, 42, 0.12); border-left: 4px solid #E8522A;">
+  <div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest">Method</div>
+  <div class="mt-2">A function that belongs to an object. It can read and change the object's attributes.</div>
+</div>
+
+<div class="grid grid-cols-2 gap-8 items-start mt-6">
+<div>
+
+| Method | What it does |
+|---|---|
+| bark | Prints `Rex says Woof!` |
+| eat | The dog is no longer hungry |
+
+</div>
+<div>
+
+```python
+rex.bark()   # Rex says Woof!
+rex.eat()    # Rex is no longer hungry
+```
+
+Call a method with a dot and brackets: `object.method()`.
+
+</div>
+</div>
+
+A method works on the object you call it on: `rex.eat()` changes Rex, not another dog.
+
+---
+
+# State
+
+What the object looks like right now.
+
+<div class="rounded p-5 mt-6" style="background: rgba(232, 82, 42, 0.12); border-left: 4px solid #E8522A;">
+  <div class="text-sm font-semibold text-[#E8522A] uppercase tracking-widest">State</div>
+  <div class="mt-2">The values of all of an object's attributes at one moment. When an attribute changes, the state changes.</div>
+</div>
+
+<div class="grid grid-cols-2 gap-8 items-start mt-6">
+<div class="[&_td]:py-2 [&_th]:py-2">
+
+| Attribute | Before eating | After eating |
+|---|---|---|
+| name | Rex | Rex |
+| age | 3 | 3 |
+| hungry | **True** | **False** |
+
+</div>
+<div>
+
+```python
+print(rex.hungry)   # True
+rex.eat()
+print(rex.hungry)   # False
+```
+
+</div>
+</div>
+
+Methods can change an object's state.
 
 ---
 
@@ -171,7 +268,7 @@ tina.left(90)                # turns left
 print(tina.position())       # (100.00,0.00)
 print(tina.heading())        # 90.0
 
-print(type(tina))            # <class 'turtle.Turtle'>
+print(type(tina))            # which class: <class 'turtle.Turtle'>
 turtle.done()                # keeps the window open
 ```
 
